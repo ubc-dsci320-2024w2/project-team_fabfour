@@ -4,11 +4,26 @@
 
 ## Describe your dataset in about 150-200 words
 
-{Add a description of your dataset here, including the source}
+The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results) comes from Kaggle.
+It was compiled by Catherine Rasgaitis based on a survey about music-listening habits and their connection to mental health that respondents filled out via Google Forms.
+The form was posted on different social media platforms such as Reddit and Discord.
+The dataset has a CC0: Public Domain license and consists of 737 rows and 33 columns.
+
 
 ## Describe your topic/interest in about 150-200 words
 
-{Add a description of what you're interested in exploring here}
+Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI).
+She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health.
+As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being.
+The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
+
+Allison is a BCS student interested in Co…
+
+As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health.
+She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music.
+When Jessica was a Crisis Line Volunteer supporting callers with mental health challenges,
+she heard from many help-seekers that music was something people turned to when they felt anxious, stressed, depressed, restless or lonely.
+
 
 ## Team Members
 
