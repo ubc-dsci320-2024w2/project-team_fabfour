@@ -1,4 +1,4 @@
-# Group {Name} - {Short Title of your project}
+# Group Fab Four - Music and Mental Health
 
 - Your title can change over time.
 
