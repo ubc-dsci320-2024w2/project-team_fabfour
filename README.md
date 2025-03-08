@@ -15,7 +15,7 @@
 - Person 1: Allison is a 2nd-year (+6 other years...) computer science student in the BCS program who loves a 10 pm bubble tea :sparkles: :bear:
 - Person 2: one sentence about you!
 - Person 3: Judy is a 5th-year student majoring in Computer Science and minoring in Data Science. She is also a full-time matcha girlie! 🍵💚
-- Person 4: Jessica is a 5th-year student in the Behavioural Neuroscience program and one of her favourite songs is "The Fall" by half·alive 
+- Person 4: Jessica is a 5th-year student majoring in Behavioural Neuroscience + minoring in Data Science and always enjoys a late night sweet treat 🍫🌙
 
 ## Images
 
