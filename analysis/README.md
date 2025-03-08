@@ -1,6 +1,6 @@
 # Analysis Files
 
-- `ColdHarbour/analysis1.ipynb` : Teammate 1 should have Jupyter Notebook work stored here. Remember to change the header in this file to your names or an alias. Feel free to change the name of the folder but don't change the name of this file.
+- `Allison/analysis1.ipynb` : Teammate 1 should have Jupyter Notebook work stored here. Remember to change the header in this file to your names or an alias. Feel free to change the name of the folder but don't change the name of this file.
 - `Lucknow/analysis2.ipynb` : Teammate 2 should have Jupyter Notebook work stored here. Remember to change the header in this file to your names or an alias. Feel free to change the name of the folder but don't change the name of this file.
 - `Rhodes/analysis3.ipynb` : Teammate 3 should have Jupyter Notebook work stored here. Remember to change the header in this file to your names or an alias. Feel free to change the name of the folder but don't change the name of this file.
 - `Wellington/analysis4.ipynb` : Teammate 4 should have Jupyter Notebook work stored here. Remember to change the header in this file to your names or an alias. Feel free to change the name of the folder but don't change the name of this file.
