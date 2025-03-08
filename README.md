@@ -14,7 +14,7 @@
 
 - Person 1: one sentence about you!
 - Person 2: one sentence about you!
-- Person 3: one sentence about you!
+- Person 3: Judy is a 5th-year student majoring in Computer Science and minoring in Data Science. She is also a full-time matcha girlie! 🍵💚
 - Person 4: Jessica is a student in the Behavioural Neuroscience program and one of her favourite songs is "The Fall" by half·alive
 
 ## Images
