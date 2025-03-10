@@ -57,17 +57,31 @@ Jessica's research question is,
 ### Jessica's Sketches
 
 **Retrieve Value: What is the favourite genre of a person who made a response on September 21st, 2022?**
-or 
-**Cluster: Is there a cluster of whether people believe music improves or does not improve their mental health based on the time of day and self-reported mental health?**
-<img src ="../images/Jessica-sketch-low-1.jpg" width="300px">
-This sketch...
 
-**Filter: Given a time of day, what was the most frequently self-reported mental health condition?**
-<img src ="../images/Jessica-sketch-low-2.jpg" width="300px">
-This sketch...
+or 
+
+**Cluster: Is there a cluster of whether people believe music improves or does not improve their mental health based on the time of day and self-reported mental health?**
+
+<img src ="../images/Jessica-sketch-low-1.jpg" width="500px">
+
+This sketch is able to be filtered by `Music Effects` which could make it easy for viewers to see the distribution of opinions or any patterns/clusters in the data across the scatterplot of time.
+The tooltip makes it easy for a viewer to retrieve an exact value, but may not be good at comparing proportions of `Music Effects` or music habits (`Favourite Genre`, `Composer`, etc.)
+Having the right panel of Self-Reported Mental Health ratings within similar proximity and highlighting bars to make them pop-out helps the viewer understand that they are related to the left panel.
+
+
+**Filter: Given a range of time, what was the most frequent choice for `music effects`? `Intrumentalists`? `Composer`? `While Working`? etc.**
+
+<img src ="../images/Jessica-sketch-low-2.jpg" width="500px">
+
+The ability to select a date range across a timeline helps reduce cognitive load, and provide the opportunity for "common fate" when the small timeline panel slides while the larger left panel shows the expanded/zoomed-in data range.
+Having self-reported mental health scores change every time a single point is selected/hovered over, the viewer cannot see the overall distribution of these variables.
+Allowing the user to interact by filtering for `Instrumentalists`, `Composer`, `While Working`, etc. may be overwhelming and difficult for the viewer as they have to learn what each of the panels and choices mean.
 
 **Determine Range: what is the range for self-reported depression severity across a certain timeframe?**
-<img src ="../images/Jessica-sketch-low-e.jpg" width="300px">
-This sketch...
+
+<img src ="../images/Jessica-sketch-low-3.jpg" width="500px">
+
+This heat map component of this visualization is not effective for the task - only the right side of the panel (range bar of time and mental health severity) is effective for this task.
+Grouping each different condition (anxiety, depression, OCD, insomnia) as different coloured bars may help viewers better differentiate between conditions, but having them all close together may challenge separability.
 
 ## Next Steps (~250 words)
