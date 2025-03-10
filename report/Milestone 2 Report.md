@@ -44,6 +44,30 @@ Jessica's research question is,
 
 ## Task Analysis (~500 words)
 
+- **Determine Range** - what is the range for self-reported depression severity across a certain timeframe?
+  - A viewer may be curious about only responses in the first day, at night.
+- **Retrieve Value** – What is the favourite genre of a person who made a response on September 21st, 2022?
+  - Seeing individual points may be interesting for viewers.
+- **Filter** – Given a time of day, what was the most frequently self-reported mental health condition? 
+  - Filtering between certain days may allow people to explore and interact with a certain day/week/month of interest.
+- 
+
 ## Preliminary Sketches (~250 words)
+
+### Jessica's Sketches
+
+**Retrieve Value: What is the favourite genre of a person who made a response on September 21st, 2022?**
+or 
+**Cluster: Is there a cluster of whether people believe music improves or does not improve their mental health based on the time of day and self-reported mental health?**
+<img src ="images/Jessica-sketch-low-1.jpg" width="300px">
+This sketch...
+
+**Filter: Given a time of day, what was the most frequently self-reported mental health condition?**
+<img src ="images/Jessica-sketch-low-2.jpg" width="300px">
+This sketch...
+
+**Determine Range: what is the range for self-reported depression severity across a certain timeframe?**
+<img src ="images/Jessica-sketch-low-e.jpg" width="300px">
+This sketch...
 
 ## Next Steps (~250 words)
