@@ -39,6 +39,9 @@ Our intended audience includes individuals who are passionate about music or men
 
 ## Research Questions (~500 words)
 
+Jessica's research question is, 
+*"How does the time of day a person responds to a mental health survey relate to their self-reported mental health, considering music background and listening habits?"*
+
 ## Task Analysis (~500 words)
 
 ## Preliminary Sketches (~250 words)
