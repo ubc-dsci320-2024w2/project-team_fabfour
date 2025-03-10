@@ -59,15 +59,15 @@ Jessica's research question is,
 **Retrieve Value: What is the favourite genre of a person who made a response on September 21st, 2022?**
 or 
 **Cluster: Is there a cluster of whether people believe music improves or does not improve their mental health based on the time of day and self-reported mental health?**
-<img src ="images/Jessica-sketch-low-1.jpg" width="300px">
+<img src ="../images/Jessica-sketch-low-1.jpg" width="300px">
 This sketch...
 
 **Filter: Given a time of day, what was the most frequently self-reported mental health condition?**
-<img src ="images/Jessica-sketch-low-2.jpg" width="300px">
+<img src ="../images/Jessica-sketch-low-2.jpg" width="300px">
 This sketch...
 
 **Determine Range: what is the range for self-reported depression severity across a certain timeframe?**
-<img src ="images/Jessica-sketch-low-e.jpg" width="300px">
+<img src ="../images/Jessica-sketch-low-e.jpg" width="300px">
 This sketch...
 
 ## Next Steps (~250 words)
