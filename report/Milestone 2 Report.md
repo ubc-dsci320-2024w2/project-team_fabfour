@@ -36,7 +36,7 @@ Our intended audience includes individuals who are passionate about music or men
 | Permissions               | Categorical      | Permission to publicize data | 1
 
 ### Exploratory Data Analysis
-All four of our group's invidiual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in teh analysis folder.
+All four of our group's invidiual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
 
 ## Research Questions (~500 words)
 
