@@ -1,15 +1,19 @@
 ## Introduction
+### *Dataset Overview*
 The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results/data) comes from Kaggle and was compiled by Catherine Rasgaitis based on a survey about music-listening habits and their connection to mental health that respondents filled out via Google Forms. The form was posted on different social media platforms such as Reddit and Discord. The dataset has a CC0: Public Domain license and consists of 737 rows and 33 columns.
 
 Our team is FabFour, consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee, and Jessica Luo. 
 
+### *Team Members & Our Interest in the Data*
 Allison is currently a Bachelor of Computer Science (BCS) student interested in machine learning, data science, and artificial intelligence. Coming from a background in biology with a minor in psychology, she has a strong foundation in cognition and positive psychology—both of which explored the positive impact of music on mental health.  Her interest in the Music and Mental Health dataset stems from her passion for understanding how music influences emotional well-being and how it can uplift individuals from languishing to flourishing.
 
 Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI). She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health. As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being. The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
 
 As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health. She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music. When Jessica was a Crisis Line Volunteer supporting callers with mental health challenges, she heard from many help-seekers that music was something people turned to when they felt anxious, stressed, depressed, restless or lonely.
 
+### *Intended Audience*
 Our intended audience includes individuals who are passionate about music or mental health, such as music enthusiasts, mental health professionals, and researchers interested in the intersection of the two fields. Since this dataset allows for the visual exploration of how different music genres correlate with mental health conditions like anxiety and depression, we aim to provide valuable insights through data visualizations. These insights will help people better understand how music influences emotional well-being and overall mental health.
+
 
 ## About the Data (no limit)
 
@@ -91,10 +95,7 @@ Who were the youngest and the oldest participants? Are there any overarching pat
 **Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
   - Clusters of groups may be indicative of relationships.
 
-**Find Anomalies** - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)
-  - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
-
-
+---
 ## Preliminary Sketches (~250 words)
 
 ### Allison's Sketches
@@ -161,6 +162,7 @@ I chose the box plots as the final high-fidelity design because is if the most e
  - The use of color saturation for low, medium, and high mental health scores improves readability and helps distinguish severity levels within each condition.
  - The box plot provides exact values while maintaining a clear visual structure, unlike the violin plot, which smooths density, or the stacked bar chart, which lacks range details.
 
+---
 ### Judy's Sketches
 
 **Characterize distribution: What is the distribution of depression scores based on the frequency of listening to Rock music?**
@@ -340,30 +342,15 @@ I chose the sunburst chart for the high-fidelity sketch because it provides the 
 - The filter dropdown allows users to refine the visualization based on different music effects.
 - Hover tooltips provide exact values without overwhelming the chart visually.
 
-
+---
 ### Jessica's Sketches
 
-**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
+**1. Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
 
 <img src ="../images/jess-lowfid-1.jpg" width="600px">
 
 *Critique:*
-Each of these sketches effectively shows distributions of each mental health category. The violin plot and boxplots can effectively show the medians and IQR. The multi-bar chart can effectively show distribution, but it may be cluttered when looking at them all at once.
-
-**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
-
-<img src ="../images/jess-lowfid-2.jpg" width="600px">
-
-*Critique:*
-These sketches effectively an area graph, scatter plot and dot plot, all of which align with the task of finding extremums (and characterizing distributions). Most or least frequently reported scores can be found on an area graph by looking at peaks and troughs, respectively. In the scatterplot, separating the scores by mental health condition help reduce cognitive load but is poor for comparing two different extremums in different mental health categories. The dot-plot, with size as count, may help easily show the viewer which scores were most or least reported, however, area is known to have poor discriminability in the human visual system, especially when data values are close to each other.
-
-**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
-
-<img src ="../images/jess-lowfid-3.jpg" width="600px">
-
-*Critique:*
-The scatterplot, circle packing chart, and bubble chart can help identify clusters of people based on music preferences. Each chart can compare a mental health category and a separate variable of interest, but is poor at looking at other variables may interact. To improve readability, we could add colours or density representations to help reveal cluster patterns in the data more effectively.
-
+Each of these sketches effectively shows distributions of each mental health category. The violin plot and boxplots can effectively show the medians and IQR, and has good expressiveness since each boxplot is on a common axis. The multi-bar chart can effectively show distribution, but it may be cluttered or overplotted when looking at them all at once. The violin plot may be improved by adding a radio button to let viewers decide if they want to view just the boxplot or just the violin plot or both the violin and boxplot. The boxplot can be improved by creating a second boxplot such that there are different boxplots for each level of `music effects`. The multi-bar chart could be improved by changing the plot to a stacked bar chart, where we look at one mental health condition at a time and use different colours to represent `music effects`.
 
 **High Fidelity Sketch**
 
@@ -371,16 +358,33 @@ The scatterplot, circle packing chart, and bubble chart can help identify cluste
 
 This high-fidelity sketch of a violin plot adheres to the principles of visual design we learnt in class by using area/density and boxplots to express distributions of each score. The vis utilizes pop-outs by making the median red. A tooltip can help display exact distribution information, such as mean, median, mode, SD and IQR. Allowing the user to interact with the vis by selecting violin or boxplot or both can help viewers by creating a cleaner, less dense visualization.
 
+**2. Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
+
+<img src ="../images/jess-lowfid-2.jpg" width="600px">
+
+*Critique:*
+These sketches effectively an area graph, scatter plot and dot plot, all of which align with the task of finding extremums (and characterizing distributions). Most or least frequently reported scores can be found on an area graph by looking at peaks and troughs, respectively. In the scatterplot, the most frequently reported mental health scores separating the scores by mental health condition help reduce cognitive load but is poor for comparing two different extremums in different mental health categories. The dot-plot, with size as count, may help easily show the viewer which scores were most or least reported, however, circular area is known to have poor discriminability in the human visual system, especially when data values are close to each other.
+
+**High Fidelity Sketch**
 
 <img src ="../images/jess-highfid-2a.jpg" width="500px"> <img src ="../images/jess-highfid-2b.jpg" width="500px">
 
 My high-fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X-axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
 
+**3. Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+
+<img src ="../images/jess-lowfid-3.jpg" width="600px">
+
+*Critique:*
+The scatterplot, circle packing chart, and bubble chart can help identify clusters of people based on music preferences. Each chart can compare a mental health category and a separate variable of interest, but is poor at looking at other variables may interact. To improve readability, we could add colours or density representations to help reveal cluster patterns in the data more effectively.
+
+**High Fidelity Sketch**
+
 <img src ="../images/jess-highfid-3.jpg" width="600px">
 
 This high-fidelity sketch adheres to the principles of visual design we learnt in class by using a scatter-plot to express two different self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures accuracy through different color saturations to account for the music listened BPM. Dark points will show outliers. An option to have size as count may help identify clusters.
 
-
+---
 ## Next Steps (~250 words)
 
 To achieve an A-grade project, our group will follow the structured timeline (below).
