@@ -41,7 +41,13 @@ All four of our group's invidiual exploratory data analysis can be found under t
 ## Research Questions (~500 words)
 
 Jessica's research question is, 
-*"How does the time of day a person responds to a mental health survey relate to their self-reported mental health, considering music background and listening habits?"*
+**"How does response bias play a role in self-reporting mental health severity?"** Further questions worth exploring might be:
+*"What are the patterns and anomalies in self-reported mental health severities?",
+"How do demographics (eg. mental illness), music listening habits contribute to biased self-reporting?",
+"Are there any reasons for extreme/invalid response values that can be identified based on other responses?",
+"How do illogical, invalid responses influence data reliability?"*
+The visualization may be a dashboard with interactions, or SPLOM with outlier points that are linked bi-directionally to other visualizations.
+
 
 ## Task Analysis (~500 words)
 
