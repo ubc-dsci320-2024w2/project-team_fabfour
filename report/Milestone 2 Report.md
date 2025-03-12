@@ -36,9 +36,12 @@ Our intended audience includes individuals who are passionate about music or men
 | Permissions               | Categorical      | Permission to publicize data | 1
 
 ### Exploratory Data Analysis
-All four of our group's invidiual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
+All four of our group's individual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
 
 ## Research Questions (~500 words)
+
+Judy's research question is,
+**How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?**
 
 Jessica's research question is, 
 **"How does response bias play a role in self-reporting mental health severity?"** Further questions worth exploring might be:
@@ -50,6 +53,14 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 
 
 ## Task Analysis (~500 words)
+
+**Characterize distribution** - What is the distribution of depression scores based on the frequency of listening to Rock music?
+
+**Determine Range** - What is the range of genre diversity scores among individuals who report that music improves their well-being?
+
+**Correlate** - Is there a correlation between genre diversity scores and self-reported mental health scores?
+
+**Find Extremum** - Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
 
 **Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
   - Distributions could be different for those who believe music does vs does not improve mental health.
