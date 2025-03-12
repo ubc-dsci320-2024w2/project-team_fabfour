@@ -69,16 +69,16 @@ Who were the youngest and the oldest participants? Are there any overarching pat
 
 **Characterize distribution** - What is the distribution of depression scores based on the frequency of listening to Rock music?
 
+**Characterize Distribution** - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
+
 **Determine Range** - What is the range of genre diversity scores among individuals who report that music improves their well-being?
 
 **Correlate** - Is there a correlation between genre diversity scores and self-reported mental health scores?
 
 **Find Extremum** - Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
 
-**Characterize Distribution** - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
-
 **Find Extremum** - "What are the most and least frequently reported mental health severity scores?"
-  - Most frequent reported mental health severity scores might reflect response biases.
+  - Most frequently reported mental health severity scores might reflect response biases.
 
 **Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
   - Clusters of groups may be indicative of relationships.
@@ -105,6 +105,12 @@ The first option uses the common length channel (on a common scale) to display t
 
 <img src ="../images/Allison_high_fidelity_task_1.png" width="600px">
 
+I chose the bar chart with a radio button as the final high-fidelity design because it is the most accurate and  interpretable visualization for this task.
+ - The bar chart uses position along a common scale (length) to represent magnitude, which is the most effective way to compare numerical values. This is the better option over area, which more challenging to compare.
+ - There is no reliance on colour, which enhances the separability of the encodings (different colours vs. different bar lengths)
+ - there is little to no information loss since all 16 genres can be displays simultaneously and space effectively using the bar chart.
+ - The radio button interaction allows users to switch between age groups, reducing the amount of data at presented at once.
+
 **Compute derived value: What is the average age associated with each favourite genre?**
 
 <img src ="../images/Allison_low_fidelity_task_2.png" width="600px">
@@ -120,6 +126,11 @@ The first option (1) uses area to encode the magnitude property (number of respo
 
 <img src ="../images/Allison_high_fidelity_task_2.png" width="600px">
 
+I chose the linked bar charts for the final high-fidelity design because they provide the most accurate and intuitive representation of how average age varies across favorite genres.
+ - High effectiveness/accuracy using bar lengths along a common scale, which is important for comparing values across genres. This is significantly more accurate than using area (bubble chart) or colour (heat map) to convey this information.
+ - Interaction adds an extra dimension to the plot, allowing the user to select and alter the chart to fit their specific task (e.g. what is average age and distribution for rock music).
+ - Since there is interaction, the readability also increases as there is less information presented simultaneously. This allows the user to focus on the specific task and retrieve the details they are looking for as needed.
+ 
 **Determine range: Find range of ages reporting high mental health scores for each condition**
 
 <img src ="../images/Allison_low_fidelity_task_3.png" width="600px">
@@ -134,6 +145,13 @@ The box plot (1) uses position along a common scale to encode age and length of 
 **High Fidelity Sketch**
 
 <img src ="../images/Allison_high_fidelity_task_3.png" width="600px">
+
+I chose the box plots as the final high-fidelity design because is if the most effective for this task
+ - The box plot displays the minimum, maximum, median, and interquartile range (IQR), making it easy to identify the full distribution of ages for each condition.
+ - All conditions (Anxiety, Depression, Insomnia, OCD) share a common age scale, allowing for direct comparisons.
+ - The box plot explicitly marks outliers, making it easier to detect extreme values that do not align with trends.
+ - The use of color saturation for low, medium, and high mental health scores improves readability and helps distinguish severity levels within each condition.
+ - The box plot provides exact values while maintaining a clear visual structure, unlike the violin plot, which smooths density, or the stacked bar chart, which lacks range details.
 
 ### Judy's Sketches
 
@@ -371,7 +389,7 @@ Proposed timeline:
 | Attend OH for advice for A+ project               | Wed Mar 19, 12:30-2pm | ???                    |
 | Check-in Discord Meeting                          | Wed Mar 19, evening   | all                    |
 | Finalize individual vis + written sections        | Wed Mar 19            | all                    |
-| look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
+| Look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
 | adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
 | Finalize contracted grade                         | Sun Mar 23            | all                    |
 | Create and publish website                        | Sun Mar 23            | Jess                   |
@@ -381,3 +399,19 @@ In addition, each group member will adhere to the following:
 - Project Management: all members will write their completed tasks/actions as a comment under the respective issue(s).
 - Feedback Incorporation: Regular communication on Discord, to ensure alignment and quality.
 
+## Summary of contributions
+ **Workload distribution Milestone 2**: Allison (25%), Helena (25%), Judy (25%), and Jessica (25%)
+ 
+  ### Allison
+My contributions included writing my portions of the introduction and conducting individual EDA + report. I also created the group EDA file and the wrangling_and_cleaning python script compiling our collective cleaning/transformations.
+
+  ### Helena
+
+  ### Judy
+ My contributions included writing my portions of the introductory and analysis README.md files, creating the introduction and the data abstraction sections, completing my EDA analysis, and doing my task abstraction and sketches.
+ 
+ ### Jessica
+ My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
+ 
+
+ 
