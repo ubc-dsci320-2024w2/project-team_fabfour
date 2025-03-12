@@ -12,12 +12,12 @@ The dataset has a CC0: Public Domain license and consists of 737 rows and 33 col
 
 ## Describe your topic/interest in about 150-200 words
 
+Allison is currently a Bachelor of Computer Science (BCS) student interested in machine learning, data science, and artificial intelligence. Coming from a background in biology with a minor in psychology, she has a strong foundation in cognition and positive psychology—both of which explored the positive impact of music on mental health. Her interest in the Music and Mental Health dataset stems from her passion for understanding how music influences emotional well-being and how it can uplift individuals from languishing to flourishing.
+
 Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI).
 She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health.
 As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being.
 The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
-
-Allison is a BCS student interested in Co…
 
 As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health.
 She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music.
