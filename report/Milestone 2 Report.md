@@ -49,6 +49,8 @@ Jessica's research question is,
 The visualization may be a dashboard with interactions, or SPLOM with outlier points that are linked bi-directionally to other visualizations.
 
 
+
+
 ## Task Analysis (~500 words)
 
 **Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
@@ -65,41 +67,6 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 
 
 ## Preliminary Sketches (~250 words)
-
-### Jessica's Sketches
-
-**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
-
-<img src ="../images/jess-sketch-lowfid-1.jpg" width="600px">
-
-This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories, but is potentially unnecessary. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
-
-**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
-
-<img src ="../images/jess-sketch-lowfid-2.jpg" width="600px">
-
-This sketch effectively conveys exploratory data insights through a histogram and a scatterplot, both of which align with the task of finding extremums (and characterizing distributions). The grouped bar chart/histogram would provide a a clear breakdown of mental health scores, but the colors could be changed to be made colorblind friendly. The scatterplot offers insight into how mental health categories distribute, but the panel may be better separated so the viewer understands that the right and left panels are separate.
-
-**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
-
-<img src ="../images/jess-sketch-lowfid-3.jpg" width="600px">
-
-This sketch conveys a comparison between music listening habits (e.g. hrs per day) and self-reported mental health, with a scatterplot representing the relationship. However, the filtering options (under the title) could be clearer. The axes labels could be more specific — "Hours Listen per Day" should specify that it's total number of hours. To improve readability, adding shaded areas, colours or density representations would help reveal cluster patterns in the data more effectively.
-
-
-**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
-
-<img src ="../images/jess-sketch-lowfid-4.jpg" width="600px">
-
-The plot comparing one nominal mental health variable (e.g. anxiety) vs another mental health variable (e.g. OCD) may be interesting and effective at identifying outliers, such as people with low anxiety and high OCD (since [OCD is an anxiety disorder](https://www.hopkinsmedicine.org/health/conditions-and-diseases/obsessivecompulsive-disorder-ocd)). This sketch does not have a legend for size of circles, which should be added to improve expressiveness. However, area is known to have poor effectiveness when it comes to human visualization.
-
-
-**High Fidelity Sketch**
-
-<img src ="../images/jess-sketch-highfid-b.jpg" width="600px">
-<img src ="../images/jess-sketch-highfid-a.jpg" width="600px">
-
-My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
 
 ### Allison's Sketches
 **Retrieve value: What is the most commonly reported favourite genre for specific age groups**
@@ -185,6 +152,40 @@ TODO: write
 
 <img src ="../images/judy-hifi-4.jpg" width="600px">
 
+### Jessica's Sketches
+
+**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
+
+<img src ="../images/jess-sketch-lowfid-1.jpg" width="600px">
+
+This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories, but is potentially unnecessary. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
+
+**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
+
+<img src ="../images/jess-sketch-lowfid-2.jpg" width="600px">
+
+This sketch effectively conveys exploratory data insights through a histogram and a scatterplot, both of which align with the task of finding extremums (and characterizing distributions). The grouped bar chart/histogram would provide a a clear breakdown of mental health scores, but the colors could be changed to be made colorblind friendly. The scatterplot offers insight into how mental health categories distribute, but the panel may be better separated so the viewer understands that the right and left panels are separate.
+
+**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+
+<img src ="../images/jess-sketch-lowfid-3.jpg" width="600px">
+
+This sketch conveys a comparison between music listening habits (e.g. hrs per day) and self-reported mental health, with a scatterplot representing the relationship. However, the filtering options (under the title) could be clearer. The axes labels could be more specific — "Hours Listen per Day" should specify that it's total number of hours. To improve readability, adding shaded areas, colours or density representations would help reveal cluster patterns in the data more effectively.
+
+
+**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
+
+<img src ="../images/jess-sketch-lowfid-4.jpg" width="600px">
+
+The plot comparing one nominal mental health variable (e.g. anxiety) vs another mental health variable (e.g. OCD) may be interesting and effective at identifying outliers, such as people with low anxiety and high OCD (since [OCD is an anxiety disorder](https://www.hopkinsmedicine.org/health/conditions-and-diseases/obsessivecompulsive-disorder-ocd)). This sketch does not have a legend for size of circles, which should be added to improve expressiveness. However, area is known to have poor effectiveness when it comes to human visualization.
+
+
+**High Fidelity Sketch**
+
+<img src ="../images/jess-sketch-highfid-b.jpg" width="600px">
+<img src ="../images/jess-sketch-highfid-a.jpg" width="600px">
+
+My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
 
 
 ## Next Steps (~250 words)
