@@ -41,48 +41,136 @@ All four of our group's invidiual exploratory data analysis can be found under t
 ## Research Questions (~500 words)
 
 Jessica's research question is, 
-*"How does the time of day a person responds to a mental health survey relate to their self-reported mental health, considering music background and listening habits?"*
+**"How does response bias play a role in self-reporting mental health severity?"** Further questions worth exploring might be:
+*"What are the patterns and anomalies in self-reported mental health severities?",
+"How do demographics (eg. mental illness), music listening habits contribute to biased self-reporting?",
+"Are there any reasons for extreme/invalid response values that can be identified based on other responses?",
+"How do illogical, invalid responses influence data reliability?"*
+The visualization may be a dashboard with interactions, or SPLOM with outlier points that are linked bi-directionally to other visualizations.
+
 
 ## Task Analysis (~500 words)
 
-- **Determine Range** - what is the range for self-reported depression severity across a certain timeframe?
-  - A viewer may be curious about only responses in the first day, at night.
-- **Retrieve Value** – What is the favourite genre of a person who made a response on September 21st, 2022?
-  - Seeing individual points may be interesting for viewers.
-- **Filter** – Given a time of day, what was the most frequently self-reported mental health condition? 
-  - Filtering between certain days may allow people to explore and interact with a certain day/week/month of interest.
-- 
+**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
+  - Distributions could be different for those who believe music does vs does not improve mental health.
+
+**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
+  - Most frequent reported mental health severity scores might reflect response biases.
+
+**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+  - Clusters of groups may be indicative of relationships.
+
+**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
+  - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
+
 
 ## Preliminary Sketches (~250 words)
 
 ### Jessica's Sketches
 
-**Retrieve Value: What is the favourite genre of a person who made a response on September 21st, 2022?**
+**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
 
-or 
+<img src ="../images/jess-sketch-lowfid-1.jpg" width="600px">
 
-**Cluster: Is there a cluster of whether people believe music improves or does not improve their mental health based on the time of day and self-reported mental health?**
+This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories, but is potentially unnecessary. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
 
-<img src ="../images/Jessica-sketch-low-1.jpg" width="500px">
+**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
 
-This sketch is able to be filtered by `Music Effects` which could make it easy for viewers to see the distribution of opinions or any patterns/clusters in the data across the scatterplot of time.
-The tooltip makes it easy for a viewer to retrieve an exact value, but may not be good at comparing proportions of `Music Effects` or music habits (`Favourite Genre`, `Composer`, etc.)
-Having the right panel of Self-Reported Mental Health ratings within similar proximity and highlighting bars to make them pop-out helps the viewer understand that they are related to the left panel.
+<img src ="../images/jess-sketch-lowfid-2.jpg" width="600px">
+
+This sketch effectively conveys exploratory data insights through a histogram and a scatterplot, both of which align with the task of finding extremums (and characterizing distributions). The grouped bar chart/histogram would provide a a clear breakdown of mental health scores, but the colors could be changed to be made colorblind friendly. The scatterplot offers insight into how mental health categories distribute, but the panel may be better separated so the viewer understands that the right and left panels are separate.
+
+**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+
+<img src ="../images/jess-sketch-lowfid-3.jpg" width="600px">
+
+This sketch conveys a comparison between music listening habits (e.g. hrs per day) and self-reported mental health, with a scatterplot representing the relationship. However, the filtering options (under the title) could be clearer. The axes labels could be more specific — "Hours Listen per Day" should specify that it's total number of hours. To improve readability, adding shaded areas, colours or density representations would help reveal cluster patterns in the data more effectively.
 
 
-**Filter: Given a range of time, what was the most frequent choice for `music effects`? `Intrumentalists`? `Composer`? `While Working`? etc.**
+**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
 
-<img src ="../images/Jessica-sketch-low-2.jpg" width="500px">
+<img src ="../images/jess-sketch-lowfid-4.jpg" width="600px">
 
-The ability to select a date range across a timeline helps reduce cognitive load, and provide the opportunity for "common fate" when the small timeline panel slides while the larger left panel shows the expanded/zoomed-in data range.
-Having self-reported mental health scores change every time a single point is selected/hovered over, the viewer cannot see the overall distribution of these variables.
-Allowing the user to interact by filtering for `Instrumentalists`, `Composer`, `While Working`, etc. may be overwhelming and difficult for the viewer as they have to learn what each of the panels and choices mean.
+The plot comparing one nominal mental health variable (e.g. anxiety) vs another mental health variable (e.g. OCD) may be interesting and effective at identifying outliers, such as people with low anxiety and high OCD (since [OCD is an anxiety disorder](https://www.hopkinsmedicine.org/health/conditions-and-diseases/obsessivecompulsive-disorder-ocd)). This sketch does not have a legend for size of circles, which should be added to improve expressiveness. However, area is known to have poor effectiveness when it comes to human visualization.
 
-**Determine Range: what is the range for self-reported depression severity across a certain timeframe?**
 
-<img src ="../images/Jessica-sketch-low-3.jpg" width="500px">
+**High Fidelity Sketch**
 
-This heat map component of this visualization is not effective for the task - only the right side of the panel (range bar of time and mental health severity) is effective for this task.
-Grouping each different condition (anxiety, depression, OCD, insomnia) as different coloured bars may help viewers better differentiate between conditions, but having them all close together may challenge separability.
+<img src ="../images/jess-sketch-highfid-b.jpg" width="600px">
+<img src ="../images/jess-sketch-highfid-a.jpg" width="600px">
+
+My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
+
+### Allison's Sketches
+**Retrieve value: What is the most commonly reported favourite genre for specific age groups**
+
+<img src ="../images/Allison_low_fidelity_task_1.png" width="600px">
+
+The three low fidelity sketches for task 1 above are as follows: 
+1) A bar chart of genres sorted by count and a radio button to swap between age groups
+2) A mosaic plot of different genres for each age group
+3) A pie chart showing the top four genres with a radio button to swap between age groups.
+
+The first option uses the common length channel (on a common scale) to display the magnitude, which is preferred over 2) and 3), which both use area (2D size). The use of these channels are effective, but using a common scale is the strongest at conveying the magnitude. The use of the radio button in 2) and 3) provides interaction, which 2) lacks. A major limitation of 2) and 3) are their ability to display all distinct categories satisfactorily. For 2), colour is needed to distinguish between groups, however, it is challenging to use 16 distinct colours. For 3), the area on a pie chart is limited and will be challenging to separate from each other. In this example, I only chose the top-four, which comes with the downside of not being able to display all categories at one.
+
+**High Fidelity Sketch**
+
+<img src ="../images/Allison_high_fidelity_task_1.png" width="600px">
+
+**Compute derived value: What is the average age associated with each favourite genre?**
+
+<img src ="../images/Allison_low_fidelity_task_2.png" width="600px">
+
+The three low fidelity sketches for task 2 above are as follows: 
+1) A bubble chart with interactability and a tooltip displaying the aggregated value.
+2) Unidirectionally linked bar charts (left: genre sorted by average age; right: distribution of age)
+3) A heatmap of the distribution with a tooltip displaying average age.
+
+The first option (1) uses area to encode the magnitude property (number of respondants) and a tooltip to display the aggregation (average age) for each genre. (2) uses linked bar charts using the length on a common scale channel to encode magnitude. The user would click on the bar of a genre, which would display the corresponding dsitribution of values. (3) uses the colour saturation channel to display mangitude (count) and a tooltip to display the aggregated value (average age). 2) ranks the highest for accuracy/effectiveness, as using a common scale is the preferred channel for ordered attributes. 1) has the issue of using the area of a circle to encode magnitude, which does not grow at a consistent rate. In addition, the size of the circle will be quite small for smaller categories, since some genres have very few respondants (e.g. only 2 for latin). The heat map suffers from the issue of using color saturation to encode magnitude, which can be difficult to interpret accurately, especially for subtle differences. Additionally, without clear numerical labels, viewers may struggle to precisely compare values across the heatmap. While tooltips provide additional context, they require interaction and do not offer an at-a-glance summary of the data.
+
+**High Fidelity Sketch**
+
+<img src ="../images/Allison_high_fidelity_task_2.png" width="600px">
+
+**Determine range: Find range of ages reporting high mental health scores for each condition**
+
+<img src ="../images/Allison_low_fidelity_task_3.png" width="600px">
+
+The three low fidelity sketches for task 3 above are as follows:
+1) A box plot of age distributions for each condition (Anxiety, Depression, Insomnia, OCD).
+2) A stacked bar chart showing the count of high mental health scores across age ranges.
+3) A violin plot representing the distribution density of ages for each condition.
+
+The box plot (1) uses position along a common scale to encode age and length of the box and whiskers to represent the range of ages reporting high mental health scores. Outliers are explicitly marked, making it easy to identify extreme values. The stacked bar chart (2) encodes magnitude using bar height and color hue to distinguish between mental health conditions. While effective for comparing relative frequencies across age groups, it does not directly highlight the range of ages in each condition. The violin plot (3) encodes distribution density through area and uses position on a common scale to represent age, making it useful for identifying if there are multiple peaks but less precise for pinpointing specific age ranges. 1) ranks highest in accuracy, as it clearly displays the minimum, maximum, and interquartile ranges, which directly answer the task (find the range). 
+
+**High Fidelity Sketch**
+
+<img src ="../images/Allison_high_fidelity_task_3.png" width="600px">
 
 ## Next Steps (~250 words)
+
+To achieve an A-grade project, our group will follow the structured timeline (below).
+The plan is broken down into actionable steps with deadlines and assigned responsibilities.
+
+Proposed timeline:
+| Task                                              | Date                  | Assignee               |
+|---------------------------------------------------|-----------------------|------------------------|
+| Implement feedback from PM2                       | ASAP                  | Applicable members     |
+| Attend OH for advice for A+ project               | Wed Mar 12, 12:30-2pm | ???                    |
+| Create 1st visualizations                         | Fri Mar 14            | all                    |
+| Check-in Discord Meeting                          | Fri Mar 14, evening   | all                    |
+| Create 2nd visualizations                         | Sat Mar 15            | all                    |
+| Create 3rd & 4th visualization(s)                 | Sun Mar 16            | all                    |
+| Attend OH for advice for A+ project               | Wed Mar 19, 12:30-2pm | ???                    |
+| Check-in Discord Meeting                          | Wed Mar 19, evening   | all                    |
+| Finalize individual vis + written sections        | Wed Mar 19            | all                    |
+| look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
+| adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
+| Finalize contracted grade                         | Sun Mar 23            | all                    |
+| Create and publish website                        | Sun Mar 23            | Jess                   |
+
+In addition, each group member will adhere to the following:
+- Version Control: All members will commit their work to GitHub with clear commit messages and create separate Pull Requests when making changes based on TA feedback.
+- Project Management: all members will write their completed tasks/actions as a comment under the respective issue(s).
+- Feedback Incorporation: Regular communication on Discord, to ensure alignment and quality.
+
