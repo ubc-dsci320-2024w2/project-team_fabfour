@@ -45,13 +45,18 @@ Jessica's research question is,
 
 ## Task Analysis (~500 words)
 
-- **Determine Range** - what is the range for self-reported depression severity across a certain timeframe?
-  - A viewer may be curious about only responses in the first day, at night.
-- **Retrieve Value** – What is the favourite genre of a person who made a response on September 21st, 2022?
-  - Seeing individual points may be interesting for viewers.
-- **Filter** – Given a time of day, what was the most frequently self-reported mental health condition? 
-  - Filtering between certain days may allow people to explore and interact with a certain day/week/month of interest.
-- 
+**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
+  - Distributions could be different for those who believe music does vs does not improve mental health.
+
+**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
+  - Most frequent reported mental health severity scores might reflect response biases.
+
+**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+  - Clusters of groups may be indicative of relationships.
+
+**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
+  - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
+
 
 ## Preliminary Sketches (~250 words)
 
