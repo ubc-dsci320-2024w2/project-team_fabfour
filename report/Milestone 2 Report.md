@@ -62,16 +62,15 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 
 **Find Extremum** - Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
 
-**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
-  - Distributions could be different for those who believe music does vs does not improve mental health.
+**Characterize Distribution** - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
 
-**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
+**Find Extremum** - "What are the most and least frequently reported mental health severity scores?"
   - Most frequent reported mental health severity scores might reflect response biases.
 
-**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+**Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
   - Clusters of groups may be indicative of relationships.
 
-**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
+**Find Anomalies** - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)
   - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
 
 
