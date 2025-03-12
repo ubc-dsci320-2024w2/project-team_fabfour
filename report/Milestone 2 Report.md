@@ -57,32 +57,36 @@ Jessica's research question is,
 
 ### Jessica's Sketches
 
-**Retrieve Value: What is the favourite genre of a person who made a response on September 21st, 2022?**
+**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
 
-or 
+<img src ="../images/jess-sketch-lowfid-1.jpg" width="600px">
 
-**Cluster: Is there a cluster of whether people believe music improves or does not improve their mental health based on the time of day and self-reported mental health?**
+This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
 
-<img src ="../images/Jessica-sketch-low-1.jpg" width="500px">
+**Compute derived value - what is the most frequently selected value (mode) of self-reported depression scores?**
 
-This sketch is able to be filtered by `Music Effects` which could make it easy for viewers to see the distribution of opinions or any patterns/clusters in the data across the scatterplot of time.
-The tooltip makes it easy for a viewer to retrieve an exact value, but may not be good at comparing proportions of `Music Effects` or music habits (`Favourite Genre`, `Composer`, etc.)
-Having the right panel of Self-Reported Mental Health ratings within similar proximity and highlighting bars to make them pop-out helps the viewer understand that they are related to the left panel.
+<img src ="../images/jess-sketch-lowfid-2.jpg" width="600px">
+
+This sketch of a grouped bar chart and related scatter plot may effectively show distributions of each mental health category as well as . Separating by colors allows viewers to easily distinguish between the different categories. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
 
 
-**Filter: Given a range of time, what was the most frequent choice for `music effects`? `Intrumentalists`? `Composer`? `While Working`? etc.**
+**Find extremum - what is the most hours of music listened to per day for those who reported 10/10 anxiety?**
 
-<img src ="../images/Jessica-sketch-low-2.jpg" width="500px">
+<img src ="../images/jess-sketch-lowfid-3.jpg" width="600px">
 
-The ability to select a date range across a timeline helps reduce cognitive load, and provide the opportunity for "common fate" when the small timeline panel slides while the larger left panel shows the expanded/zoomed-in data range.
-Having self-reported mental health scores change every time a single point is selected/hovered over, the viewer cannot see the overall distribution of these variables.
-Allowing the user to interact by filtering for `Instrumentalists`, `Composer`, `While Working`, etc. may be overwhelming and difficult for the viewer as they have to learn what each of the panels and choices mean.
+critique blah blah blah
+
+
+**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
+
+<img src ="../images/jess-sketch-lowfid-4.jpg" width="600px">
+
+critique blah blah blah
 
 **Determine Range: what is the range for self-reported depression severity across a certain timeframe?**
 
-<img src ="../images/Jessica-sketch-low-3.jpg" width="500px">
+critique blah blah blah
 
-This heat map component of this visualization is not effective for the task - only the right side of the panel (range bar of time and mental health severity) is effective for this task.
-Grouping each different condition (anxiety, depression, OCD, insomnia) as different coloured bars may help viewers better differentiate between conditions, but having them all close together may challenge separability.
+
 
 ## Next Steps (~250 words)
