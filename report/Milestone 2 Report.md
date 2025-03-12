@@ -147,6 +147,46 @@ The box plot (1) uses position along a common scale to encode age and length of 
 
 <img src ="../images/Allison_high_fidelity_task_3.png" width="600px">
 
+### Judy's Sketches
+
+**Characterize distribution: What is the distribution of depression scores based on the frequency of listening to Rock music?**
+
+<img src ="../images/judy-lofi-1.jpg" width="600px">
+TODO: write
+
+**High Fidelity Sketch**
+
+<img src ="../images/judy-hifi-1.jpg" width="600px">
+
+**Determine Range: What is the range of genre diversity scores among individuals who report that music improves their well-being?**
+
+<img src ="../images/judy-lofi-2.jpg" width="600px">
+TODO: write
+
+**High Fidelity Sketch**
+
+<img src ="../images/judy-hifi-2.jpg" width="600px">
+
+**Correlate: Is there a correlation between genre diversity scores and self-reported mental health scores?**
+
+<img src ="../images/judy-lofi-3.jpg" width="600px">
+TODO: write
+
+**High Fidelity Sketch**
+
+<img src ="../images/judy-hifi-3.jpg" width="600px">
+
+**Find Extremum: Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?**
+
+<img src ="../images/judy-lofi-4.jpg" width="600px">
+TODO: write
+
+**High Fidelity Sketch**
+
+<img src ="../images/judy-hifi-4.jpg" width="600px">
+
+
+
 ## Next Steps (~250 words)
 
 To achieve an A-grade project, our group will follow the structured timeline (below).
