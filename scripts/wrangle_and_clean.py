@@ -8,26 +8,15 @@ from tabulate import tabulate
 
 def clean_data(path):
     data = pd.read_csv(path)
-    data = handle_BPM_outliers(data)
-    data = handle_NAs(data)
     data = make_frequency_cols_ordered(data)
     data = make_mental_health_levels(data)
     data = make_data_time(data)
     data = make_time_of_day(data)
     data = drop_permissions(data)
+    data = create_no_music_hobbies_column(data)
+    data = group_ages(data)
     return data
 
-def handle_BPM_outliers(data):
-    droppedMax = data["BPM"].nlargest(2).index
-    droppedMin = data["BPM"].nsmallest(5).index
-    droppedOutliers = droppedMax.union(droppedMin)
-    data_cleaned = data.drop(index=droppedOutliers)
-    return data_cleaned
-
-def handle_NAs(data):
-    data["BPM"] = data["BPM"].interpolate(method="linear")
-    data.dropna(inplace=True)
-    return data
 
 def make_frequency_cols_ordered(data):
     order = ["Never", "Rarely", "Sometimes", "Very frequently"]
@@ -91,3 +80,12 @@ def categorize_time_of_day(timestamp):
 def drop_permissions(data):
     data = data.drop(columns=["Permissions"])
     return data
+
+def create_no_music_hobbies_column(data):
+    data['No_musical_hobbies'] = (
+    (data["Composer"] == "No") & (data["Instrumentalist"] == "No")
+        ).map({True: "Yes", False: "No"})
+    return data
+
+def group_ages(data):
+    data["Age_Grouped"] = np.where(data["Age"] > 65, 66, data["Age"])
