@@ -85,10 +85,37 @@ The plot comparing one nominal mental health variable (e.g. anxiety) vs another 
 
 **High Fidelity Sketch**
 
-<img src ="../images/jess-sketch-highfid.jpg" width="600px">
+<img src ="../images/jess-sketch-highfid-a.jpg" width="600px">
+<img src ="../images/jess-sketch-highfid-b.jpg" width="600px">
 
 My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
 
 
 
 ## Next Steps (~250 words)
+
+To achieve an A-grade project, our group will follow the structured timeline (below).
+The plan is broken down into actionable steps with deadlines and assigned responsibilities.
+
+Proposed timeline:
+| Task                                              | Date                  | Assignee               |
+|---------------------------------------------------|-----------------------|------------------------|
+| Implement feedback from PM2                       | ASAP                  | Applicable members     |
+| Attend OH for advice for A+ project               | Wed Mar 12, 12:30-2pm | ???                    |
+| Create 1st visualizations                         | Fri Mar 14            | all                    |
+| Check-in Discord Meeting                          | Fri Mar 14, evening   | all                    |
+| Create 2nd visualizations                         | Sat Mar 15            | all                    |
+| Create 3rd & 4th visualization(s)                 | Sun Mar 16            | all                    |
+| Attend OH for advice for A+ project               | Wed Mar 19, 12:30-2pm | ???                    |
+| Check-in Discord Meeting                          | Wed Mar 19, evening   | all                    |
+| Finalize individual vis + written sections        | Wed Mar 19            | all                    |
+| look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
+| adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
+| Finalize contracted grade                         | Sun Mar 23            | all                    |
+| Create and publish website                        | Sun Mar 23            | Jess                   |
+
+In addition, each group member will adhere to the following:
+- Version Control: All members will commit their work to GitHub with clear commit messages and create separate Pull Requests when making changes based on TA feedback.
+- Project Management: all members will write their completed tasks/actions as a comment under the respective issue(s).
+- Feedback Incorporation: Regular communication on Discord, to ensure alignment and quality.
+
