@@ -40,6 +40,11 @@ All four of our group's invidiual exploratory data analysis can be found under t
 
 ## Research Questions (~500 words)
 
+Allison's research question is:
+**What is the impact of the respondent's age on their survey responses?**
+1.  Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
+2. How Does Age Influence the Relationship Between Music Engagement and Mental Health Outcomes? Examine how different forms of music engagement (e.g., instrumentalist, composer) correlate with mental health outcomes across various age groups. Do those who engage with music in more dimensions (e.g. composer or musician) form distinct groups?
+
 Jessica's research question is, 
 **"How does response bias play a role in self-reporting mental health severity?"** Further questions worth exploring might be:
 *"What are the patterns and anomalies in self-reported mental health severities?",
@@ -63,6 +68,14 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 **Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
   - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
 
+**Retrieve value: What is the most commonly reported favourite genre for specific age groups for those with high mental health conditions scores**
+- For those with high scores, there may be age-related differences in music genre preferences
+
+**Compute derived value: What is the average age associated with each favourite genre?**
+- Understanding the average age associated with each favorite genre helps identify generational trends in music preferences. 
+
+**Determine range: Find range of ages reporting high mental health scores for each condition**
+- Broader or narrower ranges can express how self-reported mental health conditions vary across age groups and may align with trends showing that younger generations are more likely to rate their mental health as more severe [APA, 2019](https://www.apa.org/monitor/2019/01/gen-z).
 
 ## Preliminary Sketches (~250 words)
 
@@ -82,6 +95,12 @@ The first option uses the common length channel (on a common scale) to display t
 
 <img src ="../images/Allison_high_fidelity_task_1.png" width="600px">
 
+I chose the bar chart with a radio button as the final high-fidelity design because it is the most accurate and  interpretable visualization for this task.
+- The bar chart uses position along a common scale (length) to represent magnitude, which is the most effective way to compare numerical values. This is the better option over area, which more challenging to compare.
+- There is no reliance on colour, which enhances the separability of the encodings (different colours vs. different bar lengths)
+- there is little to no information loss since all 16 genres can be displays simultaneously and space effectively using the bar chart.
+- The radio button interaction allows users to switch between age groups, reducing the amount of data at presented at once.
+
 **Compute derived value: What is the average age associated with each favourite genre?**
 
 <img src ="../images/Allison_low_fidelity_task_2.png" width="600px">
@@ -97,6 +116,12 @@ The first option (1) uses area to encode the magnitude property (number of respo
 
 <img src ="../images/Allison_high_fidelity_task_2.png" width="600px">
 
+I chose the linked bar charts for the final high-fidelity design because they provide the most accurate and intuitive representation of how average age varies across favorite genres.
+- High effectiveness/accuracy using bar lengths along a common scale, which is important for comparing values across genres. This is significantly more accurate than using area (bubble chart) or colour (heat map) to convey this information.
+- Interaction adds an extra dimension to the plot, allowing the user to select and alter the chart to fit their specific task (e.g. what is average age and distribution for rock music).
+- Since there is interaction, the readability also increases as there is less information presented simultaneously. This allows the user to focus on the specific task and retrieve the details they are looking for as needed.
+
+
 **Determine range: Find range of ages reporting high mental health scores for each condition**
 
 <img src ="../images/Allison_low_fidelity_task_3.png" width="600px">
@@ -111,6 +136,13 @@ The box plot (1) uses position along a common scale to encode age and length of 
 **High Fidelity Sketch**
 
 <img src ="../images/Allison_high_fidelity_task_3.png" width="600px">
+
+I chose the box plots as the final high-fidelity design because is if the most effective for this task
+- The box plot displays the minimum, maximum, median, and interquartile range (IQR), making it easy to identify the full distribution of ages for each condition.
+- All conditions (Anxiety, Depression, Insomnia, OCD) share a common age scale, allowing for direct comparisons.
+- The box plot explicitly marks outliers, making it easier to detect extreme values that do not align with trends.
+- The use of color saturation for low, medium, and high mental health scores improves readability and helps distinguish severity levels within each condition.
+- The box plot provides exact values while maintaining a clear visual structure, unlike the violin plot, which smooths density, or the stacked bar chart, which lacks range details.
 
 ### Judy's Sketches
 
@@ -355,3 +387,11 @@ In addition, each group member will adhere to the following:
 - Project Management: all members will write their completed tasks/actions as a comment under the respective issue(s).
 - Feedback Incorporation: Regular communication on Discord, to ensure alignment and quality.
 
+## Summary of contributions
+**Workload distribution Milestone 2**: Allison (25%), Helena (25%), Judy (25%), and Jessica (25%)
+
+### Jessica
+My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
+
+### Allison
+My contributions included writing my portions of the introduction and conducting individual EDA + report. I also created the group EDA file and the wrangling_and_cleaning python script compiling our collective cleaning/transformations.
