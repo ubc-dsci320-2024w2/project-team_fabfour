@@ -61,32 +61,26 @@ Jessica's research question is,
 
 <img src ="../images/jess-sketch-lowfid-1.jpg" width="600px">
 
-This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
+This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories, but is potentially unnecessary. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
 
-**Compute derived value - what is the most frequently selected value (mode) of self-reported depression scores?**
+**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
 
 <img src ="../images/jess-sketch-lowfid-2.jpg" width="600px">
 
-This sketch of a grouped bar chart and related scatter plot may effectively show distributions of each mental health category as well as . Separating by colors allows viewers to easily distinguish between the different categories. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
+This sketch effectively conveys exploratory data insights through a histogram and a scatterplot, both of which align with the task of finding extremums (and characterizing distributions). The grouped bar chart/histogram would provide a a clear breakdown of mental health scores, but the colors could be changed to be made colorblind friendly. The scatterplot offers insight into how mental health categories distribute, but the panel may be better separated so the viewer understands that the right and left panels are separate.
 
-
-**Find extremum - what is the most hours of music listened to per day for those who reported 10/10 anxiety?**
+**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
 
 <img src ="../images/jess-sketch-lowfid-3.jpg" width="600px">
 
-critique blah blah blah
+This sketch conveys a comparison between music listening habits (e.g. hrs per day) and self-reported mental health, with a scatterplot representing the relationship. However, the filtering options (under the title) could be clearer. The axes labels could be more specific — "Hours Listen per Day" should specify that it's total number of hours. To improve readability, adding shaded areas, colours or density representations would help reveal cluster patterns in the data more effectively.
 
 
 **Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
 
 <img src ="../images/jess-sketch-lowfid-4.jpg" width="600px">
 
-critique blah blah blah
-
-**Determine Range: what is the range for self-reported depression severity across a certain timeframe?**
-
-critique blah blah blah
-
+The plot comparing one nominal mental health variable (e.g. anxiety) vs another mental health variable (e.g. OCD) may be interesting and effective at identifying outliers, such as people with low anxiety and high OCD (since [OCD is an anxiety disorder](https://www.hopkinsmedicine.org/health/conditions-and-diseases/obsessivecompulsive-disorder-ocd)). This sketch does not have a legend for size of circles, which should be added to improve expressiveness. However, area is known to have poor effectiveness when it comes to human visualization.
 
 
 ## Next Steps (~250 words)
