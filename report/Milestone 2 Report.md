@@ -83,4 +83,9 @@ This sketch conveys a comparison between music listening habits (e.g. hrs per da
 The plot comparing one nominal mental health variable (e.g. anxiety) vs another mental health variable (e.g. OCD) may be interesting and effective at identifying outliers, such as people with low anxiety and high OCD (since [OCD is an anxiety disorder](https://www.hopkinsmedicine.org/health/conditions-and-diseases/obsessivecompulsive-disorder-ocd)). This sketch does not have a legend for size of circles, which should be added to improve expressiveness. However, area is known to have poor effectiveness when it comes to human visualization.
 
 
+**High Fidelity Sketch**
+
+<img src ="../images/jess-sketch-highfid.jpg" width="600px">
+
+
 ## Next Steps (~250 words)
