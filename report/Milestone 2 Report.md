@@ -115,7 +115,7 @@ The first option uses the common length channel (on a common scale) to display t
 
 **High Fidelity Sketch**
 
-<img src ="../images/Allison_high_fidelity_task_2.png" width="600px">
+<img src ="../images/Allison_high_fidelity_task_1.png" width="600px">
 
 **Compute derived value: What is the average age associated with each favourite genre?**
 
@@ -130,6 +130,8 @@ The first option (1) uses area to encode the magnitude property (number of respo
 
 **High Fidelity Sketch**
 
+<img src ="../images/Allison_high_fidelity_task_2.png" width="600px">
+
 **Determine range: Find range of ages reporting high mental health scores for each condition**
 
 <img src ="../images/Allison_low_fidelity_task_3.png" width="600px">
@@ -142,6 +144,8 @@ The three low fidelity sketches for task 3 above are as follows:
 The box plot (1) uses position along a common scale to encode age and length of the box and whiskers to represent the range of ages reporting high mental health scores. Outliers are explicitly marked, making it easy to identify extreme values. The stacked bar chart (2) encodes magnitude using bar height and color hue to distinguish between mental health conditions. While effective for comparing relative frequencies across age groups, it does not directly highlight the range of ages in each condition. The violin plot (3) encodes distribution density through area and uses position on a common scale to represent age, making it useful for identifying if there are multiple peaks but less precise for pinpointing specific age ranges. 1) ranks highest in accuracy, as it clearly displays the minimum, maximum, and interquartile ranges, which directly answer the task (find the range). 
 
 **High Fidelity Sketch**
+
+<img src ="../images/Allison_high_fidelity_task_3.png" width="600px">
 
 ## Next Steps (~250 words)
 
