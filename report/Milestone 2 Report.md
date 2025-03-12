@@ -177,23 +177,24 @@ The three low-fidelity sketches for task 1 are as follows:
 *Critique*
 1) Normalized Stacked Bar Chart
    
-- Encoding: The normalized stacked bar chart uses position on a common scale, which is one of the most effective visual channels for accurately comparing magnitudes. Since we aim to represent proportions, the bars are normalized (stacked to 100%) to facilitate part-to-whole comparisons across different frequency categories. The color encoding is used to differentiate between depression score categories, improving discriminability while maintaining clear segment boundaries.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the dataset’s characteristics without unnecessary information.
+- Encoding: The normalized stacked bar chart uses position on a common scale, which is one of the most effective visual channels for accurately comparing magnitudes. Since we aim to represent proportions, the bars are normalized (stacked to 100%) to facilitate part-to-whole comparisons across different frequency categories. The color hue encoding is used to differentiate between depression score categories, improving discriminability while maintaining clear segment boundaries.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the dataset’s characteristics without unnecessary information.
 - Effectiveness: Position encoding makes the relative distribution easy to compare across groups. 
 - Interactivity: A UI widget with filter dropdowns enables users to select different genres and mental health conditions (e.g., anxiety, depression, insomnia, OCD), increasing flexibility in data exploration.
   
 2) Parallel Coordinates Plot
    
-- Encoding: The parallel coordinates plot places mental health conditions (e.g., depression, anxiety) along parallel axes, with lines connecting values across dimensions. Position on a common scale is used to compare depression scores, while color encoding distinguishes between different frequency categories of listening to Rock music.
-- Expressiveness: The plot maintains expressiveness since all visual encodings directly represent the dataset’s attributes.
-- Effectiveness: While parallel coordinate plots are excellent for showing multidimensional relationships, they suffer from overplotting and clutter when too many data points are present, making it harder to discern trends in large datasets.
+- Encoding: The parallel coordinates plot places mental health conditions (e.g., depression, anxiety) along parallel axes, with lines connecting values across dimensions. Position on a common scale is used to compare depression scores, while color hue encoding distinguishes between different frequency categories of listening to Rock music.
+- Expressiveness: The plot maintains expressiveness since all visual encodings (position on common scale and color hue) directly represent the dataset’s attributes.
+- Effectiveness: The most effective channels are also used since quantitative variables like the mental health condition scores are best represented by position on a common scale and using color hue to maintain discriminability in order to distinguish between the frequency levels, is the most effective.
+- Limitations: While parallel coordinate plots are good for showing multidimensional relationships, they suffer from overplotting and clutter when too many data points are present, making it harder to discern trends in large datasets.  
 - Interactivity: Filter dropdowns allow users to highlight specific genres or conditions, but without interaction, the visualization may become difficult to interpret.
 
 3) Radial Plot
    
 - Encoding: A radial layout (polar coordinates) is used, where angular position represents the frequency of listening to Rock music and radial distance encodes depression scores. Color differentiates listening frequency categories and shows good discriminability. Size encodes the average depression score per frequency category.
-- Expressiveness: The plot maintains expressiveness since all visual encodings directly represent the data attributes. The encoding remains relevant, though polar plots can introduce distortions in perception, particularly for angular comparisons, which are harder to judge accurately than linear ones.
-- Effectiveness: While visually engaging, the plot can be difficult to gauge angles clearly, making direct comparisons less effective than in Cartesian plots.
+- Expressiveness: The plot maintains some expressiveness since all visual encodings directly represent the data attributes, but polar plots can introduce distortions in perception, particularly for angular comparisons, which are harder to judge accurately than linear ones.
+- Effectiveness: While visually engaging, the plot can be difficult to gauge angles clearly, making direct comparisons less effective than in Cartesian plots. Hence, using position on a common scale (vertical and horizontal position) would have increased effectiveness.
 - Interactivity: A tooltip provides exact depression score values when hovering, and filter dropdowns allow users to switch between mental health conditions.
 
 
@@ -226,7 +227,7 @@ The three low-fidelity sketches for task 2 are as follows:
 - Encoding: The histogram uses position on a common scale (vertical for frequency and horizontal for genre diversity scores), which is highly effective for showing distributions and identifying the shape of data (e.g., normal, skewed, multimodal).
 - Expressiveness: The visualization remains expressive since it directly represents the data characteristics without unnecessary elements.
 - Effectiveness: It provides an intuitive view of frequency distributions but does not explicitly show measures like quartiles, outliers, or central tendency (which a boxplot or violin plot can). Filtering via a dropdown enables users to compare distributions across music effect categories, though comparisons might require flipping between views.
-- Limitations: Bin size selection can impact interpretability. It is also harder to make direct comparisons between categories unless displayed side by side.
+- Limitations: Selecting different bin sizes can impact interpretability. It is also harder to make direct comparisons between categories unless displayed side by side.
 
 2) Boxplot
 - Encoding: The boxplot also uses position on a common scale, but instead of showing full distributions, it summarizes the data via quartiles, median, whiskers, and outliers.
