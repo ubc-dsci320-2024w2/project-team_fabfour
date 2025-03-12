@@ -85,7 +85,8 @@ The plot comparing one nominal mental health variable (e.g. anxiety) vs another 
 
 **High Fidelity Sketch**
 
-<img src ="../images/jess-sketch-highfid.jpg" width="600px">
+<img src ="../images/jess-sketch-highfid-a.jpg" width="600px">
+<img src ="../images/jess-sketch-highfid-b.jpg" width="600px">
 
 My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
 
