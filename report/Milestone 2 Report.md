@@ -108,17 +108,17 @@ The three low fidelity sketches for task 1 above are as follows:
 2) A mosaic plot of different genres for each age group
 3) A pie chart showing the top four genres with a radio button to swap between age groups.
 
-The first option uses the common length channel (on a common scale) to display the magnitude, which is preferred over 2) and 3), which both use area (2D size). The use of these channels are effective, but using a common scale is the strongest at conveying the magnitude. The use of the radio button in 2) and 3) provides interaction, which 2) lacks. A major limitation of 2) and 3) are their ability to display all distinct categories satisfactorily. For 2), colour is needed to distinguish between groups, however, it is challenging to use 16 distinct colours. For 3), the area on a pie chart is limited and will be challenging to separate from each other. In this example, I only chose the top-four, which comes with the downside of not being able to display all categories at one.
+The first option uses the common length channel (on a common scale) to display the magnitude, which is preferred over 2) and 3), which both use area (2D size). The use of these channels is effective, but using a common scale is the strongest at conveying the magnitude. The use of the radio button in 2) and 3) provides interaction, which 2) lacks. A major limitation of 2) and 3) is their ability to display all distinct categories satisfactorily. For 2), colour is needed to distinguish between groups, however, it is challenging to use 16 distinct colours. For 3), the area on a pie chart is limited and will be challenging to separate from each other. In this example, I only chose the top four, which comes with the downside of not being able to display all categories at once.
 
 **High Fidelity Sketch**
 
 <img src ="../images/Allison_high_fidelity_task_1.png" width="600px">
 
 I chose the bar chart with a radio button as the final high-fidelity design because it is the most accurate and  interpretable visualization for this task.
- - The bar chart uses position along a common scale (length) to represent magnitude, which is the most effective way to compare numerical values. This is the better option over area, which more challenging to compare.
+ - The bar chart uses position along a common scale (length) to represent magnitude, which is the most effective way to compare numerical values. This is the better option over area, which is more challenging to compare.
  - There is no reliance on colour, which enhances the separability of the encodings (different colours vs. different bar lengths)
- - there is little to no information loss since all 16 genres can be displays simultaneously and space effectively using the bar chart.
- - The radio button interaction allows users to switch between age groups, reducing the amount of data at presented at once.
+ - There is little to no information loss since all 16 genres can be displayed simultaneously and space effectively using the bar chart.
+ - The radio button interaction allows users to switch between age groups, reducing the amount of data presented at once.
 
 **Compute derived value: What is the average age associated with each favourite genre?**
 
@@ -129,7 +129,7 @@ The three low fidelity sketches for task 2 above are as follows:
 2) Unidirectionally linked bar charts (left: genre sorted by average age; right: distribution of age)
 3) A heatmap of the distribution with a tooltip displaying average age.
 
-The first option (1) uses area to encode the magnitude property (number of respondents) and a tooltip to display the aggregation (average age) for each genre. (2) uses linked bar charts using the length on a common scale channel to encode magnitude. The user would click on the bar of a genre, which would display the corresponding distribution of values. (3) uses the colour saturation channel to display magnitude (count) and a tooltip to display the aggregated value (average age). 2) ranks the highest for accuracy/effectiveness, as using a common scale is the preferred channel for ordered attributes. 1) has the issue of using the area of a circle to encode magnitude, which does not grow at a consistent rate. In addition, the size of the circle will be quite small for smaller categories since some genres have very few respondents (e.g. only 2 for Latin). The heat map suffers from the issue of using color saturation to encode magnitude, which can be difficult to interpret accurately, especially for subtle differences. Additionally, without clear numerical labels, viewers may struggle to precisely compare values across the heatmap. While tooltips provide additional context, they require interaction and do not offer an at-a-glance summary of the data.
+The first option (1) uses the area to encode the magnitude property (number of respondents) and a tooltip to display the aggregation (average age) for each genre. (2) uses linked bar charts using the length on a common scale channel to encode magnitude. The user would click on the bar of a genre, which would display the corresponding distribution of values. (3) uses the colour saturation channel to display magnitude (count) and a tooltip to display the aggregated value (average age). 2) ranks the highest for accuracy/effectiveness, as using a common scale is the preferred channel for ordered attributes. 1) has the issue of using the area of a circle to encode magnitude, which does not grow at a consistent rate. In addition, the size of the circle will be quite small for smaller categories since some genres have very few respondents (e.g. only 2 for Latin). The heat map suffers from the issue of using color saturation to encode magnitude, which can be difficult to interpret accurately, especially for subtle differences. Additionally, without clear numerical labels, viewers may struggle to precisely compare values across the heatmap. While tooltips provide additional context, they require interaction and do not offer an at-a-glance summary of the data.
 
 **High Fidelity Sketch**
 
@@ -226,20 +226,23 @@ The three low-fidelity sketches for task 2 are as follows:
 
 - Encoding: The histogram uses position on a common scale (vertical for frequency and horizontal for genre diversity scores), which is highly effective for showing distributions and identifying the shape of data (e.g., normal, skewed, multimodal).
 - Expressiveness: The visualization remains expressive since it directly represents the data characteristics without unnecessary elements.
-- Effectiveness: It provides an intuitive view of frequency distributions but does not explicitly show measures like quartiles, outliers, or central tendency (which a boxplot or violin plot can). Filtering via a dropdown enables users to compare distributions across music effect categories, though comparisons might require flipping between views.
-- Limitations: Selecting different bin sizes can impact interpretability. It is also harder to make direct comparisons between categories unless displayed side by side.
+- Effectiveness: The channels used are the most effective since they aim to show quantitative variables like the genre diversity scores and frequency. 
+- Limitations: Selecting different bin sizes can impact interpretability. It is also harder to make direct comparisons between categories unless they are displayed side by side and do not explicitly show measures like quartiles, outliers, or central tendency (which a boxplot or violin plot can). 
+- Interactivity: Filtering via a dropdown enables users to compare distributions across music effect categories, though comparisons might require flipping between views.
 
 2) Boxplot
 - Encoding: The boxplot also uses position on a common scale, but instead of showing full distributions, it summarizes the data via quartiles, median, whiskers, and outliers.
-- Expressiveness: It adheres to expressiveness principles by accurately depicting range, central tendency, and spread without unnecessary complexity. Filtering via a dropdown selector enables users to view different music effect groups.
-- Effectiveness: Great for comparing summary statistics but hides detailed distribution patterns (e.g., modality, density of values). Outliers are clearly visible, which helps in identifying unusual values. It is also more compact than a histogram, making it suitable for side-by-side comparisons.
+- Expressiveness: It adheres to expressiveness principles by accurately depicting range, central tendency, and spread without unnecessary complexity. 
+- Effectiveness: Using position on a common scale is an effective channel since it aims to represent the quantitative variables. It is great for comparing summary statistics but hides detailed distribution patterns. Outliers are clearly visible, which helps in identifying unusual values. It is also more compact than a histogram, making it suitable for side-by-side comparisons.
 - Limitations: It does not show the actual shape of the distribution. It might be harder for non-expert users to interpret compared to a histogram.
+- Interactivity: Filtering via a dropdown selector enables users to view different music effect groups.
 
 3) Violin Plot
-- Encoding: Like the boxplot, the violin plot uses position on a common scale, but instead of summarizing distribution with quartiles alone, it also shows density estimation on each side of the "violin."
-- Expressiveness: he visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It is also expressive since it displays both distribution shape and statistical summaries. The interactive legend allows users to toggle different music effect categories (Improve, Worsen, No Effect, or all three simultaneously), which allows for easier comparisons to be made.
+- Encoding: Like the boxplot, the violin plot uses position on a common scale, but instead of summarizing distribution with quartiles alone, it also shows density estimation on each side of the "violin." There is also a color hue encoding used to show the categories of music effects, which is a categorical channel representative of qualitative data.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It is also expressive since it displays both distribution shape and statistical summaries. 
 - Effectiveness: It combines the strengths of boxplots (summary statistics) and histograms (distribution density). It is also more compact and interpretable than multiple histograms, making it easier to compare distributions. The UI widget (range slider) allows users to focus on specific genre diversity score ranges, thus improving data exploration.
-- Limitation: The density estimation is based on kernel smoothing, which can sometimes misrepresent sparse data. 
+- Limitation: The density estimation is based on kernel smoothing, which can sometimes misrepresent sparse data.
+- Interactivity: The interactive legend allows users to toggle different music effect categories (Improve, Worsen, No Effect, or all three simultaneously), which allows for easier comparisons to be made.
 
 
 **High Fidelity Sketch**
@@ -269,23 +272,26 @@ The three low-fidelity sketches for Task 3 are as follows:
 1) Scatterplot
 
 - Encoding: Uses position on a common scale, where the vertical axis represents genre diversity scores and the horizontal axis represents mental health scores.
-- Expressiveness: The scatterplot effectively shows relationships between two continuous variables, making it a good method for correlation analysis. The brushing interaction enhances clarity by allowing users to examine specific data points in greater detail.
-- Effectiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It provides an intuitive way to assess trends, clusters, and potential outliers. The brushing interaction also reveals additional details in a table, helping users interpret individual data points. it is well-suited for understanding how genre diversity relates to mental health conditions.
-- Limitations: It can become cluttered if there are too many data points and the correlation trends may not be immediately clear without additional visual aids like trend lines.
+- Expressiveness: The scatterplot effectively shows relationships between two continuous variables, making it a good method for correlation analysis.  Moreover, it adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information.
+- Effectiveness: It provides an intuitive way to assess trends, clusters, and potential outliers and the position on common scale used for the quantitative attributes help with that.
+- Limitations: It can become cluttered if there are too many data points, and the correlation trends may not be immediately clear without additional visual aids like trend lines.
+- Interactivity: The brushing interaction enhances clarity by allowing users to examine specific data points in greater detail.  It also reveals additional details in a table, helping users interpret individual data points. it is well-suited for understanding how genre diversity relates to mental health conditions.
 
 2) Heatmap
 
-- Encoding: Uses area (2D) encoding with shared boundaries, and color encoding to represent correlation strength. A filter dropdown allows the selection of different mental health condition scores.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It clearly communicates correlation values, as colors make it easy to differentiate strong vs. weak correlations.
-- Effectiveness: It quickly conveys overall trends and relationships in a compact space and users can easily compare different mental health condition scores via the filter dropdown. It is also suitable for detecting strong or weak correlations at a glance.
+- Encoding: Uses area (2D) encoding with shared boundaries and color hue encoding to represent correlation strength with correlation text annotation. 
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (area, color hue) directly correspond to the data characteristics without unnecessary information. It clearly communicates correlation values, as color hues make it easy to differentiate strong vs. weak correlations.
+- Effectiveness: It quickly conveys overall trends and relationships in a compact space. The area and color hue are the best channels to encode the information of correlation. 
 - Limitations: It is less effective for detailed individual data exploration and can be misleading if small differences in correlation may not be easily differentiated due to color gradients.
+- Interactivity: Users can easily compare different mental health condition scores via the filter dropdown. It is also suitable for detecting strong or weak correlations at a glance.
   
 3) Dot Plot
 
 - Encoding: Uses position on a common scale (vertical for genre diversity scores, horizontal for mental health scores), with hover interactions to show exact values. A filter dropdown allows selecting the mental health condition score.
-- Expressiveness: Clearly presents individual data points while reducing clutter compared to a scatterplot.
-- Effectiveness: It simplifies the visualization by making each data point distinct. The hover interactions allow users to see exact values without overwhelming the visualization, and the filtering improves clarity by focusing on specific mental health conditions.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the data characteristics without unnecessary information. It clearly presents individual data points while reducing clutter compared to a scatterplot.
+- Effectiveness: The channels used are the most effective as they help simplify the visualization by making each data point distinct.
 - Limitations: It lacks trend lines or density representation, making the overall correlation patterns harder to interpret. It can become difficult to read if there are too many overlapping points.
+- Interactivity:  The hover interactions allow users to see exact values without overwhelming the visualization, and the filtering improves clarity by focusing on specific mental health conditions.
 
 
 **High Fidelity Sketch**
