@@ -303,40 +303,45 @@ I chose the sunburst chart for the high-fidelity sketch because it provides the 
 - The filter dropdown allows users to refine the visualization based on different music effects.
 - Hover tooltips provide exact values without overwhelming the chart visually.
 
+
 ### Jessica's Sketches
 
 **Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
 
-<img src ="../images/jess-sketch-lowfid-1.jpg" width="600px">
+<img src ="../images/jess-lowfid-1.jpg" width="600px">
 
-This sketch of a violin plot may effectively show distributions of each mental health category. Separating by colors allows viewers to easily distinguish between the different categories, but is potentially unnecessary. The bar graph in black may be useful for identifying the medians and IQR. The tool-tip makes it easy for a viewer to retrieve an exact value (for a different task), but may not be good at looking at an overview of the variables shown by the tool-tip.
+*Critique:*
+This each of these sketches effectively show distributions of each mental health category. The violin plot and boxplots can effectively show the medians and IQR. The multi-bar chart can effectively show distribution, but it may be cluttered when looking at them all at once.
 
 **Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
 
-<img src ="../images/jess-sketch-lowfid-2.jpg" width="600px">
+<img src ="../images/jess-lowfid-2.jpg" width="600px">
 
-This sketch effectively conveys exploratory data insights through a histogram and a scatterplot, both of which align with the task of finding extremums (and characterizing distributions). The grouped bar chart/histogram would provide a a clear breakdown of mental health scores, but the colors could be changed to be made colorblind friendly. The scatterplot offers insight into how mental health categories distribute, but the panel may be better separated so the viewer understands that the right and left panels are separate.
+*Critique:*
+These sketches effectively an area graph, scatter plot and dot plot, all of which align with the task of finding extremums (and characterizing distributions). Most or least frequently reported scores can be found on an area graph by looking at peaks and troughs, respectively. In the scatterplot, separating the scores by mental health condition help reduce cognitive load but is poor for comparing two different extremums in different mental health categories. The dot-plot, with size as count, may help easily show the viewer which scores were most or least reported, however, area is known to have poor discriminability in the human visual system, especially when data values are close to each other.
 
 **Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
 
-<img src ="../images/jess-sketch-lowfid-3.jpg" width="600px">
+<img src ="../images/jess-lowfid-3.jpg" width="600px">
 
-This sketch conveys a comparison between music listening habits (e.g. hrs per day) and self-reported mental health, with a scatterplot representing the relationship. However, the filtering options (under the title) could be clearer. The axes labels could be more specific — "Hours Listen per Day" should specify that it's total number of hours. To improve readability, adding shaded areas, colours or density representations would help reveal cluster patterns in the data more effectively.
-
-
-**Find Anomalies - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)**
-
-<img src ="../images/jess-sketch-lowfid-4.jpg" width="600px">
-
-The plot comparing one nominal mental health variable (e.g. anxiety) vs another mental health variable (e.g. OCD) may be interesting and effective at identifying outliers, such as people with low anxiety and high OCD (since [OCD is an anxiety disorder](https://www.hopkinsmedicine.org/health/conditions-and-diseases/obsessivecompulsive-disorder-ocd)). This sketch does not have a legend for size of circles, which should be added to improve expressiveness. However, area is known to have poor effectiveness when it comes to human visualization.
+*Critique:*
+The scatterplot, circle packing chart, and bubble chart can help identify clusters of people based on music preferences. Each chart can compare a mental health category and a separate variable of interest, but is poor at looking at other variables may interact. To improve readability, we could add colours or density representations to help reveal cluster patterns in the data more effectively.
 
 
 **High Fidelity Sketch**
 
-<img src ="../images/jess-sketch-highfid-b.jpg" width="600px">
-<img src ="../images/jess-sketch-highfid-a.jpg" width="600px">
+<img src ="../images/jess-highfid-1.jpg" width="600px">
+
+This high fidelity sketch of a violin plot adheres to the principles of visual design we learnt in class by using area/density and boxplots to express distributions of each score. The vis utilizes pop-outs by making the median red. A tooltip can help display exact distribution information, such as mean, median, mode, SD and IQR. Allowing the user to interact with the vis by selecting violin or boxplot or both can help viewers by creating a cleaner, less dense visualization.
+
+
+<img src ="../images/jess-highfid-2a.jpg" width="500px"> <img src ="../images/jess-highfid-2b.jpg" width="500px">
 
 My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
+
+<img src ="../images/jess-highfid-3.jpg" width="600px">
+
+This high fidelity sketch adheres to the principles of visual design we learnt in class by using a scatter-plot to express two different self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures accuracy through different color saturations to account for the music listened BPM. Dark points will show outliers. An option to have size as count may help identify clusters.
 
 
 ## Next Steps (~250 words)
@@ -348,7 +353,6 @@ Proposed timeline:
 | Task                                              | Date                  | Assignee               |
 |---------------------------------------------------|-----------------------|------------------------|
 | Implement feedback from PM2                       | ASAP                  | Applicable members     |
-| Attend OH for advice for A+ project               | Wed Mar 12, 12:30-2pm | ???                    |
 | Create 1st visualizations                         | Fri Mar 14            | all                    |
 | Check-in Discord Meeting                          | Fri Mar 14, evening   | all                    |
 | Create 2nd visualizations                         | Sat Mar 15            | all                    |
