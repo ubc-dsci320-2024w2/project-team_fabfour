@@ -618,3 +618,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,visualstudio,python,jupyternotebooks,macos,windows,linux
+report/Untitled.ipynb
+report/Temp.ipynb
+images/Allison_low_fidelity_task_4.png
