@@ -1,5 +1,4 @@
 ## Introduction
-
 ### *Dataset Overview*
 The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results/data) comes from Kaggle and was compiled by Catherine Rasgaitis based on a survey about music-listening habits and their connection to mental health that respondents filled out via Google Forms. The form was posted on different social media platforms such as Reddit and Discord. The dataset has a CC0: Public Domain license and consists of 737 rows and 33 columns.
 
@@ -8,6 +7,8 @@ Our team is FabFour, consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee
 ### *Team Members & Our Interest in the Data*
 Allison is currently a Bachelor of Computer Science (BCS) student interested in machine learning, data science, and artificial intelligence. Coming from a background in biology with a minor in psychology, she has a strong foundation in cognition and positive psychology—both of which explored the positive impact of music on mental health.  Her interest in the Music and Mental Health dataset stems from her passion for understanding how music influences emotional well-being and how it can uplift individuals from languishing to flourishing.
 
+Helena is also a Bachelor of Computer Science (BCS) student and data science minor. During her time as a medical researcher (genetics, molecular/cell biology, cancer/microbiome/organoid research), she also began following mental health research due to personal interest. She has recently become aware of a study finding that individuals with depression gravitate towards sad music. This poses the question: do depressed individuals perpetuate their depression via their listening habits? She is interested to see if other mental illnesses are also associated with specific music tastes.
+
 Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI). She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health. As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being. The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
 
 As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health. She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music. When Jessica was a Crisis Line Volunteer supporting callers with mental health challenges, she heard from many help-seekers that music was something people turned to when they felt anxious, stressed, depressed, restless or lonely.
@@ -15,7 +16,8 @@ As a Behavioural Neuroscience student, Jessica is interested in any topic in the
 ### *Intended Audience*
 Our intended audience includes individuals who are passionate about music or mental health, such as music enthusiasts, mental health professionals, and researchers interested in the intersection of the two fields. Since this dataset allows for the visual exploration of how different music genres correlate with mental health conditions like anxiety and depression, we aim to provide valuable insights through data visualizations. These insights will help people better understand how music influences emotional well-being and overall mental health.
 
-## About the Data
+
+## About the Data (no limit)
 
 ### Data Abstraction
 | Attribute Name            | Attribute Type   | Data Semantics                                                    | Cardinality        |
@@ -42,7 +44,7 @@ Our intended audience includes individuals who are passionate about music or men
 ### Exploratory Data Analysis
 All four of our group's individual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
 
-## Research Questions
+## Research Questions (~500 words)
 
 **Allison**'s research questions are,
 **"What is the impact of the respondent's age on their survey responses?"**
@@ -57,11 +59,6 @@ Some sub-research questions worth exploring would be:
 - Are individuals who listen to a variety of music genres more likely to report that music improves their well-being compared to those with low diversity, regardless of their favorite genre?
 - Do individuals with different mental health conditions (anxiety, depression, insomnia, OCD) tend to have distinct music preferences?
 
-**Helena**'s research question is, 
-**What is the relationship between specific mental illnesses and listening habits?**
-- Are any mental illnesses associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.)?
-
-
 **Jessica**'s research question is, 
 **"How does response bias play a role in self-reporting mental health severity?"**
 
@@ -73,60 +70,34 @@ Further questions worth exploring might be:
 The visualization may be a dashboard with interactions, or SPLOM with outlier points that are linked bi-directionally to other visualizations.
 
 
-## Task Analysis
+## Task Analysis (~500 words)
 
-### Judy: How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?
+**Retrieve value** - favourite music genres across different age groups for individuals with high anxiety, high depression, high OCD, or high insomnia.
 
-**Attributes:** genre diversity score, fav genre, anxiety score, depression score, insomnia score, OCD score, frequency[rock], music effects.
+**Filter** - Filter by high, medium, low mental health scores (Anxiety_Level, Depression_Level, Insomnia_Level, or OCD_Level) and view their association with musical hobbies.
 
-**Tasks:**
-- **Characterize distribution** – What is the distribution of depression scores based on the frequency of listening to Rock music?
-- **Determine Range** – What is the range of genre diversity scores among individuals who report that music improves their well-being?
-- **Correlate** – Is there a correlation between genre diversity scores and self-reported mental health scores?
-- **Find Extremum** – Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
+**Compute Derived Value** - Calculate the average age for individuals with each favourite genre in the filtered high-mental-health-score group.
 
-### Allison: Does age influence the relationship between music genre preferences and mental health scores?
+**Determine Range** - Find the range of ages reporting high mental health scores for each condition.
+Who were the youngest and the oldest participants? Are there any overarching patterns
 
-**Attributes:** age, anxiety score, depression score, insomnia score, OCD score, fav genre, instrumentalist, composer, music effect.
+**Characterize distribution** - What is the distribution of depression scores based on the frequency of listening to Rock music?
 
-**Tasks:**
-- **Retrieve value** – Favourite music genres across different age groups for individuals with high anxiety, high depression, high OCD, or high insomnia.
-    - Determine what music genres are preferred by those who experience higher reported mental health scores for different age categories (Are there commonalities/differences?)
-- **Filter** – Filter by high, medium, low mental health scores (Anxiety_Level, Depression_Level, Insomnia_Level, or OCD_Level) and view their association with musical hobbies.
-    - For each level (high, medium, low), how does each age group interact with music? Are there tendencies that are shared or that differ?
-- **Compute Derived Value** – Calculate the average age for individuals with each favourite genre in the filtered high-mental-health-score group.
-    - What age group prefers each genre? Are there similarities in age between similar genres?
-- **Determine Range** – Find the range of ages reporting high mental health scores for each condition.
-    - Who were the youngest and the oldest participants? Are there any overarching patterns?
+**Characterize Distribution** - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
 
-### Jessica: How does response bias play a role in self-reported mental health?
-- What are the patterns and anomalies in self-reported mental health severities?
-- How do demographics (eg. mental illness), music listening habits contribute to biased self-reporting?
-- Are there any reasons for extreme/invalid response values that can be identified based on other responses?
-- How do illogical, invalid responses influence data reliability?
+**Determine Range** - What is the range of genre diversity scores among individuals who report that music improves their well-being?
 
-**Attributes:** anxiety score, depression score, insomnia score, OCD score, improves mental health.
+**Correlate** - Is there a correlation between genre diversity scores and self-reported mental health scores?
 
-**Tasks:**
-- **Characterize Distribution** – What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
-    - Distributions could be different for those who believe music does vs does not improve mental health.
-- **Find Extremum** – What are the most and least frequently reported mental health severity scores?
-    - Most frequent reported mental health severity scores might reflect response biases.
-- **Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
-    - Clusters of groups may be indicative of relationships.
-- **Find Anomalies** – Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)?
-    - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
+**Find Extremum** - Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
 
-### Helena: What is the relationship between specific mental illnesses and listening habits?
+**Find Extremum** - "What are the most and least frequently reported mental health severity scores?"
+  - Most frequently reported mental health severity scores might reflect response biases.
 
-**Attributes:** Non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, and Foreign languages), frequency of each genre, favourite genre, and mental illness severity (Anxiety, Depression, Insomnia, OCD).
+**Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
+  - Clusters of groups may be indicative of relationships.
 
-**Tasks:**
-- **Correlate** – How is the severity of each mental illness associated with listening frequency to each genre?
-- **Compute Derived Value** – Among individuals with each favourite genre, what is the severity of each mental illness?
-- **Find Anomalies** – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?
-- **Characterize Distribution** – How do the distributions of mental illness severities differ across non-genre music habits?
-
+---
 ## Preliminary Sketches
 
 ### Allison's Sketches
@@ -351,22 +322,24 @@ The three low-fidelity sketches for Task 4 are as follows:
 
 - Encoding: Uses polar position encoding (angular position for genres and radial distance for proportions), with color distinguishing different genres.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It also shows hierarchical relationships and proportions using the magnitude channels.
-- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
+- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. However, the polar position channel being used might not be the most effective since it can be hard to read values, but since tooltips are included in this visualization, it could help mitigate that.
 - Limitations: It can become cluttered with too many categories, and it is not ideal for precise comparisons between genre proportions.
+- Interactivity: The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
 
 2) Stacked Bar Chart
 
-- Encoding: Uses position on a common scale, with bars representing favorite genres and segments within each bar showing proportions of self-reported music effects.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
-- Effectiveness: It allows easy comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
+- Encoding: Uses position on a common scale, with horizontal axis representing favorite genres and vertical axis showing proportions of self-reported music effects. The color hue channel is also used to distinguish between the levels of music effects.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
+- Effectiveness: The channels used are effective since color hue clearly distinguishes the categories of music effects, and the position channel enables us to read the quantitative values well. Thus, we can easily make comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
 - Limitations: It can become visually complex if there are too many genres, and it is less interactive compared to the sunburst chart.
 
 3) Heatmap
 
-- Encoding: Uses area (2D) as encoding with shared boundaries and color encoding representing the count of individuals.
+- Encoding: Uses area (2D) as encoding with shared boundaries and color hue and saturation encoding representing the count of individuals.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the dataset’s characteristics without unnecessary information. It shows the relationship between favorite genre and self-reported music effects.
-- Effectiveness: It is easy to compare across multiple genres at once. The hover tooltips also help view the counts. 
+- Effectiveness: It is easy to compare across multiple genres at once since the color hue and saturation channel is effective at helping us distinguish the counts and see which values are higher at first glance (darker color saturation). 
 - Limitations: It is less intuitive than bar charts or sunburst charts for understanding proportions and requires a good color scheme to ensure readability.
+- Interactivity: The hover tooltips help view the counts easily. 
 
 
 **High Fidelity Sketch**
@@ -451,7 +424,7 @@ The first matrix shows the severity:Q/O (y) by the bins of each habit:Q/N/O (x) 
 
 The first histogram matrix shows the count (y) by the bins of each habit:Q/N/O (x), encodes mental illness severity as colour luminance, and facets by mental illness:N (row) and habit (column). Many habit variables are not continuous (N/O), thus plotting the distribution of these variables is not ideal. The second visualization swaps the encodings for habit bins and severity (x<->colour), and changes the habit variable from facets to a dropdown. Colouring by the bins of each habit (N variable: colour hue, Q/O variable: colour luminance) will work for discrete and continuous (eg. hours per day) habit variables. The third histogram matrix keeps the habit variable as a dropdown, and facets by mental illness:N (row) and bins of each habit:Q/N/O (column). However, faceting by the bins of each habit will not work for quantitative habit variables such as hours per day. Thus, I am selecting the second visualization for the high-fidelity sketch.
 
-## Next Steps
+## Next Steps (~250 words)
 
 To achieve an A-grade project, our group will follow the structured timeline (below).
 The plan is broken down into actionable steps with deadlines and assigned responsibilities.
@@ -491,3 +464,6 @@ My contributions included writing my portions of the introductory and analysis R
  
  ### Jessica
 My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
+ 
+
+ 
