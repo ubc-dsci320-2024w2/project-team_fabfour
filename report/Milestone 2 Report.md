@@ -51,15 +51,20 @@ All four of our group's individual exploratory data analysis can be found under 
 - Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
 - How Does Age Influence the Relationship Between Music Engagement and Mental Health Outcomes? Examine how different forms of music engagement (e.g., instrumentalist, composer) correlate with mental health outcomes across various age groups. Do those who engage with music in more dimensions (e.g. composer or musician) form distinct groups?
 
-**Judy**'s research question is,
-**"How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?"**. 
+Helena’s Research Question is, 
+**Association between mental illnesses and music habits: Are any mental illnesses associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.)?**
+and some other questions that could be;
+- Are specific listening habits (eg. specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.) associated with improvement or worsening of specific mental health conditions?
+- Are musicians/composers associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.) or mental illnesses?
 
+Judy's research question is,
+**How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?**
 Some sub-research questions worth exploring would be:
 - Are there specific favorite genres that are more commonly associated with positive or negative perceived effects of music on well-being?
 - Are individuals who listen to a variety of music genres more likely to report that music improves their well-being compared to those with low diversity, regardless of their favorite genre?
 - Do individuals with different mental health conditions (anxiety, depression, insomnia, OCD) tend to have distinct music preferences?
 
-**Jessica**'s research question is, 
+Jessica's research question is, 
 **"How does response bias play a role in self-reporting mental health severity?"**
 
 Further questions worth exploring might be:
@@ -96,6 +101,26 @@ Who were the youngest and the oldest participants? Are there any overarching pat
 
 **Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
   - Clusters of groups may be indicative of relationships.
+
+**Find Anomalies** - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)
+  - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
+
+**Retrieve value: What is the most commonly reported favourite genre for specific age groups for those with high mental health conditions scores**
+- For those with high scores, there may be age-related differences in music genre preferences
+
+**Compute derived value: What is the average age associated with each favourite genre?**
+- Understanding the average age associated with each favorite genre helps identify generational trends in music preferences. 
+
+**Determine range: Find range of ages reporting high mental health scores for each condition**
+- Broader or narrower ranges can express how self-reported mental health conditions vary across age groups and may align with trends showing that younger generations are more likely to rate their mental health as more severe [APA, 2019](https://www.apa.org/monitor/2019/01/gen-z).
+
+**Correlate – How is the severity of each mental illness associated with listening frequency to each genre?** 
+
+**Compute Derived Value – Among individuals with each favourite genre, what is the severity of each mental illness?** 
+
+**Find Anomalies – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?**
+
+**Characterize Distribution – How do the distributions of mental illness severities differ across non-genre music habits?**
 
 ---
 ## Preliminary Sketches
