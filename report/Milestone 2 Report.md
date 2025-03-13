@@ -7,6 +7,8 @@ Our team is FabFour, consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee
 ### *Team Members & Our Interest in the Data*
 Allison is currently a Bachelor of Computer Science (BCS) student interested in machine learning, data science, and artificial intelligence. Coming from a background in biology with a minor in psychology, she has a strong foundation in cognition and positive psychology—both of which explored the positive impact of music on mental health.  Her interest in the Music and Mental Health dataset stems from her passion for understanding how music influences emotional well-being and how it can uplift individuals from languishing to flourishing.
 
+Helena is also a Bachelor of Computer Science (BCS) student and data science minor. During her time as a medical researcher (genetics, molecular/cell biology, cancer/microbiome/organoid research), she also began following mental health research due to personal interest. She has recently become aware of a study finding that individuals with depression gravitate towards sad music. This poses the question: do depressed individuals perpetuate their depression via their listening habits? She is interested to see if other mental illnesses are also associated with specific music tastes.
+
 Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI). She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health. As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being. The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
 
 As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health. She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music. When Jessica was a Crisis Line Volunteer supporting callers with mental health challenges, she heard from many help-seekers that music was something people turned to when they felt anxious, stressed, depressed, restless or lonely.
@@ -320,22 +322,24 @@ The three low-fidelity sketches for Task 4 are as follows:
 
 - Encoding: Uses polar position encoding (angular position for genres and radial distance for proportions), with color distinguishing different genres.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It also shows hierarchical relationships and proportions using the magnitude channels.
-- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
+- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. However, the polar position channel being used might not be the most effective since it can be hard to read values, but since tooltips are included in this visualization, it could help mitigate that.
 - Limitations: It can become cluttered with too many categories, and it is not ideal for precise comparisons between genre proportions.
+- Interactivity: The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
 
 2) Stacked Bar Chart
 
-- Encoding: Uses position on a common scale, with bars representing favorite genres and segments within each bar showing proportions of self-reported music effects.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
-- Effectiveness: It allows easy comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
+- Encoding: Uses position on a common scale, with horizontal axis representing favorite genres and vertical axis showing proportions of self-reported music effects. The color hue channel is also used to distinguish between the levels of music effects.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
+- Effectiveness: The channels used are effective since color hue clearly distinguishes the categories of music effects, and the position channel enables us to read the quantitative values well. Thus, we can easily make comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
 - Limitations: It can become visually complex if there are too many genres, and it is less interactive compared to the sunburst chart.
 
 3) Heatmap
 
-- Encoding: Uses area (2D) as encoding with shared boundaries and color encoding representing the count of individuals.
+- Encoding: Uses area (2D) as encoding with shared boundaries and color hue and saturation encoding representing the count of individuals.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the dataset’s characteristics without unnecessary information. It shows the relationship between favorite genre and self-reported music effects.
-- Effectiveness: It is easy to compare across multiple genres at once. The hover tooltips also help view the counts. 
+- Effectiveness: It is easy to compare across multiple genres at once since the color hue and saturation channel is effective at helping us distinguish the counts and see which values are higher at first glance (darker color saturation). 
 - Limitations: It is less intuitive than bar charts or sunburst charts for understanding proportions and requires a good color scheme to ensure readability.
+- Interactivity: The hover tooltips help view the counts easily. 
 
 
 **High Fidelity Sketch**
