@@ -93,6 +93,14 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 **Determine range: Find range of ages reporting high mental health scores for each condition**
 - Broader or narrower ranges can express how self-reported mental health conditions vary across age groups and may align with trends showing that younger generations are more likely to rate their mental health as more severe [APA, 2019](https://www.apa.org/monitor/2019/01/gen-z).
 
+**Correlate – How is the severity of each mental illness associated with listening frequency to each genre?** 
+
+**Compute Derived Value – Among individuals with each favourite genre, what is the severity of each mental illness?** 
+
+**Find Anomalies – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?**
+
+**Characterize Distribution – How do the distributions of mental illness severities differ across non-genre music habits?**
+
 ## Preliminary Sketches (~250 words)
 
 ### Allison's Sketches
