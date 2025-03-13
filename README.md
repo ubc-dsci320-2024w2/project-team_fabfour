@@ -30,7 +30,7 @@ she heard from many help-seekers that music was something people turned to when 
 ## Team Members
 
 - Person 1: Allison is a 2nd-year (+6 other years...) computer science student in the BCS program who loves a 10 pm bubble tea :sparkles: :bear:
-- Person 2: one sentence about you!
+- Person 2: Helena is a BCS student who is interested in the brain 🤓
 - Person 3: Judy is a 5th-year student majoring in Computer Science and minoring in Data Science. She is also a full-time matcha girlie! 🍵💚
 - Person 4: Jessica is a 5th-year student majoring in Behavioural Neuroscience + minoring in Data Science and always enjoys a late night sweet treat 🍫🌙
 
