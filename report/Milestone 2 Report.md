@@ -1,12 +1,14 @@
 ## Introduction
 
 ### *Dataset Overview*
-The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results/data) comes from Kaggle and was compiled by Catherine Rasgaitis based on a survey about music-listening habits and their connection to mental health that respondents filled out via Google Forms. The form was posted on different social media platforms such as Reddit and Discord. The dataset has a CC0: Public Domain license and consists of 737 rows and 33 columns.
+The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results/data) comes from Kaggle and was compiled by Catherine Rasgaitis. These data were collected via a survey about music listening habits and their connection to mental health, that respondents filled out via Google Forms. The form was posted on different social media platforms such as Reddit and Discord. Posters and cards were distributed to advertise the survey in libraries, parks, and other public locations. The dataset has a CC0: Public Domain license. Overall, the dataset contains 737 participants (rows) and 33 variables (columns). See Data Abstraction below for all the dataset variables. This dataset consists of self-reported data, thus the reliability of the data cannot be confirmed.
 
-Our team is FabFour, consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee, and Jessica Luo. 
+Our team is **The Fab Four**: consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee, and Jessica Luo. 
 
 ### *Team Members & Our Interest in the Data*
 Allison is currently a Bachelor of Computer Science (BCS) student interested in machine learning, data science, and artificial intelligence. Coming from a background in biology with a minor in psychology, she has a strong foundation in cognition and positive psychology—both of which explored the positive impact of music on mental health.  Her interest in the Music and Mental Health dataset stems from her passion for understanding how music influences emotional well-being and how it can uplift individuals from languishing to flourishing.
+
+Helena is also a Bachelor of Computer Science (BCS) student and data science minor. During her time as a medical researcher (genetics, molecular/cell biology, cancer/microbiome/organoid research), she also began following mental health research due to personal interest. She has recently become aware of a study finding that individuals with depression gravitate towards sad music. This poses the question: do depressed individuals perpetuate their depression via their listening habits? She is interested to see if other mental illnesses are also associated with specific music tastes.
 
 Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI). She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health. As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being. The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
 
@@ -44,25 +46,21 @@ All four of our group's individual exploratory data analysis can be found under 
 
 ## Research Questions
 
-**Allison**'s research questions are,
-**"What is the impact of the respondent's age on their survey responses?"**
+**Allison's** research question is: **What is the impact of the respondent's age on their survey responses?**
 - Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
 - How Does Age Influence the Relationship Between Music Engagement and Mental Health Outcomes? Examine how different forms of music engagement (e.g., instrumentalist, composer) correlate with mental health outcomes across various age groups. Do those who engage with music in more dimensions (e.g. composer or musician) form distinct groups?
 
-**Judy**'s research question is,
-**"How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?"**. 
+**Judy's** research question is: **How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?**
 
 Some sub-research questions worth exploring would be:
 - Are there specific favorite genres that are more commonly associated with positive or negative perceived effects of music on well-being?
 - Are individuals who listen to a variety of music genres more likely to report that music improves their well-being compared to those with low diversity, regardless of their favorite genre?
 - Do individuals with different mental health conditions (anxiety, depression, insomnia, OCD) tend to have distinct music preferences?
 
-**Helena**'s research question is, 
-**What is the relationship between specific mental illnesses and listening habits?**
+**Helena's** research question is: **What is the relationship between specific mental illnesses and listening habits?**
 - Are any mental illnesses associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.)?
 
-**Jessica**'s research question is, 
-**"How does response bias play a role in self-reporting mental health severity?"**
+**Jessica's** research question is: **How does response bias play a role in self-reporting mental health severity?**
 
 Further questions worth exploring might be:
 - What are the patterns and anomalies in self-reported mental health severities?
@@ -432,30 +430,52 @@ This high-fidelity sketch adheres to the principles of visual design we learnt i
 
 The first boxplot matrix shows the severity:Q/O (y) by listening frequency:O (x) and facets by mental illness:N (row) and genre:N (column). Instead of faceting by row, the second visualization encodes each mental illness:N as colour hue. This appears cluttered on the x-axis and makes it difficult to compare severity across frequency (as boxplots are grouped by listening frequency). We can also decide to encode listening frequency:O as colour luminance instead of mental illness:N, so it is easier to compare severity across frequency (as boxplots are grouped by mental illness). Still, having boxplots for every mental illness and listening frequency on the x-axis creates a cluttered appearance. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and listening frequency:O (x), and faceting by illness:N (row) and genre:N (column). It does not seem essential to plot/distinguish all 12 severities (0-10) on the y-axis, so stratifying severity (used to be Q) into low/medium/high categories makes sense. However, heatmaps are more suited to finding anomalies, as colour luminance is a poor quantitative encoding. The fourth bar plot matrix shows the average(severity:Q) (y) by listening frequency:O (x) and facets by mental illness:N (row) and genre:N (column). Using the metric average(severity:Q/O) (y) by listening frequency:O does not allow us to see the distribution of severity, but this is not feasible regardless since severity is not a continuous variable. Since we are looking at the correlation between genre listening frequency and mental health severity, it seems preferable to leave severity as a quantitative variable (average severity) rather than stratifying it to an ordinal variable and showing the count in each category as in the third heatmap. Thus I will select the fourth bar plot matrix for my high-fidelity sketch.
 
+<img src ="../images/Helena_Correlate_Hifi.jpg" width="400px">
+
+In the high-fidelity sketch, I replaced faceting by genre (column) to a dropdown for the user to select the genre. This is because the research question prioritizes correlating mental illness severity and listening frequency of a genre, instead of comparing across genres. I also double-encode listening frequency as both x and colour luminance to emphasize that the variable is ordinal.
+
+---
+
 <img src ="../images/Helena_Compute_Derived_Value_Lofi.jpg" width="600px">
 
 **Compute Derived Value – Among individuals with each favourite genre, what is the severity of each mental illness?**
 
 The first visualization shows the severity:Q/O (y) by mental illness:N (x) and facets the boxplots by favourite genre:N (column). The second visualization moves the favourite genre:N from facets into the x-axis, and encodes mental illness as the colour hue. The boxplots appear too crowded on the x-axis, and it is difficult to compare severity across favourite genres (as boxplots are grouped by favourite genre). Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third visualization stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and mental illness:N (x), and faceting the heatmaps by favourite genre:N (row). It does not seem essential to plot/distinguish all 12 severities (0-10) on the y-axis, so stratifying severity (used to be Q) into low/medium/high categories makes sense. However, heatmaps are more suited to finding anomalies, as colour luminance is a poor quantitative encoding. The fourth visualization also utilizes stratified severity, showing the count (y) of individuals with each severity:O (colour luminance) of each mental illness:N (x) and faceting each stacked bar plot by favourite genre:N (row). The fifth visualization shows the average(severity:Q) (y) by favourite genre (x) and facets by mental illness:N (column). Using the metric average(severity:Q) (y) does not allow us to see the distribution of severity, but this is not feasible regardless since severity is not a continuous variable. Since we are looking at deriving the mental health severity, it seems preferable to leave severity as a quantitative variable (average severity) rather than stratifying it to an ordinal variable and showing the count in each category as in the third heatmap. Thus I will select the fifth visualization for my high-fidelity sketch.
 
+<img src ="../images/Helena_Compute_Hifi.jpg" width="300px">
+
+In the high-fidelity sketch, I replaced faceting by favourite genre (column) to a dropdown for the user to select the favourite genre. This is because the research question prioritizes computing mental illness severity in individuals within each favourite genre, instead of comparing across genres. I moved mental illness from facets (row) to colour hue of bars in a single plot, as this aids comparison of severity across mental illnesses. I also utilized a colourblind-friendly colour palette.
+
+---
+
 <img src ="../images/Helena_Find_Anomalies_Lofi.jpg" width="600px">
 
 **Find Anomalies – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?**
 
-The first matrix shows the severity:Q/O (y) by the bins of each habit:Q/N/O (x) and facets the plots by mental illness:N (row) and habit:N (column). Using points on continuous x/y axes allows us to draw different plot types (boxplots/scatterplots) for each type of habit variable (Q/N/O). The second visualization moves the mental illness:N from facets into colour hue, however the boxplots appear too crowded on the x-axis. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and category of habit:Q/N/O, and faceting the heatmaps by mental illness:N (row) and habit (column). This is not ideal since some habits are quantitative variables, so the x/luminance encodings will have to change based on the type of each variable. The fourth visualization replaces the boxplots/scatterplots of the first matrix to bar plots that show average(severity), as a severity distribution is not possible given it is not a continuous variable. Continuous habit variables are binned along the x-axis. This visualization appears the most suited to juxtapose the results since the plot type/encodings do not change with each type of habit variable as in the first and third matrices, thus I will select it for the high-fidelity sketch.
+The first matrix shows the severity:Q/O (y) by the bins of each habit:Q/N/O (x) and facets the plots by mental illness:N (row) and habit:N (column). Using points on continuous x/y axes allows us to draw different plot types (boxplots/scatterplots) for each type of habit variable (Q/N/O). The second visualization moves the mental illness:N from facets into colour hue, however the boxplots appear too crowded on the x-axis. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and category of habit:Q/N/O, and faceting the heatmaps by mental illness:N (row) and habit (column). This is not ideal since some habits are quantitative variables, so the x/luminance encodings will have to change based on the type of each variable. The fourth visualization replaces the boxplots/scatterplots of the first matrix to bar plots that show average(severity), as a severity distribution is not possible given it is not a continuous variable. Continuous habit variables are binned along the x-axis. This visualization appears the most suited to juxtapose the results since the plot type/encodings do not change with each type of habit variable as in the first and third matrices. However, using the metric of average mental illness severity does not seem suited to identifying anomalies, as the mean obscures outliers.
+
+<img src ="../images/Helena_Find_Anomalies_Hifi.jpg" width="600px">
+
+In the high-fidelity sketch, I decided to change the format entirely. I made a bubble plot comparing the count (size) of individuals at each intersection of mental illness severity (y) and habit variable categories (x), and the user can select the mental illness and habit variable via dropdowns. I chose a bubble plot since size is an efficient encoding (better than colour) to find anomalies in the relationships between mental illness severity and listening habits.
+
+---
 
 <img src ="../images/Helena_Characterize_Distribution_Lofi.jpg" width="600px">
 
 **Characterize Distribution – How do the distributions of mental illness severities differ across non-genre music habits?**
 
-The first histogram matrix shows the count (y) by the bins of each habit:Q/N/O (x), encodes mental illness severity as colour luminance, and facets by mental illness:N (row) and habit (column). Many habit variables are not continuous (N/O), thus plotting the distribution of these variables is not ideal. The second visualization swaps the encodings for habit bins and severity (x<->colour), and changes the habit variable from facets to a dropdown. Colouring by the bins of each habit (N variable: colour hue, Q/O variable: colour luminance) will work for discrete and continuous (eg. hours per day) habit variables. The third histogram matrix keeps the habit variable as a dropdown, and facets by mental illness:N (row) and bins of each habit:Q/N/O (column). However, faceting by the bins of each habit will not work for quantitative habit variables such as hours per day. Thus, I am selecting the second visualization for the high-fidelity sketch.
+The first histogram matrix shows the count (y) by the bins of each habit:Q/N/O (x), encodes mental illness severity as colour luminance, and facets by mental illness:N (row) and habit (column). Many habit variables are not continuous (N/O), thus plotting the distribution of these variables is not ideal. The second visualization swaps the encodings for habit bins and severity (x<->colour), and changes the habit variable from facets to a dropdown. Colouring by the bins of each habit (N variable: colour hue, Q/O variable: colour luminance) will work for discrete and continuous (eg. hours/day) habit variables. The third histogram matrix keeps the habit variable as a dropdown, and facets by mental illness:N (row) and bins of each habit:Q/N/O (column). However, faceting by the bins of each habit will not work for quantitative habit variables such as hours per day. Thus, I am selecting the second visualization for the high-fidelity sketch.
+
+<img src ="../images/Helena_Characterize_Distribution_Hifi.jpg" width="400px">
+
+In the high-fidelity sketch, I kept the same format as the low-fidelity sketch, but used this opportunity to draw an example of distributions for a continuous habit variable (eg. hours/day). Continuous ordinal variables will be split into 4-6 bins (to avoid using too many colours) and represented by single-colour (eg. blue) luminance. Discrete nominal variables will continue to be represented by different colourblind-friendly hues.
 
 ## Next Steps
 
-To achieve an A-grade project, our group will follow the structured timeline (below).
-The plan is broken down into actionable steps with deadlines and assigned responsibilities.
+### *Action Plan*
 
-Proposed timeline:
+To achieve an A-grade project, our group will follow the structured timeline (below). The plan is broken down into actionable steps with deadlines and assigned responsibilities.
+
 | Task                                              | Date                  | Assignee               |
 |---------------------------------------------------|-----------------------|------------------------|
 | Implement feedback from PM2                       | ASAP                  | Applicable members     |
@@ -467,7 +487,7 @@ Proposed timeline:
 | Check-in Discord Meeting                          | Wed Mar 19, evening   | all                    |
 | Finalize individual vis + written sections        | Wed Mar 19            | all                    |
 | Look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
-| adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
+| Adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
 | Finalize contracted grade                         | Sun Mar 23            | all                    |
 | Create and publish website                        | Sun Mar 23            | Jess                   |
 
