@@ -320,22 +320,24 @@ The three low-fidelity sketches for Task 4 are as follows:
 
 - Encoding: Uses polar position encoding (angular position for genres and radial distance for proportions), with color distinguishing different genres.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It also shows hierarchical relationships and proportions using the magnitude channels.
-- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
+- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. However, the polar position channel being used might not be the most effective since it can be hard to read values, but since tooltips are included in this visualization, it could help mitigate that.
 - Limitations: It can become cluttered with too many categories, and it is not ideal for precise comparisons between genre proportions.
+- Interactivity: The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
 
 2) Stacked Bar Chart
 
-- Encoding: Uses position on a common scale, with bars representing favorite genres and segments within each bar showing proportions of self-reported music effects.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
-- Effectiveness: It allows easy comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
+- Encoding: Uses position on a common scale, with horizontal axis representing favorite genres and vertical axis showing proportions of self-reported music effects. The color hue channel is also used to distinguish between the levels of music effects.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
+- Effectiveness: The channels used are effective since color hue clearly distinguishes the categories of music effects, and the position channel enables us to read the quantitative values well. Thus, we can easily make comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
 - Limitations: It can become visually complex if there are too many genres, and it is less interactive compared to the sunburst chart.
 
 3) Heatmap
 
-- Encoding: Uses area (2D) as encoding with shared boundaries and color encoding representing the count of individuals.
+- Encoding: Uses area (2D) as encoding with shared boundaries and color hue and saturation encoding representing the count of individuals.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the dataset’s characteristics without unnecessary information. It shows the relationship between favorite genre and self-reported music effects.
-- Effectiveness: It is easy to compare across multiple genres at once. The hover tooltips also help view the counts. 
+- Effectiveness: It is easy to compare across multiple genres at once since the color hue and saturation channel is effective at helping us distinguish the counts and see which values are higher at first glance (darker color saturation). 
 - Limitations: It is less intuitive than bar charts or sunburst charts for understanding proportions and requires a good color scheme to ensure readability.
+- Interactivity: The hover tooltips help view the counts easily. 
 
 
 **High Fidelity Sketch**
