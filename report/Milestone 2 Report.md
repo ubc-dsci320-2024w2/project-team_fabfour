@@ -96,7 +96,7 @@ Who were the youngest and the oldest participants? Are there any overarching pat
   - Clusters of groups may be indicative of relationships.
 
 ---
-## Preliminary Sketches (~250 words)
+## Preliminary Sketches
 
 ### Allison's Sketches
 **Retrieve value: What is the most commonly reported favourite genre for specific age groups**
@@ -392,6 +392,34 @@ The scatterplot, circle packing chart, and bubble chart can help identify cluste
 This high-fidelity sketch adheres to the principles of visual design we learnt in class by using a scatter-plot to express two different self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures accuracy through different color saturations to account for the music listened BPM. Dark points will show outliers. An option to have size as count may help identify clusters.
 
 ---
+### Helena’s Sketches:
+
+**What is the relationship between specific mental illnesses and listening habits?**
+
+<img src ="../images/Helena_Correlate_Lofi.jpg" width="600px">
+
+**Correlate – How is the severity of each mental illness associated with listening frequency to each genre?**
+
+The first boxplot matrix shows the severity:Q/O (y) by listening frequency:O (x) and facets by mental illness:N (row) and genre:N (column). Instead of faceting by row, the second visualization encodes each mental illness:N as colour hue. This appears cluttered on the x-axis and makes it difficult to compare severity across frequency (as boxplots are grouped by listening frequency). We can also decide to encode listening frequency:O as colour luminance instead of mental illness:N, so it is easier to compare severity across frequency (as boxplots are grouped by mental illness). Still, having boxplots for every mental illness and listening frequency on the x-axis creates a cluttered appearance. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and listening frequency:O (x), and faceting by illness:N (row) and genre:N (column). It does not seem essential to plot/distinguish all 12 severities (0-10) on the y-axis, so stratifying severity (used to be Q) into low/medium/high categories makes sense. However, heatmaps are more suited to finding anomalies, as colour luminance is a poor quantitative encoding. The fourth bar plot matrix shows the average(severity:Q) (y) by listening frequency:O (x) and facets by mental illness:N (row) and genre:N (column). Using the metric average(severity:Q/O) (y) by listening frequency:O does not allow us to see the distribution of severity, but this is not feasible regardless since severity is not a continuous variable. Since we are looking at the correlation between genre listening frequency and mental health severity, it seems preferable to leave severity as a quantitative variable (average severity) rather than stratifying it to an ordinal variable and showing the count in each category as in the third heatmap. Thus I will select the fourth bar plot matrix for my high-fidelity sketch.
+
+<img src ="../images/Helena_Compute_Derived_Value_Lofi.jpg" width="600px">
+
+**Compute Derived Value – Among individuals with each favourite genre, what is the severity of each mental illness?**
+
+The first visualization shows the severity:Q/O (y) by mental illness:N (x) and facets the boxplots by favourite genre:N (column). The second visualization moves the favourite genre:N from facets into the x-axis, and encodes mental illness as the colour hue. The boxplots appear too crowded on the x-axis, and it is difficult to compare severity across favourite genres (as boxplots are grouped by favourite genre). Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third visualization stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and mental illness:N (x), and faceting the heatmaps by favourite genre:N (row). It does not seem essential to plot/distinguish all 12 severities (0-10) on the y-axis, so stratifying severity (used to be Q) into low/medium/high categories makes sense. However, heatmaps are more suited to finding anomalies, as colour luminance is a poor quantitative encoding. The fourth visualization also utilizes stratified severity, showing the count (y) of individuals with each severity:O (colour luminance) of each mental illness:N (x) and faceting each stacked bar plot by favourite genre:N (row). The fifth visualization shows the average(severity:Q) (y) by favourite genre (x) and facets by mental illness:N (column). Using the metric average(severity:Q) (y) does not allow us to see the distribution of severity, but this is not feasible regardless since severity is not a continuous variable. Since we are looking at deriving the mental health severity, it seems preferable to leave severity as a quantitative variable (average severity) rather than stratifying it to an ordinal variable and showing the count in each category as in the third heatmap. Thus I will select the fifth visualization for my high-fidelity sketch.
+
+<img src ="../images/Helena_Find_Anomalies_Lofi.jpg" width="600px">
+
+**Find Anomalies – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?**
+
+The first matrix shows the severity:Q/O (y) by the bins of each habit:Q/N/O (x) and facets the plots by mental illness:N (row) and habit:N (column). Using points on continuous x/y axes allows us to draw different plot types (boxplots/scatterplots) for each type of habit variable (Q/N/O). The second visualization moves the mental illness:N from facets into colour hue, however the boxplots appear too crowded on the x-axis. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and category of habit:Q/N/O, and faceting the heatmaps by mental illness:N (row) and habit (column). This is not ideal since some habits are quantitative variables, so the x/luminance encodings will have to change based on the type of each variable. The fourth visualization replaces the boxplots/scatterplots of the first matrix to bar plots that show average(severity), as a severity distribution is not possible given it is not a continuous variable. Continuous habit variables are binned along the x-axis. This visualization appears the most suited to juxtapose the results since the plot type/encodings do not change with each type of habit variable as in the first and third matrices, thus I will select it for the high-fidelity sketch.
+
+<img src ="../images/Helena_Characterize_Distribution_Lofi.jpg" width="600px">
+
+**Characterize Distribution – How do the distributions of mental illness severities differ across non-genre music habits?**
+
+The first histogram matrix shows the count (y) by the bins of each habit:Q/N/O (x), encodes mental illness severity as colour luminance, and facets by mental illness:N (row) and habit (column). Many habit variables are not continuous (N/O), thus plotting the distribution of these variables is not ideal. The second visualization swaps the encodings for habit bins and severity (x<->colour), and changes the habit variable from facets to a dropdown. Colouring by the bins of each habit (N variable: colour hue, Q/O variable: colour luminance) will work for discrete and continuous (eg. hours per day) habit variables. The third histogram matrix keeps the habit variable as a dropdown, and facets by mental illness:N (row) and bins of each habit:Q/N/O (column). However, faceting by the bins of each habit will not work for quantitative habit variables such as hours per day. Thus, I am selecting the second visualization for the high-fidelity sketch.
+
 ## Next Steps (~250 words)
 
 To achieve an A-grade project, our group will follow the structured timeline (below).
@@ -414,9 +442,9 @@ Proposed timeline:
 | Create and publish website                        | Sun Mar 23            | Jess                   |
 
 In addition, each group member will adhere to the following:
-- Version Control: All members will commit their work to GitHub with clear commit messages and create separate Pull Requests when making changes based on TA feedback.
-- Project Management: all members will write their completed tasks/actions as a comment under the respective issue(s).
-- Feedback Incorporation: Regular communication on Discord, to ensure alignment and quality.
+- **Version Control:** All members will commit their work to GitHub with clear commit messages and create separate Pull Requests when making changes based on TA feedback.
+- **Project Management:** all members will write their completed tasks/actions as a comment under the respective issue(s).
+- **Feedback Incorporation:** Regular communication on Discord, to ensure alignment and quality.
 
 ## Summary of contributions
  **Workload distribution Milestone 2**: Allison (25%), Helena (25%), Judy (25%), and Jessica (25%)
@@ -425,12 +453,13 @@ In addition, each group member will adhere to the following:
 My contributions included writing my portions of the introduction and conducting individual EDA + report. I also created the group EDA file and the wrangling_and_cleaning python script compiling our collective cleaning/transformations.
 
   ### Helena
+My contributions included writing my portions of the introduction and conducting individual EDA + report.
 
   ### Judy
- My contributions included writing my portions of the introductory and analysis README.md files, creating the introduction and the data abstraction sections, completing my EDA analysis, and doing my task abstraction and sketches.
+My contributions included writing my portions of the introductory and analysis README.md files, creating the introduction and the data abstraction sections, completing my EDA analysis, and doing my task abstraction and sketches.
  
  ### Jessica
- My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
+My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
  
 
  
