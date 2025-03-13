@@ -19,6 +19,8 @@ She is particularly drawn to the music and mental health survey dataset because 
 As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being.
 The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
 
+Helena is also a Bachelor of Computer Science (BCS) student and data science minor. During her time as a medical researcher (genetics, molecular/cell biology, cancer/microbiome/organoid research), she also began following mental health research due to personal interest. She has recently become aware of a study finding that individuals with depression gravitate towards sad music. This poses the question: do depressed individuals perpetuate their depression via their listening habits? She is interested to see if other mental illnesses are also associated with specific music tastes.
+
 As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health.
 She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music.
 When Jessica was a Crisis Line Volunteer supporting callers with mental health challenges,
