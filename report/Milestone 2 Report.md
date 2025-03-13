@@ -45,6 +45,12 @@ Allison's research question is:
 1.  Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
 2. How Does Age Influence the Relationship Between Music Engagement and Mental Health Outcomes? Examine how different forms of music engagement (e.g., instrumentalist, composer) correlate with mental health outcomes across various age groups. Do those who engage with music in more dimensions (e.g. composer or musician) form distinct groups?
 
+Helena’s Research Question is :
+**Association between mental illnesses and music habits: Are any mental illnesses associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.)?**
+and some other questions that could be;
+- Are specific listening habits (eg. specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.) associated with improvement or worsening of specific mental health conditions?
+- Are musicians/composers associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.) or mental illnesses?
+
 Judy's research question is,
 **How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?**
 
