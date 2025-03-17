@@ -1,17 +1,23 @@
 ## Introduction
-The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results/data) comes from Kaggle and was compiled by Catherine Rasgaitis based on a survey about music-listening habits and their connection to mental health that respondents filled out via Google Forms. The form was posted on different social media platforms such as Reddit and Discord. The dataset has a CC0: Public Domain license and consists of 737 rows and 33 columns.
 
-Our team is FabFour, consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee, and Jessica Luo. 
+### *Dataset Overview*
+The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results/data) comes from Kaggle and was compiled by Catherine Rasgaitis. These data were collected via a survey about music listening habits and their connection to mental health, that respondents filled out via Google Forms. The form was posted on different social media platforms such as Reddit and Discord. Posters and cards were distributed to advertise the survey in libraries, parks, and other public locations. The dataset has a CC0: Public Domain license. Overall, the dataset contains 737 participants (rows) and 33 variables (columns). See Data Abstraction below for all the dataset variables. This dataset consists of self-reported data, thus the reliability of the data cannot be confirmed.
 
+Our team is **The Fab Four**: consisting of Allison Fellhauer, Olena Sokolovska, Judy Lee, and Jessica Luo. 
+
+### *Team Members & Our Interest in the Data*
 Allison is currently a Bachelor of Computer Science (BCS) student interested in machine learning, data science, and artificial intelligence. Coming from a background in biology with a minor in psychology, she has a strong foundation in cognition and positive psychology—both of which explored the positive impact of music on mental health.  Her interest in the Music and Mental Health dataset stems from her passion for understanding how music influences emotional well-being and how it can uplift individuals from languishing to flourishing.
+
+Helena is also a Bachelor of Computer Science (BCS) student and data science minor. During her time as a medical researcher (genetics, molecular/cell biology, cancer/microbiome/organoid research), she also began following mental health research due to personal interest. She has recently become aware of a study finding that individuals with depression gravitate towards sad music. This poses the question: do depressed individuals perpetuate their depression via their listening habits? She is interested to see if other mental illnesses are also associated with specific music tastes.
 
 Judy is a 5th-year computer science major and data science minor with a background in product design (UX/UI). She is particularly drawn to the music and mental health survey dataset because it combines two of her passions: music and mental health. As someone who is often found listening to music, Judy has a personal connection to how it can influence emotions and well-being. The dataset resonates with her as it provides an opportunity to explore how music impacts mental health and analyze the data to uncover meaningful insights.
 
 As a Behavioural Neuroscience student, Jessica is interested in any topic in the area of mental health. She grew up with music as a core component of life and appreciates the diversity of benefits that many people can obtain from listening, making and appreciating music. When Jessica was a Crisis Line Volunteer supporting callers with mental health challenges, she heard from many help-seekers that music was something people turned to when they felt anxious, stressed, depressed, restless or lonely.
 
+### *Intended Audience*
 Our intended audience includes individuals who are passionate about music or mental health, such as music enthusiasts, mental health professionals, and researchers interested in the intersection of the two fields. Since this dataset allows for the visual exploration of how different music genres correlate with mental health conditions like anxiety and depression, we aim to provide valuable insights through data visualizations. These insights will help people better understand how music influences emotional well-being and overall mental health.
 
-## About the Data (no limit)
+## About the Data
 
 ### Data Abstraction
 | Attribute Name            | Attribute Type   | Data Semantics                                                    | Cardinality        |
@@ -38,56 +44,87 @@ Our intended audience includes individuals who are passionate about music or men
 ### Exploratory Data Analysis
 All four of our group's individual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
 
-## Research Questions (~500 words)
+## Research Questions
 
-Allison's research question is:
-**What is the impact of the respondent's age on their survey responses?**
-1.  Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
-2. How Does Age Influence the Relationship Between Music Engagement and Mental Health Outcomes? Examine how different forms of music engagement (e.g., instrumentalist, composer) correlate with mental health outcomes across various age groups. Do those who engage with music in more dimensions (e.g. composer or musician) form distinct groups?
+**Allison's** research question is: **What is the impact of the respondent's age on their survey responses?**
+- Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
+- How Does Age Influence the Relationship Between Music Engagement and Mental Health Outcomes? Examine how different forms of music engagement (e.g., instrumentalist, composer) correlate with mental health outcomes across various age groups. Do those who engage with music in more dimensions (e.g. composer or musician) form distinct groups?
 
-Judy's research question is,
-**How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?**
+**Judy's** research question is: **How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?**
 
-Jessica's research question is, 
-**"How does response bias play a role in self-reporting mental health severity?"** Further questions worth exploring might be:
-*"What are the patterns and anomalies in self-reported mental health severities?",
-"How do demographics (eg. mental illness), music listening habits contribute to biased self-reporting?",
-"Are there any reasons for extreme/invalid response values that can be identified based on other responses?",
-"How do illogical, invalid responses influence data reliability?"*
+Some sub-research questions worth exploring would be:
+- Are there specific favorite genres that are more commonly associated with positive or negative perceived effects of music on well-being?
+- Are individuals who listen to a variety of music genres more likely to report that music improves their well-being compared to those with low diversity, regardless of their favorite genre?
+- Do individuals with different mental health conditions (anxiety, depression, insomnia, OCD) tend to have distinct music preferences?
+
+**Helena's** research question is: **What is the relationship between specific mental illnesses and listening habits?**
+- Are any mental illnesses associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.)?
+
+**Jessica's** research question is: **How does response bias play a role in self-reporting mental health severity?**
+
+Further questions worth exploring might be:
+- What are the patterns and anomalies in self-reported mental health severities?
+- How do demographics (eg. mental illness), music listening habits contribute to biased self-reporting?
+- Are there any reasons for extreme/invalid response values that can be identified based on other responses?
+- How do illogical, invalid responses influence data reliability?
 The visualization may be a dashboard with interactions, or SPLOM with outlier points that are linked bi-directionally to other visualizations.
 
 
-## Task Analysis (~500 words)
+## Task Analysis
 
-**Characterize distribution** - What is the distribution of depression scores based on the frequency of listening to Rock music?
+### Judy: How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?
 
-**Determine Range** - What is the range of genre diversity scores among individuals who report that music improves their well-being?
+**Attributes:** genre diversity score, fav genre, anxiety score, depression score, insomnia score, OCD score, frequency[rock], music effects.
 
-**Correlate** - Is there a correlation between genre diversity scores and self-reported mental health scores?
+**Tasks:**
+- **Characterize distribution** – What is the distribution of depression scores based on the frequency of listening to Rock music?
+- **Determine Range** – What is the range of genre diversity scores among individuals who report that music improves their well-being?
+- **Correlate** – Is there a correlation between genre diversity scores and self-reported mental health scores?
+- **Find Extremum** – Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
 
-**Find Extremum** - Which favorite genre has the highest proportion of individuals reporting that music worsens their well-being?
+### Allison: Does age influence the relationship between music genre preferences and mental health scores?
 
-**Characterize Distribution** - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
+**Attributes:** age, anxiety score, depression score, insomnia score, OCD score, fav genre, instrumentalist, composer, music effect.
 
-**Find Extremum** - "What are the most and least frequently reported mental health severity scores?"
-  - Most frequent reported mental health severity scores might reflect response biases.
+**Tasks:**
+- **Retrieve value** – Favourite music genres across different age groups for individuals with high anxiety, high depression, high OCD, or high insomnia.
+    - Determine what music genres are preferred by those who experience higher reported mental health scores for different age categories (Are there commonalities/differences?)
+- **Filter** – Filter by high, medium, low mental health scores (Anxiety_Level, Depression_Level, Insomnia_Level, or OCD_Level) and view their association with musical hobbies.
+    - For each level (high, medium, low), how does each age group interact with music? Are there tendencies that are shared or that differ?
+- **Compute Derived Value** – Calculate the average age for individuals with each favourite genre in the filtered high-mental-health-score group.
+    - What age group prefers each genre? Are there similarities in age between similar genres?
+- **Determine Range** – Find the range of ages reporting high mental health scores for each condition.
+    - Who were the youngest and the oldest participants? Are there any overarching patterns?
 
-**Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
-  - Clusters of groups may be indicative of relationships.
+### Jessica: How does response bias play a role in self-reported mental health?
+- What are the patterns and anomalies in self-reported mental health severities?
+- How do demographics (eg. mental illness), music listening habits contribute to biased self-reporting?
+- Are there any reasons for extreme/invalid response values that can be identified based on other responses?
+- How do illogical, invalid responses influence data reliability?
 
-**Find Anomalies** - "Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls?" (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)
-  - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
+**Attributes:** anxiety score, depression score, insomnia score, OCD score, improves mental health.
 
-**Retrieve value: What is the most commonly reported favourite genre for specific age groups for those with high mental health conditions scores**
-- For those with high scores, there may be age-related differences in music genre preferences
+**Tasks:**
+- **Characterize Distribution** – What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?
+    - Distributions could be different for those who believe music does vs does not improve mental health.
+- **Find Extremum** – What are the most and least frequently reported mental health severity scores?
+    - Most frequent reported mental health severity scores might reflect response biases.
+- **Cluster** – Can we group individuals into clusters based on their music preferences and mental health scores?
+    - Clusters of groups may be indicative of relationships.
+- **Find Anomalies** – Are there outliers in the self-reported mental health severities that suggest response bias or survey trolls (e.g. 1/10 for insomnia but 10/10 for OCD; 1/10 anxiety but 10/10 for depression, OCD and insomnia)?
+    - Invalid or illogical responses could indicate issues regarding misinterpretation of survey questions, problems with self-response surveys, and/or presence of "trolls".
 
-**Compute derived value: What is the average age associated with each favourite genre?**
-- Understanding the average age associated with each favorite genre helps identify generational trends in music preferences. 
+### Helena: What is the relationship between specific mental illnesses and listening habits?
 
-**Determine range: Find range of ages reporting high mental health scores for each condition**
-- Broader or narrower ranges can express how self-reported mental health conditions vary across age groups and may align with trends showing that younger generations are more likely to rate their mental health as more severe [APA, 2019](https://www.apa.org/monitor/2019/01/gen-z).
+**Attributes:** Non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, and Foreign languages), frequency of each genre, favourite genre, and mental illness severity (Anxiety, Depression, Insomnia, OCD).
 
-## Preliminary Sketches (~250 words)
+**Tasks:**
+- **Correlate** – How is the severity of each mental illness associated with listening frequency to each genre?
+- **Compute Derived Value** – Among individuals with each favourite genre, what is the severity of each mental illness?
+- **Find Anomalies** – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?
+- **Characterize Distribution** – How do the distributions of mental illness severities differ across non-genre music habits?
+
+## Preliminary Sketches
 
 ### Allison's Sketches
 **Retrieve value: What is the most commonly reported favourite genre for specific age groups**
@@ -99,17 +136,17 @@ The three low fidelity sketches for task 1 above are as follows:
 2) A mosaic plot of different genres for each age group
 3) A pie chart showing the top four genres with a radio button to swap between age groups.
 
-The first option uses the common length channel (on a common scale) to display the magnitude, which is preferred over 2) and 3), which both use area (2D size). The use of these channels are effective, but using a common scale is the strongest at conveying the magnitude. The use of the radio button in 2) and 3) provides interaction, which 2) lacks. A major limitation of 2) and 3) are their ability to display all distinct categories satisfactorily. For 2), colour is needed to distinguish between groups, however, it is challenging to use 16 distinct colours. For 3), the area on a pie chart is limited and will be challenging to separate from each other. In this example, I only chose the top-four, which comes with the downside of not being able to display all categories at one.
+The first option uses the common length channel (on a common scale) to display the magnitude, which is preferred over 2) and 3), which both use area (2D size). The use of these channels is effective, but using a common scale is the strongest at conveying the magnitude. The use of the radio button in 2) and 3) provides interaction, which 2) lacks. A major limitation of 2) and 3) is their ability to display all distinct categories satisfactorily. For 2), colour is needed to distinguish between groups, however, it is challenging to use 16 distinct colours. For 3), the area on a pie chart is limited and will be challenging to separate from each other. In this example, I only chose the top four, which comes with the downside of not being able to display all categories at once.
 
 **High Fidelity Sketch**
 
 <img src ="../images/Allison_high_fidelity_task_1.png" width="600px">
 
 I chose the bar chart with a radio button as the final high-fidelity design because it is the most accurate and  interpretable visualization for this task.
-- The bar chart uses position along a common scale (length) to represent magnitude, which is the most effective way to compare numerical values. This is the better option over area, which more challenging to compare.
-- There is no reliance on colour, which enhances the separability of the encodings (different colours vs. different bar lengths)
-- there is little to no information loss since all 16 genres can be displays simultaneously and space effectively using the bar chart.
-- The radio button interaction allows users to switch between age groups, reducing the amount of data at presented at once.
+ - The bar chart uses position along a common scale (length) to represent magnitude, which is the most effective way to compare numerical values. This is the better option over area, which is more challenging to compare.
+ - There is no reliance on colour, which enhances the separability of the encodings (different colours vs. different bar lengths)
+ - There is little to no information loss since all 16 genres can be displayed simultaneously and space effectively using the bar chart.
+ - The radio button interaction allows users to switch between age groups, reducing the amount of data presented at once.
 
 **Compute derived value: What is the average age associated with each favourite genre?**
 
@@ -120,18 +157,17 @@ The three low fidelity sketches for task 2 above are as follows:
 2) Unidirectionally linked bar charts (left: genre sorted by average age; right: distribution of age)
 3) A heatmap of the distribution with a tooltip displaying average age.
 
-The first option (1) uses area to encode the magnitude property (number of respondants) and a tooltip to display the aggregation (average age) for each genre. (2) uses linked bar charts using the length on a common scale channel to encode magnitude. The user would click on the bar of a genre, which would display the corresponding dsitribution of values. (3) uses the colour saturation channel to display mangitude (count) and a tooltip to display the aggregated value (average age). 2) ranks the highest for accuracy/effectiveness, as using a common scale is the preferred channel for ordered attributes. 1) has the issue of using the area of a circle to encode magnitude, which does not grow at a consistent rate. In addition, the size of the circle will be quite small for smaller categories, since some genres have very few respondants (e.g. only 2 for latin). The heat map suffers from the issue of using color saturation to encode magnitude, which can be difficult to interpret accurately, especially for subtle differences. Additionally, without clear numerical labels, viewers may struggle to precisely compare values across the heatmap. While tooltips provide additional context, they require interaction and do not offer an at-a-glance summary of the data.
+The first option (1) uses the area to encode the magnitude property (number of respondents) and a tooltip to display the aggregation (average age) for each genre. (2) uses linked bar charts using the length on a common scale channel to encode magnitude. The user would click on the bar of a genre, which would display the corresponding distribution of values. (3) uses the colour saturation channel to display magnitude (count) and a tooltip to display the aggregated value (average age). 2) ranks the highest for accuracy/effectiveness, as using a common scale is the preferred channel for ordered attributes. 1) has the issue of using the area of a circle to encode magnitude, which does not grow at a consistent rate. In addition, the size of the circle will be quite small for smaller categories since some genres have very few respondents (e.g. only 2 for Latin). The heat map suffers from the issue of using color saturation to encode magnitude, which can be difficult to interpret accurately, especially for subtle differences. Additionally, without clear numerical labels, viewers may struggle to precisely compare values across the heatmap. While tooltips provide additional context, they require interaction and do not offer an at-a-glance summary of the data.
 
 **High Fidelity Sketch**
 
 <img src ="../images/Allison_high_fidelity_task_2.png" width="600px">
 
 I chose the linked bar charts for the final high-fidelity design because they provide the most accurate and intuitive representation of how average age varies across favorite genres.
-- High effectiveness/accuracy using bar lengths along a common scale, which is important for comparing values across genres. This is significantly more accurate than using area (bubble chart) or colour (heat map) to convey this information.
-- Interaction adds an extra dimension to the plot, allowing the user to select and alter the chart to fit their specific task (e.g. what is average age and distribution for rock music).
-- Since there is interaction, the readability also increases as there is less information presented simultaneously. This allows the user to focus on the specific task and retrieve the details they are looking for as needed.
-
-
+ - High effectiveness/accuracy using bar lengths along a common scale, which is important for comparing values across genres. This is significantly more accurate than using area (bubble chart) or colour (heat map) to convey this information.
+ - Interaction adds an extra dimension to the plot, allowing the user to select and alter the chart to fit their specific task (e.g. what is average age and distribution for rock music).
+ - Since there is interaction, the readability also increases as there is less information presented simultaneously. This allows the user to focus on the specific task and retrieve the details they are looking for as needed.
+ 
 **Determine range: Find range of ages reporting high mental health scores for each condition**
 
 <img src ="../images/Allison_low_fidelity_task_3.png" width="600px">
@@ -148,12 +184,13 @@ The box plot (1) uses position along a common scale to encode age and length of 
 <img src ="../images/Allison_high_fidelity_task_3.png" width="600px">
 
 I chose the box plots as the final high-fidelity design because is if the most effective for this task
-- The box plot displays the minimum, maximum, median, and interquartile range (IQR), making it easy to identify the full distribution of ages for each condition.
-- All conditions (Anxiety, Depression, Insomnia, OCD) share a common age scale, allowing for direct comparisons.
-- The box plot explicitly marks outliers, making it easier to detect extreme values that do not align with trends.
-- The use of color saturation for low, medium, and high mental health scores improves readability and helps distinguish severity levels within each condition.
-- The box plot provides exact values while maintaining a clear visual structure, unlike the violin plot, which smooths density, or the stacked bar chart, which lacks range details.
+ - The box plot displays the minimum, maximum, median, and interquartile range (IQR), making it easy to identify the full distribution of ages for each condition.
+ - All conditions (Anxiety, Depression, Insomnia, OCD) share a common age scale, allowing for direct comparisons.
+ - The box plot explicitly marks outliers, making it easier to detect extreme values that do not align with trends.
+ - The use of color saturation for low, medium, and high mental health scores improves readability and helps distinguish severity levels within each condition.
+ - The box plot provides exact values while maintaining a clear visual structure, unlike the violin plot, which smooths density, or the stacked bar chart, which lacks range details.
 
+---
 ### Judy's Sketches
 
 **Characterize distribution: What is the distribution of depression scores based on the frequency of listening to Rock music?**
@@ -168,23 +205,24 @@ The three low-fidelity sketches for task 1 are as follows:
 *Critique*
 1) Normalized Stacked Bar Chart
    
-- Encoding: The normalized stacked bar chart uses position on a common scale, which is one of the most effective visual channels for accurately comparing magnitudes. Since we aim to represent proportions, the bars are normalized (stacked to 100%) to facilitate part-to-whole comparisons across different frequency categories. The color encoding is used to differentiate between depression score categories, improving discriminability while maintaining clear segment boundaries.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the dataset’s characteristics without unnecessary information.
+- Encoding: The normalized stacked bar chart uses position on a common scale, which is one of the most effective visual channels for accurately comparing magnitudes. Since we aim to represent proportions, the bars are normalized (stacked to 100%) to facilitate part-to-whole comparisons across different frequency categories. The color hue encoding is used to differentiate between depression score categories, improving discriminability while maintaining clear segment boundaries.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the dataset’s characteristics without unnecessary information.
 - Effectiveness: Position encoding makes the relative distribution easy to compare across groups. 
 - Interactivity: A UI widget with filter dropdowns enables users to select different genres and mental health conditions (e.g., anxiety, depression, insomnia, OCD), increasing flexibility in data exploration.
   
 2) Parallel Coordinates Plot
    
-- Encoding: The parallel coordinates plot places mental health conditions (e.g., depression, anxiety) along parallel axes, with lines connecting values across dimensions. Position on a common scale is used to compare depression scores, while color encoding distinguishes between different frequency categories of listening to Rock music.
-- Expressiveness: The plot maintains expressiveness since all visual encodings directly represent the dataset’s attributes.
-- Effectiveness: While parallel coordinate plots are excellent for showing multidimensional relationships, they suffer from overplotting and clutter when too many data points are present, making it harder to discern trends in large datasets.
+- Encoding: The parallel coordinates plot places mental health conditions (e.g., depression, anxiety) along parallel axes, with lines connecting values across dimensions. Position on a common scale is used to compare depression scores, while color hue encoding distinguishes between different frequency categories of listening to Rock music.
+- Expressiveness: The plot maintains expressiveness since all visual encodings (position on common scale and color hue) directly represent the dataset’s attributes.
+- Effectiveness: The most effective channels are also used since quantitative variables like the mental health condition scores are best represented by position on a common scale and using color hue to maintain discriminability in order to distinguish between the frequency levels, is the most effective.
+- Limitations: While parallel coordinate plots are good for showing multidimensional relationships, they suffer from overplotting and clutter when too many data points are present, making it harder to discern trends in large datasets.  
 - Interactivity: Filter dropdowns allow users to highlight specific genres or conditions, but without interaction, the visualization may become difficult to interpret.
 
 3) Radial Plot
    
 - Encoding: A radial layout (polar coordinates) is used, where angular position represents the frequency of listening to Rock music and radial distance encodes depression scores. Color differentiates listening frequency categories and shows good discriminability. Size encodes the average depression score per frequency category.
-- Expressiveness: The plot maintains expressiveness since all visual encodings directly represent the data attributes. The encoding remains relevant, though polar plots can introduce distortions in perception, particularly for angular comparisons which are harder to judge accurately than linear ones.
-- Effectiveness: While visually engaging, the plot can be difficult to gauge angles clearly, making direct comparisons less effective than in Cartesian plots.
+- Expressiveness: The plot maintains some expressiveness since all visual encodings directly represent the data attributes, but polar plots can introduce distortions in perception, particularly for angular comparisons, which are harder to judge accurately than linear ones.
+- Effectiveness: While visually engaging, the plot can be difficult to gauge angles clearly, making direct comparisons less effective than in Cartesian plots. Hence, using position on a common scale (vertical and horizontal position) would have increased effectiveness.
 - Interactivity: A tooltip provides exact depression score values when hovering, and filter dropdowns allow users to switch between mental health conditions.
 
 
@@ -216,21 +254,23 @@ The three low-fidelity sketches for task 2 are as follows:
 
 - Encoding: The histogram uses position on a common scale (vertical for frequency and horizontal for genre diversity scores), which is highly effective for showing distributions and identifying the shape of data (e.g., normal, skewed, multimodal).
 - Expressiveness: The visualization remains expressive since it directly represents the data characteristics without unnecessary elements.
-- Effectiveness: It provides an intuitive view of frequency distributions but does not explicitly show measures like quartiles, outliers, or central tendency (which a boxplot or violin plot can).
-Filtering via a dropdown enables users to compare distributions across music effect categories, though comparisons might require flipping between views.
-- Limitations: Bin size selection can impact interpretability. It is also harder to make direct comparisons between categories unless displayed side by side.
+- Effectiveness: The channels used are the most effective since they aim to show quantitative variables like the genre diversity scores and frequency. 
+- Limitations: Selecting different bin sizes can impact interpretability. It is also harder to make direct comparisons between categories unless they are displayed side by side and do not explicitly show measures like quartiles, outliers, or central tendency (which a boxplot or violin plot can). 
+- Interactivity: Filtering via a dropdown enables users to compare distributions across music effect categories, though comparisons might require flipping between views.
 
 2) Boxplot
 - Encoding: The boxplot also uses position on a common scale, but instead of showing full distributions, it summarizes the data via quartiles, median, whiskers, and outliers.
-- Expressiveness: It adheres to expressiveness principles by accurately depicting range, central tendency, and spread without unnecessary complexity. Filtering via a dropdown selector enables users to view different music effect groups.
-- Effectiveness: Great for comparing summary statistics but hides detailed distribution patterns (e.g., modality, density of values). Outliers are clearly visible, which helps in identifying unusual values. It is also more compact than a histogram, making it suitable for side-by-side comparisons.
+- Expressiveness: It adheres to expressiveness principles by accurately depicting range, central tendency, and spread without unnecessary complexity. 
+- Effectiveness: Using position on a common scale is an effective channel since it aims to represent the quantitative variables. It is great for comparing summary statistics but hides detailed distribution patterns. Outliers are clearly visible, which helps in identifying unusual values. It is also more compact than a histogram, making it suitable for side-by-side comparisons.
 - Limitations: It does not show the actual shape of the distribution. It might be harder for non-expert users to interpret compared to a histogram.
+- Interactivity: Filtering via a dropdown selector enables users to view different music effect groups.
 
 3) Violin Plot
-- Encoding: Like the boxplot, the violin plot uses position on a common scale, but instead of summarizing distribution with quartiles alone, it also shows density estimation on each side of the "violin."
-- Expressiveness: he visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It is also expressive since it displays both distribution shape and statistical summaries. The interactive legend allows users to toggle different music effect categories (Improve, Worsen, No Effect, or all three simultaneously), which allows for easier comparisons to be made.
+- Encoding: Like the boxplot, the violin plot uses position on a common scale, but instead of summarizing distribution with quartiles alone, it also shows density estimation on each side of the "violin." There is also a color hue encoding used to show the categories of music effects, which is a categorical channel representative of qualitative data.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It is also expressive since it displays both distribution shape and statistical summaries. 
 - Effectiveness: It combines the strengths of boxplots (summary statistics) and histograms (distribution density). It is also more compact and interpretable than multiple histograms, making it easier to compare distributions. The UI widget (range slider) allows users to focus on specific genre diversity score ranges, thus improving data exploration.
-- Limitation: The density estimation is based on kernel smoothing, which can sometimes misrepresent sparse data. 
+- Limitation: The density estimation is based on kernel smoothing, which can sometimes misrepresent sparse data.
+- Interactivity: The interactive legend allows users to toggle different music effect categories (Improve, Worsen, No Effect, or all three simultaneously), which allows for easier comparisons to be made.
 
 
 **High Fidelity Sketch**
@@ -260,23 +300,26 @@ The three low-fidelity sketches for Task 3 are as follows:
 1) Scatterplot
 
 - Encoding: Uses position on a common scale, where the vertical axis represents genre diversity scores and the horizontal axis represents mental health scores.
-- Expressiveness: The scatterplot effectively shows relationships between two continuous variables, making it a good method for correlation analysis. The brushing interaction enhances clarity by allowing users to examine specific data points in greater detail.
-- Effectiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It provides an intuitive way to assess trends, clusters, and potential outliers. The brushing interaction also reveals additional details in a table, helping users interpret individual data points. it is well-suited for understanding how genre diversity relates to mental health conditions.
-- Limitations: It can become cluttered if there are too many data points and the correlation trends may not be immediately clear without additional visual aids like trend lines.
+- Expressiveness: The scatterplot effectively shows relationships between two continuous variables, making it a good method for correlation analysis.  Moreover, it adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information.
+- Effectiveness: It provides an intuitive way to assess trends, clusters, and potential outliers and the position on common scale used for the quantitative attributes help with that.
+- Limitations: It can become cluttered if there are too many data points, and the correlation trends may not be immediately clear without additional visual aids like trend lines.
+- Interactivity: The brushing interaction enhances clarity by allowing users to examine specific data points in greater detail.  It also reveals additional details in a table, helping users interpret individual data points. it is well-suited for understanding how genre diversity relates to mental health conditions.
 
 2) Heatmap
 
-- Encoding: Uses area (2D) encoding with shared boundaries, and color encoding to represent correlation strength. A filter dropdown allows selection of different mental health condition scores.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It clearly communicates correlation values, as colors make it easy to differentiate strong vs. weak correlations.
-- Effectiveness: It quickly conveys overall trends and relationships in a compact space and users can easily compare different mental health condition scores via the filter dropdown. It is also suitable for detecting strong or weak correlations at a glance.
+- Encoding: Uses area (2D) encoding with shared boundaries and color hue encoding to represent correlation strength with correlation text annotation. 
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (area, color hue) directly correspond to the data characteristics without unnecessary information. It clearly communicates correlation values, as color hues make it easy to differentiate strong vs. weak correlations.
+- Effectiveness: It quickly conveys overall trends and relationships in a compact space. The area and color hue are the best channels to encode the information of correlation. 
 - Limitations: It is less effective for detailed individual data exploration and can be misleading if small differences in correlation may not be easily differentiated due to color gradients.
+- Interactivity: Users can easily compare different mental health condition scores via the filter dropdown. It is also suitable for detecting strong or weak correlations at a glance.
   
 3) Dot Plot
 
 - Encoding: Uses position on a common scale (vertical for genre diversity scores, horizontal for mental health scores), with hover interactions to show exact values. A filter dropdown allows selecting the mental health condition score.
-- Expressiveness: Clearly presents individual data points while reducing clutter compared to a scatterplot.
-- Effectiveness: It simplifies the visualization by making each data point distinct. The hover interactions allow users to see exact values without overwhelming the visualization and the filtering improves clarity by focusing on specific mental health conditions.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color hue) directly correspond to the data characteristics without unnecessary information. It clearly presents individual data points while reducing clutter compared to a scatterplot.
+- Effectiveness: The channels used are the most effective as they help simplify the visualization by making each data point distinct.
 - Limitations: It lacks trend lines or density representation, making the overall correlation patterns harder to interpret. It can become difficult to read if there are too many overlapping points.
+- Interactivity:  The hover interactions allow users to see exact values without overwhelming the visualization, and the filtering improves clarity by focusing on specific mental health conditions.
 
 
 **High Fidelity Sketch**
@@ -286,7 +329,7 @@ The three low-fidelity sketches for Task 3 are as follows:
 I chose the scatterplot for the high-fidelity sketch because it provides the best balance of expressiveness and effectiveness as:
 - It directly visualizes relationships between genre diversity and mental health scores.
 - The brushing interaction allows deeper exploration of specific data points.
-- It supports identification of outliers and patterns that might be lost in an aggregate view like a heatmap.
+- It supports the identification of outliers and patterns that might be lost in an aggregate view like a heatmap.
 - It provides a strong visual representation of correlation.
 
 
@@ -304,16 +347,16 @@ The three low-fidelity sketches for Task 4 are as follows:
 1) Sunburst Chart
 
 - Encoding: Uses polar position encoding (angular position for genres and radial distance for proportions), with color distinguishing different genres.
-- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information.It also shows hierarchical relationships and proportions using the magnitude channels.
-- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips display genre name, count, and proportion, enhancing data accessibility.
-- Limitations: It can become cluttered with too many categories and it is not ideal for precise comparisons between genre proportions.
+- Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It also shows hierarchical relationships and proportions using the magnitude channels.
+- Effectiveness: It captures the distribution of individuals reporting negative effects across different genres. The filter dropdown also allows users to focus on specific music effect categories. It is also effective as it also has hover tooltips that display the genre name, count, and proportion, which improves data accessibility.
+- Limitations: It can become cluttered with too many categories, and it is not ideal for precise comparisons between genre proportions.
 
 2) Stacked Bar Chart
 
 - Encoding: Uses position on a common scale, with bars representing favorite genres and segments within each bar showing proportions of self-reported music effects.
 - Expressiveness: The visualization adheres to the expressiveness principle, as all encoded attributes (position, color) directly correspond to the data characteristics without unnecessary information. It clearly displays the proportion of individuals reporting negative effects for each genre.
-- Effectiveness: It allows easy comparisons between genres and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
-- Limitations: It can become visually complex if there are too many genres and it is less interactive compared to the sunburst chart.
+- Effectiveness: It allows easy comparisons between genres, and the normalized bar heights enable proportional comparisons, making it clear which genre has the highest proportion of individuals affected negatively. It is also simple and easy to interpret, especially for users unfamiliar with more complex visualizations.
+- Limitations: It can become visually complex if there are too many genres, and it is less interactive compared to the sunburst chart.
 
 3) Heatmap
 
@@ -334,53 +377,105 @@ I chose the sunburst chart for the high-fidelity sketch because it provides the 
 - The filter dropdown allows users to refine the visualization based on different music effects.
 - Hover tooltips provide exact values without overwhelming the chart visually.
 
-
+---
 ### Jessica's Sketches
 
-**Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
+**1. Characterize Distribution - What is the distribution of self-reported mental health scores in those who believe music does not improve mental health?**
 
 <img src ="../images/jess-lowfid-1.jpg" width="600px">
 
 *Critique:*
-This each of these sketches effectively show distributions of each mental health category. The violin plot and boxplots can effectively show the medians and IQR. The multi-bar chart can effectively show distribution, but it may be cluttered when looking at them all at once.
+Each of these sketches effectively shows distributions of each mental health category. The violin plot and boxplots can effectively show the medians and IQR, and has good expressiveness since each boxplot is on a common axis. The multi-bar chart can effectively show distribution, but it may be cluttered or overplotted when looking at them all at once. The violin plot may be improved by adding a radio button to let viewers decide if they want to view just the boxplot or just the violin plot or both the violin and boxplot. The boxplot can be improved by creating a second boxplot such that there are different boxplots for each level of `music effects`. The multi-bar chart could be improved by changing the plot to a stacked bar chart, where we look at one mental health condition at a time and use different colours to represent `music effects`.
 
-**Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
+**High Fidelity Sketch**
+
+<img src ="../images/jess-highfid-1.jpg" width="600px">
+
+This high-fidelity sketch of a violin plot adheres to the principles of visual design we learnt in class by using area/density and boxplots to express distributions of each score. The vis utilizes pop-outs by making the median red. A tooltip can help display exact distribution information, such as mean, median, mode, SD and IQR. Allowing the user to interact with the vis by selecting violin or boxplot or both can help viewers by creating a cleaner, less dense visualization.
+
+**2. Find Extremum - "What are the most and least frequently reported mental health severity scores?"**
 
 <img src ="../images/jess-lowfid-2.jpg" width="600px">
 
 *Critique:*
-These sketches effectively an area graph, scatter plot and dot plot, all of which align with the task of finding extremums (and characterizing distributions). Most or least frequently reported scores can be found on an area graph by looking at peaks and troughs, respectively. In the scatterplot, separating the scores by mental health condition help reduce cognitive load but is poor for comparing two different extremums in different mental health categories. The dot-plot, with size as count, may help easily show the viewer which scores were most or least reported, however, area is known to have poor discriminability in the human visual system, especially when data values are close to each other.
+These sketches effectively an area graph, scatter plot and dot plot, all of which align with the task of finding extremums (and characterizing distributions). Most or least frequently reported scores can be found on an area graph by looking at peaks and troughs, respectively. In the scatterplot, the most frequently reported mental health scores separating the scores by mental health condition help reduce cognitive load but is poor for comparing two different extremums in different mental health categories. The dot-plot, with size as count, may help easily show the viewer which scores were most or least reported, however, circular area is known to have poor discriminability in the human visual system, especially when data values are close to each other.
 
-**Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
+**High Fidelity Sketch**
+
+<img src ="../images/jess-highfid-2a.jpg" width="500px"> <img src ="../images/jess-highfid-2b.jpg" width="500px">
+
+My high-fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X-axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
+
+**3. Cluster – Can we group individuals into clusters based on their music preferences and mental health scores?**
 
 <img src ="../images/jess-lowfid-3.jpg" width="600px">
 
 *Critique:*
 The scatterplot, circle packing chart, and bubble chart can help identify clusters of people based on music preferences. Each chart can compare a mental health category and a separate variable of interest, but is poor at looking at other variables may interact. To improve readability, we could add colours or density representations to help reveal cluster patterns in the data more effectively.
 
-
 **High Fidelity Sketch**
-
-<img src ="../images/jess-highfid-1.jpg" width="600px">
-
-This high fidelity sketch of a violin plot adheres to the principles of visual design we learnt in class by using area/density and boxplots to express distributions of each score. The vis utilizes pop-outs by making the median red. A tooltip can help display exact distribution information, such as mean, median, mode, SD and IQR. Allowing the user to interact with the vis by selecting violin or boxplot or both can help viewers by creating a cleaner, less dense visualization.
-
-
-<img src ="../images/jess-highfid-2a.jpg" width="500px"> <img src ="../images/jess-highfid-2b.jpg" width="500px">
-
-My high fidelity sketch adheres to the principles of visual design we learnt in class by using a histogram to express self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures discriminability through distinct, color blind friendly colors for different conditions. Highlighting 1 of 1 points in red helps to draw attention to outliers (pop-out). Keeping the same X axis for both graphs helps create uniformity. The potential to use closure with a brush tool could help enhance understanding and interactivity.
 
 <img src ="../images/jess-highfid-3.jpg" width="600px">
 
-This high fidelity sketch adheres to the principles of visual design we learnt in class by using a scatter-plot to express two different self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures accuracy through different color saturations to account for the music listened BPM. Dark points will show outliers. An option to have size as count may help identify clusters.
+This high-fidelity sketch adheres to the principles of visual design we learnt in class by using a scatter-plot to express two different self-reported mental health scores and effectively communicate the distributions of each score. The vis ensures accuracy through different color saturations to account for the music listened BPM. Dark points will show outliers. An option to have size as count may help identify clusters.
 
+---
+### Helena’s Sketches:
 
-## Next Steps (~250 words)
+**What is the relationship between specific mental illnesses and listening habits?**
 
-To achieve an A-grade project, our group will follow the structured timeline (below).
-The plan is broken down into actionable steps with deadlines and assigned responsibilities.
+<img src ="../images/Helena_Correlate_Lofi.jpg" width="600px">
 
-Proposed timeline:
+**Correlate – How is the severity of each mental illness associated with listening frequency to each genre?**
+
+The first boxplot matrix shows the severity:Q/O (y) by listening frequency:O (x) and facets by mental illness:N (row) and genre:N (column). Instead of faceting by row, the second visualization encodes each mental illness:N as colour hue. This appears cluttered on the x-axis and makes it difficult to compare severity across frequency (as boxplots are grouped by listening frequency). We can also decide to encode listening frequency:O as colour luminance instead of mental illness:N, so it is easier to compare severity across frequency (as boxplots are grouped by mental illness). Still, having boxplots for every mental illness and listening frequency on the x-axis creates a cluttered appearance. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and listening frequency:O (x), and faceting by illness:N (row) and genre:N (column). It does not seem essential to plot/distinguish all 12 severities (0-10) on the y-axis, so stratifying severity (used to be Q) into low/medium/high categories makes sense. However, heatmaps are more suited to finding anomalies, as colour luminance is a poor quantitative encoding. The fourth bar plot matrix shows the average(severity:Q) (y) by listening frequency:O (x) and facets by mental illness:N (row) and genre:N (column). Using the metric average(severity:Q/O) (y) by listening frequency:O does not allow us to see the distribution of severity, but this is not feasible regardless since severity is not a continuous variable. Since we are looking at the correlation between genre listening frequency and mental health severity, it seems preferable to leave severity as a quantitative variable (average severity) rather than stratifying it to an ordinal variable and showing the count in each category as in the third heatmap. Thus I will select the fourth bar plot matrix for my high-fidelity sketch.
+
+<img src ="../images/Helena_Correlate_Hifi.jpg" width="400px">
+
+In the high-fidelity sketch, I replaced faceting by genre (column) to a dropdown for the user to select the genre. This is because the research question prioritizes correlating mental illness severity and listening frequency of a genre, instead of comparing across genres. I also double-encode listening frequency as both x and colour luminance to emphasize that the variable is ordinal.
+
+---
+
+<img src ="../images/Helena_Compute_Derived_Value_Lofi.jpg" width="600px">
+
+**Compute Derived Value – Among individuals with each favourite genre, what is the severity of each mental illness?**
+
+The first visualization shows the severity:Q/O (y) by mental illness:N (x) and facets the boxplots by favourite genre:N (column). The second visualization moves the favourite genre:N from facets into the x-axis, and encodes mental illness as the colour hue. The boxplots appear too crowded on the x-axis, and it is difficult to compare severity across favourite genres (as boxplots are grouped by favourite genre). Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third visualization stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and mental illness:N (x), and faceting the heatmaps by favourite genre:N (row). It does not seem essential to plot/distinguish all 12 severities (0-10) on the y-axis, so stratifying severity (used to be Q) into low/medium/high categories makes sense. However, heatmaps are more suited to finding anomalies, as colour luminance is a poor quantitative encoding. The fourth visualization also utilizes stratified severity, showing the count (y) of individuals with each severity:O (colour luminance) of each mental illness:N (x) and faceting each stacked bar plot by favourite genre:N (row). The fifth visualization shows the average(severity:Q) (y) by favourite genre (x) and facets by mental illness:N (column). Using the metric average(severity:Q) (y) does not allow us to see the distribution of severity, but this is not feasible regardless since severity is not a continuous variable. Since we are looking at deriving the mental health severity, it seems preferable to leave severity as a quantitative variable (average severity) rather than stratifying it to an ordinal variable and showing the count in each category as in the third heatmap. Thus I will select the fifth visualization for my high-fidelity sketch.
+
+<img src ="../images/Helena_Compute_Hifi.jpg" width="300px">
+
+In the high-fidelity sketch, I replaced faceting by favourite genre (column) to a dropdown for the user to select the favourite genre. This is because the research question prioritizes computing mental illness severity in individuals within each favourite genre, instead of comparing across genres. I moved mental illness from facets (row) to colour hue of bars in a single plot, as this aids comparison of severity across mental illnesses. I also utilized a colourblind-friendly colour palette.
+
+---
+
+<img src ="../images/Helena_Find_Anomalies_Lofi.jpg" width="600px">
+
+**Find Anomalies – Are there anomalies in non-genre listening habits (Primary streaming service, Hours per day, While working, Exploratory, Foreign languages) based on the severity of each mental illness?**
+
+The first matrix shows the severity:Q/O (y) by the bins of each habit:Q/N/O (x) and facets the plots by mental illness:N (row) and habit:N (column). Using points on continuous x/y axes allows us to draw different plot types (boxplots/scatterplots) for each type of habit variable (Q/N/O). The second visualization moves the mental illness:N from facets into colour hue, however the boxplots appear too crowded on the x-axis. Using boxplots in general is not ideal: severity is a discrete scale from 0-10, so the y-axis will not form a continuous distribution. The third heatmap matrix stratifies severity (used to be Q) into low/medium/high categories, showing the count (colour luminance) at each intersection of severity:O (y) and category of habit:Q/N/O, and faceting the heatmaps by mental illness:N (row) and habit (column). This is not ideal since some habits are quantitative variables, so the x/luminance encodings will have to change based on the type of each variable. The fourth visualization replaces the boxplots/scatterplots of the first matrix to bar plots that show average(severity), as a severity distribution is not possible given it is not a continuous variable. Continuous habit variables are binned along the x-axis. This visualization appears the most suited to juxtapose the results since the plot type/encodings do not change with each type of habit variable as in the first and third matrices. However, using the metric of average mental illness severity does not seem suited to identifying anomalies, as the mean obscures outliers.
+
+<img src ="../images/Helena_Find_Anomalies_Hifi.jpg" width="600px">
+
+In the high-fidelity sketch, I decided to change the format entirely. I made a bubble plot comparing the count (size) of individuals at each intersection of mental illness severity (y) and habit variable categories (x), and the user can select the mental illness and habit variable via dropdowns. I chose a bubble plot since size is an efficient encoding (better than colour) to find anomalies in the relationships between mental illness severity and listening habits.
+
+---
+
+<img src ="../images/Helena_Characterize_Distribution_Lofi.jpg" width="600px">
+
+**Characterize Distribution – How do the distributions of mental illness severities differ across non-genre music habits?**
+
+The first histogram matrix shows the count (y) by the bins of each habit:Q/N/O (x), encodes mental illness severity as colour luminance, and facets by mental illness:N (row) and habit (column). Many habit variables are not continuous (N/O), thus plotting the distribution of these variables is not ideal. The second visualization swaps the encodings for habit bins and severity (x<->colour), and changes the habit variable from facets to a dropdown. Colouring by the bins of each habit (N variable: colour hue, Q/O variable: colour luminance) will work for discrete and continuous (eg. hours/day) habit variables. The third histogram matrix keeps the habit variable as a dropdown, and facets by mental illness:N (row) and bins of each habit:Q/N/O (column). However, faceting by the bins of each habit will not work for quantitative habit variables such as hours per day. Thus, I am selecting the second visualization for the high-fidelity sketch.
+
+<img src ="../images/Helena_Characterize_Distribution_Hifi.jpg" width="400px">
+
+In the high-fidelity sketch, I kept the same format as the low-fidelity sketch, but used this opportunity to draw an example of distributions for a continuous habit variable (eg. hours/day). Continuous ordinal variables will be split into 4-6 bins (to avoid using too many colours) and represented by single-colour (eg. blue) luminance. Discrete nominal variables will continue to be represented by different colourblind-friendly hues.
+
+## Next Steps
+
+### *Action Plan*
+
+To achieve an A-grade project, our group will follow the structured timeline (below). The plan is broken down into actionable steps with deadlines and assigned responsibilities.
+
 | Task                                              | Date                  | Assignee               |
 |---------------------------------------------------|-----------------------|------------------------|
 | Implement feedback from PM2                       | ASAP                  | Applicable members     |
@@ -391,21 +486,27 @@ Proposed timeline:
 | Attend OH for advice for A+ project               | Wed Mar 19, 12:30-2pm | ???                    |
 | Check-in Discord Meeting                          | Wed Mar 19, evening   | all                    |
 | Finalize individual vis + written sections        | Wed Mar 19            | all                    |
-| look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
-| adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
+| Look over/give feedback to team member's vis      | Fri Mar 21            | all                    |
+| Adjust vis based on feedback (if needed)          | Sat Mar 22            | all                    |
 | Finalize contracted grade                         | Sun Mar 23            | all                    |
 | Create and publish website                        | Sun Mar 23            | Jess                   |
 
 In addition, each group member will adhere to the following:
-- Version Control: All members will commit their work to GitHub with clear commit messages and create separate Pull Requests when making changes based on TA feedback.
-- Project Management: all members will write their completed tasks/actions as a comment under the respective issue(s).
-- Feedback Incorporation: Regular communication on Discord, to ensure alignment and quality.
+- **Version Control:** All members will commit their work to GitHub with clear commit messages and create separate Pull Requests when making changes based on TA feedback.
+- **Project Management:** all members will write their completed tasks/actions as a comment under the respective issue(s).
+- **Feedback Incorporation:** Regular communication on Discord, to ensure alignment and quality.
 
 ## Summary of contributions
-**Workload distribution Milestone 2**: Allison (25%), Helena (25%), Judy (25%), and Jessica (25%)
-
-### Jessica
-My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
-
-### Allison
+ **Workload distribution Milestone 2**: Allison (25%), Helena (25%), Judy (25%), and Jessica (25%)
+ 
+  ### Allison
 My contributions included writing my portions of the introduction and conducting individual EDA + report. I also created the group EDA file and the wrangling_and_cleaning python script compiling our collective cleaning/transformations.
+
+  ### Helena
+My contributions included writing my portions of the introduction and conducting individual EDA + report.
+
+  ### Judy
+My contributions included writing my portions of the introductory and analysis README.md files, creating the introduction and the data abstraction sections, completing my EDA analysis, and doing my task abstraction and sketches.
+ 
+ ### Jessica
+My contributions included writing my portions of the introductory and analysis README.md files, creating the code of conduct, completing my analysis, doing my task abstraction + sketches, writing the next steps section, and created/completed PL PM2 for the group.
