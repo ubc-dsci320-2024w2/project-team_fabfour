@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    }
+  },
+  "data": {
+    "url": "altairdata/altair-data-1ea860cd83498ee1aef79675b13027d9.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "facet": {
+    "row": {
+      "field": "Mental Health Condition",
+      "type": "nominal"
+    }
+  },
+  "spec": {
+    "layer": [
+      {
+        "mark": {
+          "type": "area",
+          "orient": "vertical"
+        },
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "param_11",
+              "empty": false,
+              "field": "Music effects",
+              "type": "nominal"
+            },
+            "value": "lightgray"
+          },
+          "x": {
+            "field": "Self-report Score",
+            "type": "quantitative"
+          },
+          "y": {
+            "axis": {
+              "grid": false,
+              "labels": false,
+              "ticks": true,
+              "values": [
+                0
+              ]
+            },
+            "field": "density",
+            "impute": null,
+            "scale": {
+              "nice": false,
+              "zero": true
+            },
+            "stack": "center",
+            "title": null,
+            "type": "quantitative"
+          }
+        },
+        "name": "view_6",
+        "transform": [
+          {
+            "density": "Self-report Score",
+            "extent": [
+              0,
+              10
+            ],
+            "groupby": [
+              "Mental Health Condition",
+              "Music effects"
+            ],
+            "as": [
+              "Self-report Score",
+              "density"
+            ]
+          }
+        ]
+      },
+      {
+        "mark": {
+          "type": "boxplot",
+          "box": {
+            "stroke": "black"
+          },
+          "color": "black",
+          "opacity": 0.5
+        },
+        "encoding": {
+          "x": {
+            "field": "Self-report Score",
+            "type": "quantitative"
+          }
+        }
+      }
+    ],
+    "height": 100,
+    "width": 500
+  },
+  "params": [
+    {
+      "name": "param_11",
+      "select": {
+        "type": "point",
+        "fields": [
+          "Music effects"
+        ]
+      },
+      "bind": "legend",
+      "views": [
+        "view_6"
+      ]
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"
+}
