@@ -64,8 +64,28 @@ TODO: Helena
     5. Characteristics of interactios and interactivity
     6. Critique the view
 
-### View 4
-TODO: Jessica
+### Response bias in self-reported mental health severity
+
+One limitation of this data set is the use of self-report.
+Although self-report can often be a simple way to gather large amounts of data from the public,
+responses may be subjected to bias.
+
+**Response bias** refers to systematic distortions in how people answer surveys or self-report data,
+leading to inaccurate or misleading results.
+It occurs when respondents provide answers that are not entirely truthful
+or reflective of their actual thoughts, feelings, or behaviors.
+This can happen due to various factors, such as social desirability (wanting to appear in a certain way),
+misunderstanding questions, extreme response tendencies (always choosing the highest or lowest options),
+or even response/survey fatigue.
+Response bias is particularly relevant to this dataset of self-reported mental health severity,
+as individuals may overstate or understate their symptoms based on personal perceptions, stigma,
+or other influences, potentially impacting the reliability of this data, and in turn, our results and perceptions of the visualizations above.
+
+**What is the distribution of self-reported mental health scores based on opinions of music on mental health?**
+
+![Jess Vis 1](images/pm3/jess-vis1.gif)
+
+
 1. Screenshot/gif of visualization
 2. Summary of tasks and how they accomplish the task
 3. Explain/justify viz choices

@@ -1,0 +1,412 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    }
+  },
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "mark": {
+            "type": "circle",
+            "opacity": 0.75
+          },
+          "encoding": {
+            "color": {
+              "condition": {
+                "param": "param_21",
+                "field": "Music effects",
+                "type": "nominal"
+              },
+              "value": "lightgray"
+            },
+            "opacity": {
+              "condition": [
+                {
+                  "param": "param_19",
+                  "value": 1,
+                  "empty": false
+                }
+              ],
+              "value": 0.3
+            },
+            "size": {
+              "condition": [
+                {
+                  "param": "param_20",
+                  "value": 800,
+                  "empty": false
+                }
+              ]
+            },
+            "tooltip": [
+              {
+                "field": "Age",
+                "type": "quantitative"
+              },
+              {
+                "field": "Anxiety",
+                "type": "quantitative"
+              },
+              {
+                "field": "Depression",
+                "type": "quantitative"
+              },
+              {
+                "field": "Insomnia",
+                "type": "quantitative"
+              },
+              {
+                "field": "OCD",
+                "type": "quantitative"
+              },
+              {
+                "field": "Music effects",
+                "type": "nominal"
+              }
+            ],
+            "x": {
+              "field": "Anxiety",
+              "scale": {
+                "domain": [
+                  -0.5,
+                  10.5
+                ]
+              },
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative"
+            }
+          },
+          "height": 300,
+          "name": "view_11",
+          "transform": [
+            {
+              "calculate": "datum[param_18]",
+              "as": "y"
+            }
+          ],
+          "width": 300
+        },
+        {
+          "mark": {
+            "type": "circle",
+            "opacity": 0.75
+          },
+          "encoding": {
+            "color": {
+              "condition": {
+                "param": "param_21",
+                "field": "Music effects",
+                "type": "nominal"
+              },
+              "value": "lightgray"
+            },
+            "opacity": {
+              "condition": [
+                {
+                  "param": "param_19",
+                  "value": 1,
+                  "empty": false
+                }
+              ],
+              "value": 0.3
+            },
+            "size": {
+              "condition": [
+                {
+                  "param": "param_20",
+                  "value": 800,
+                  "empty": false
+                }
+              ]
+            },
+            "tooltip": [
+              {
+                "field": "Age",
+                "type": "quantitative"
+              },
+              {
+                "field": "Anxiety",
+                "type": "quantitative"
+              },
+              {
+                "field": "Depression",
+                "type": "quantitative"
+              },
+              {
+                "field": "Insomnia",
+                "type": "quantitative"
+              },
+              {
+                "field": "OCD",
+                "type": "quantitative"
+              },
+              {
+                "field": "Music effects",
+                "type": "nominal"
+              }
+            ],
+            "x": {
+              "field": "Depression",
+              "scale": {
+                "domain": [
+                  -0.5,
+                  10.5
+                ]
+              },
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative"
+            }
+          },
+          "height": 300,
+          "name": "view_12",
+          "transform": [
+            {
+              "calculate": "datum[param_18]",
+              "as": "y"
+            }
+          ],
+          "width": 300
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "mark": {
+            "type": "circle",
+            "opacity": 0.75
+          },
+          "encoding": {
+            "color": {
+              "condition": {
+                "param": "param_21",
+                "field": "Music effects",
+                "type": "nominal"
+              },
+              "value": "lightgray"
+            },
+            "opacity": {
+              "condition": [
+                {
+                  "param": "param_19",
+                  "value": 1,
+                  "empty": false
+                }
+              ],
+              "value": 0.3
+            },
+            "size": {
+              "condition": [
+                {
+                  "param": "param_20",
+                  "value": 800,
+                  "empty": false
+                }
+              ]
+            },
+            "tooltip": [
+              {
+                "field": "Age",
+                "type": "quantitative"
+              },
+              {
+                "field": "Anxiety",
+                "type": "quantitative"
+              },
+              {
+                "field": "Depression",
+                "type": "quantitative"
+              },
+              {
+                "field": "Insomnia",
+                "type": "quantitative"
+              },
+              {
+                "field": "OCD",
+                "type": "quantitative"
+              },
+              {
+                "field": "Music effects",
+                "type": "nominal"
+              }
+            ],
+            "x": {
+              "field": "Insomnia",
+              "scale": {
+                "domain": [
+                  -0.5,
+                  10.5
+                ]
+              },
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative"
+            }
+          },
+          "height": 300,
+          "name": "view_13",
+          "transform": [
+            {
+              "calculate": "datum[param_18]",
+              "as": "y"
+            }
+          ],
+          "width": 300
+        },
+        {
+          "mark": {
+            "type": "circle",
+            "opacity": 0.75
+          },
+          "encoding": {
+            "color": {
+              "condition": {
+                "param": "param_21",
+                "field": "Music effects",
+                "type": "nominal"
+              },
+              "value": "lightgray"
+            },
+            "opacity": {
+              "condition": [
+                {
+                  "param": "param_19",
+                  "value": 1,
+                  "empty": false
+                }
+              ],
+              "value": 0.3
+            },
+            "size": {
+              "condition": [
+                {
+                  "param": "param_20",
+                  "value": 800,
+                  "empty": false
+                }
+              ]
+            },
+            "tooltip": [
+              {
+                "field": "Age",
+                "type": "quantitative"
+              },
+              {
+                "field": "Anxiety",
+                "type": "quantitative"
+              },
+              {
+                "field": "Depression",
+                "type": "quantitative"
+              },
+              {
+                "field": "Insomnia",
+                "type": "quantitative"
+              },
+              {
+                "field": "OCD",
+                "type": "quantitative"
+              },
+              {
+                "field": "Music effects",
+                "type": "nominal"
+              }
+            ],
+            "x": {
+              "field": "OCD",
+              "scale": {
+                "domain": [
+                  -0.5,
+                  10.5
+                ]
+              },
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative"
+            }
+          },
+          "height": 300,
+          "name": "view_14",
+          "transform": [
+            {
+              "calculate": "datum[param_18]",
+              "as": "y"
+            }
+          ],
+          "width": 300
+        }
+      ]
+    }
+  ],
+  "data": {
+    "url": "altairdata/altair-data-a485232af25b1c0d4659fec54829a86b.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "params": [
+    {
+      "name": "param_20",
+      "select": {
+        "type": "point",
+        "on": "mouseover"
+      },
+      "views": [
+        "view_11",
+        "view_12",
+        "view_13",
+        "view_14"
+      ]
+    },
+    {
+      "name": "param_21",
+      "select": {
+        "type": "interval"
+      },
+      "views": [
+        "view_11",
+        "view_12",
+        "view_13",
+        "view_14"
+      ]
+    },
+    {
+      "name": "param_18",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Age",
+          "BPM"
+        ],
+        "name": "Y-axis column "
+      },
+      "value": "Age"
+    },
+    {
+      "name": "param_19",
+      "select": {
+        "type": "point"
+      },
+      "views": [
+        "view_11",
+        "view_12",
+        "view_13",
+        "view_14"
+      ]
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"
+}

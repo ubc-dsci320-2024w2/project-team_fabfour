@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+<div class="vega-visualization" id="vega-visualization-0a27b48cb47a429ca47a4c8129a42f13"></div>
+<script type="text/javascript">
+  const spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "altairdata/altair-data-1ea860cd83498ee1aef79675b13027d9.json", "format": {"type": "json"}}, "facet": {"row": {"field": "Mental Health Condition", "type": "nominal"}}, "spec": {"layer": [{"mark": {"type": "area", "orient": "vertical"}, "encoding": {"color": {"condition": {"param": "param_1", "empty": false, "field": "Music effects", "type": "nominal"}, "value": "lightgray"}, "x": {"field": "Self-report Score", "type": "quantitative"}, "y": {"axis": {"grid": false, "labels": false, "ticks": true, "values": [0]}, "field": "density", "impute": null, "scale": {"nice": false, "zero": true}, "stack": "center", "title": null, "type": "quantitative"}}, "name": "view_1", "transform": [{"density": "Self-report Score", "extent": [0, 10], "groupby": ["Mental Health Condition", "Music effects"], "as": ["Self-report Score", "density"]}]}, {"mark": {"type": "boxplot", "box": {"stroke": "black"}, "color": "black", "opacity": 0.5}, "encoding": {"x": {"field": "Self-report Score", "type": "quantitative"}}}], "height": 100, "width": 500}, "params": [{"name": "param_1", "select": {"type": "point", "fields": ["Music effects"]}, "bind": "legend", "views": ["view_1"]}], "resolve": {"scale": {"y": "independent"}}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"};
+  const embedOpt = {};
+  vegaEmbed('#vega-visualization-0a27b48cb47a429ca47a4c8129a42f13', spec, embedOpt).catch(console.error);
+</script>
+</body>
+</html>
