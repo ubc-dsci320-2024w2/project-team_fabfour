@@ -179,7 +179,7 @@ The y-axis could have a title that changes with the dropdown, which would improv
 This vis may benefit with reduced overplotting; we could consider jittering the points slightly to prevent overlap.
 
 
-#### **How do demographics (eg. music listening habits) contribute to correlations in self-reported mental health?**
+#### **How do demographics (eg. music listening habits) contribute to unique self-reported mental health scores?**
 
 <img src="../images/pm3/jess_vis4.gif" width="550" height="500"/>
 
