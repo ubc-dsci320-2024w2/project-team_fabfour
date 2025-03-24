@@ -178,6 +178,9 @@ retrieve specific values for a certain points,which may help us understand anoma
 The y-axis could have a title that changes with the dropdown, which would improve clarity.
 This vis may benefit with reduced overplotting; we could consider jittering the points slightly to prevent overlap.
 
+
+#### **How do demographics (eg. music listening habits) contribute to correlations in self-reported mental health?**
+
 <img src="../images/pm3/jess_vis4.gif" width="550" height="500"/>
 
 #### *Summary and Explanations*:
