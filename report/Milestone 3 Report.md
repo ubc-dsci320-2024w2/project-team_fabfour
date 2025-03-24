@@ -120,7 +120,7 @@ Showing only one mental health condition at a time can be very effective, allowi
 
 #### **What are the response patterns (and anomalies) for self-reported mental health scores?**
 
-<img src="../images/pm3/jess_vis2.gif" width="650" height="650"/>
+<img src="../images/pm3/jess_vis2.gif" width="750" height="650"/>
 
 #### *Summary and Explanations*:
 Here, we can see a multi-bar plot and a dotplot, using `.mark_bar()` and `.mark_circle()`, respectively.
