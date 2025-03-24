@@ -120,7 +120,7 @@ Showing only one mental health condition at a time can be very effective, allowi
 
 #### **What are the response patterns (and anomalies) for self-reported mental health scores?**
 
-<img src="../images/pm3/jess_vis2.gif" width="750" height="650"/>
+<img src="../images/pm3/jess_vis2.gif" width="850" height="650"/>
 
 #### *Summary and Explanations*:
 Here, we can see a multi-bar plot and a dotplot, using `.mark_bar()` and `.mark_circle()`, respectively.
@@ -178,7 +178,7 @@ retrieve specific values for a certain points,which may help us understand anoma
 The y-axis could have a title that changes with the dropdown, which would improve clarity.
 This vis may benefit with reduced overplotting; we could consider jittering the points slightly to prevent overlap.
 
-<img src="../images/pm3/jess_vis4.gif" width="600" height="600"/>
+<img src="../images/pm3/jess_vis4.gif" width="640" height="600"/>
 
 #### *Summary and Explanations*:
 This visualization allows users to compare different **mental health scores** across groups. The tasks it supports include: **comparing** two mental health variables (X and Y axes) to explore relationships, identifying frequency **distributions** using bubble size to show count, **clustering**/categorizing data points using color to differentiate between groups, and viewing any **correlations** between mental health self-report scores. You may **interact with dropdowns** to dynamically change the X-axis, Y-axis, and category groupings. You can also **hover over points** to display detailed information about data points. **Size Encoding on Circles**: Larger circles indicate higher frequencies, making it easy to spot trends. **Positions X and Y** represent the selected mental health score variable on the horizontal and vertical axes, respectively. Nominal **color** categories are used to differentiate between participant groups based on the selected legend variable (e.g., "Yes," "No," "Unknown"). **Dropdown menus** allow users to change the X-axis, Y-axis, and color grouping dynamically. **Hovering over points** reveals additional information via tooltips.  
