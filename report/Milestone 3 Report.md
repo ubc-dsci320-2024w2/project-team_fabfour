@@ -85,7 +85,7 @@ and in turn, our results and perceptions of the visualizations above.
 
 #### **What is the distribution of self-reported mental health scores based on opinions of music on mental health?**
 
-<img src="../images/pm3/jess_vis1.gif" width="600" height="600"/>
+<img src="../images/pm3/jess_vis1.gif" width="700" height="600"/>
 
 #### *Summary and Explanations*:
 Above, we can see four violin plots, one of each mental health condition, overlaid by boxplots.
@@ -120,7 +120,7 @@ Showing only one mental health condition at a time can be very effective, allowi
 
 #### **What are the response patterns (and anomalies) for self-reported mental health scores?**
 
-<img src="../images/pm3/jess_vis2.gif" width="850" height="650"/>
+<img src="../images/pm3/jess_vis2.gif" width="850" height="500"/>
 
 #### *Summary and Explanations*:
 Here, we can see a multi-bar plot and a dotplot, using `.mark_bar()` and `.mark_circle()`, respectively.
@@ -150,7 +150,7 @@ but the dotplot makes it easier to see these anomalies.
 
 #### **Can we group individuals into clusters based on their music preferences and mental health scores?**
 
-<img src="../images/pm3/jess_vis3.gif" width="650" height="600"/>
+<img src="../images/pm3/jess_vis3.gif" width="700" height="600"/>
 
 #### *Summary and Explanations*:
 This visualization consists of four scatter plots arranged in a facet grid format,
