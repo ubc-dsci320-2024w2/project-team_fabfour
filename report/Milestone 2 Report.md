@@ -42,7 +42,15 @@ Our intended audience includes individuals who are passionate about music or men
 | Permissions               | Categorical      | Permission to publicize data | 1
 
 ### Exploratory Data Analysis
-All four of our group's individual exploratory data analysis can be found under the analysis folder. We shall present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
+
+All four of our group's individual exploratory data analysis can be found under the analysis folder.
+We  present the key findings in the notebook labeled "EDA Summary" located in the analysis folder.
+Here are the direct links to our EDA:
+- General: https://github.com/ubc-dsci320-2024w2/project-team_fabfour/blob/main/analysis/EDA%20Summary.ipynb
+- Allison (Person 1): https://github.com/ubc-dsci320-2024w2/project-team_fabfour/blob/main/analysis/Allison/analysis1.ipynb
+- Helena (Person 2): https://github.com/ubc-dsci320-2024w2/project-team_fabfour/blob/main/analysis/Helena/analysis2.ipynb
+- Judy (Person 3): https://github.com/ubc-dsci320-2024w2/project-team_fabfour/blob/main/analysis/Judy/analysis3.ipynb
+- Jessica (Person 4): https://github.com/ubc-dsci320-2024w2/project-team_fabfour/blob/main/analysis/Jessica/analysis4.ipynb
 
 ## Research Questions
 
