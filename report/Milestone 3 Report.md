@@ -112,7 +112,7 @@ in my vis, dark green relates to "Improves", light green relates to "No effect",
 For these choices, I assume the viewer also lives in my society where green means "good" 
 and dark green means "very good" while light green means "ok".
 The vis also uses a colourblind friendly palette, obtained from
-ColorBrewer2.org[https://colorbrewer2.org/#type=diverging&scheme=PRGn&n=4].
+[ColorBrewer2.org](https://colorbrewer2.org/#type=diverging&scheme=PRGn&n=4).
 Boxplots may be difficult to interpret due to their small size within the larger ridges,
 but larger box plots may make the violin plot splits more difficult to see.
 Showing only one mental health condition at a time can be very effective, allowing for better focus.
