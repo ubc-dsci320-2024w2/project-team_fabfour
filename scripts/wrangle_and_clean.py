@@ -62,6 +62,11 @@ def make_frequency_cols_ordered(data):
     return data
 
 def make_mental_health_levels(data):
+    data['Anxiety'] = data['Anxiety']
+    data['Depression'] = data['Depression']
+    data['Insomnia'] = data['Insomnia']
+    data['OCD'] = data['OCD']
+
     data['Anxiety_Level'] = pd.cut(
         data['Anxiety'], 
         bins=[0, 3, 6, 10], 
@@ -141,9 +146,63 @@ def make_genre_diversity_score(data):
         "Frequency [Latin]", "Frequency [Lofi]", "Frequency [Metal]", "Frequency [Pop]",
         "Frequency [R&B]", "Frequency [Rap]", "Frequency [Rock]", "Frequency [Video game music]"
     ]
+    
+    # Rename columns to replace spaces with underscores
+    renamed_columns = {col: col.replace(" ", "_").replace("[", "").replace("]", "") for col in genre_columns}
+    data = data.rename(columns=renamed_columns)
 
-    for col in genre_columns:
-        data[col] = data[col].map(frequency_mapping)
+    # Create a copy of the original genre columns to retain the original values
+    for col in renamed_columns.values():
+        data[f"{col}_numeric"] = data[col].map(frequency_mapping)  
 
-    data["Genre Diversity Score"] = (data[genre_columns] > 0).sum(axis=1)
+    # Calculate the Genre Diversity Score based on the numeric columns
+    data["Genre Diversity Score"] = (data[[f"{col}_numeric" for col in renamed_columns.values()]] > 0).sum(axis=1)
+    
     return data
+
+
+# def make_genre_diversity_score(data):
+#     frequency_mapping = {
+#         "Never": 0,
+#         "Rarely": 1,
+#         "Sometimes": 2,
+#         "Very frequently": 3
+#     }
+
+#     genre_columns = [
+#         "Frequency [Classical]", "Frequency [Country]", "Frequency [EDM]", "Frequency [Folk]",
+#         "Frequency [Gospel]", "Frequency [Hip hop]", "Frequency [Jazz]", "Frequency [K pop]",
+#         "Frequency [Latin]", "Frequency [Lofi]", "Frequency [Metal]", "Frequency [Pop]",
+#         "Frequency [R&B]", "Frequency [Rap]", "Frequency [Rock]", "Frequency [Video game music]"
+#     ]
+    
+#     # Create a copy of the original genre columns to retain the original values
+#     for col in genre_columns:
+#         data[f"{col}_numeric"] = data[col].map(frequency_mapping)  # Mapping the original column to numeric values
+
+#     # Calculate the Genre Diversity Score based on the numeric columns
+#     data["Genre Diversity Score"] = (data[[f"{col}_numeric" for col in genre_columns]] > 0).sum(axis=1)
+    
+#     return data
+
+
+# def make_genre_diversity_score(data):
+#     frequency_mapping = {
+#         "Never": 0,
+#         "Rarely": 1,
+#         "Sometimes": 2,
+#         "Very frequently": 3
+#     }
+
+#     genre_columns = [
+#         "Frequency [Classical]", "Frequency [Country]", "Frequency [EDM]", "Frequency [Folk]",
+#         "Frequency [Gospel]", "Frequency [Hip hop]", "Frequency [Jazz]", "Frequency [K pop]",
+#         "Frequency [Latin]", "Frequency [Lofi]", "Frequency [Metal]", "Frequency [Pop]",
+#         "Frequency [R&B]", "Frequency [Rap]", "Frequency [Rock]", "Frequency [Video game music]"
+#     ]
+
+#     for col in genre_columns:
+#         data[col] = data[col].map(frequency_mapping)
+
+#     data["Genre Diversity Score"] = (data[genre_columns] > 0).sum(axis=1)
+#     return data
