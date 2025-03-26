@@ -127,7 +127,7 @@ This visualization supports the following tasks:
 1. **Filter** – It filters by musical hobby (both, instrumentalist, composer, or neither) and mental health condition to explore associations between musical hobbies, age, and mental health scores.
 2. **Retrieve Value** – It retrieves the count of respondents per musical hobbies, as well as the range and distribution of mental health scores.
 3. **Determine Range** – It enables examination of score distribution across ages and musical hobby groups.
-4. 
+   
 The scatterplot on top visualizes individual responses, plotting age on the x-axis and the selected mental health condition score on the y-axis. Colour encodes musical hobby. An interval selection (brush) filters the data shown in the linked bar chart to aleviate overplotting.
 
 The bar chart below shows the count of respondents per musical hobby for the brushed region. This helps answer if people with higher scores tend to play music, or if certain musical hobbies cluster at different score levels.
@@ -164,7 +164,7 @@ This visualization does a strong job of helping users explore how musical hobbie
 One small limitation is that only one mental health condition can be viewed at a time (because of the dropdown). However, this keeps the view clean and avoids overwhelming the viewer. The bar chart works well with only four categories, and it makes it easy to compare counts across groups.
 
 ### View 2
-TODO: Judy
+TODO: Helena
 1. Screenshot/gif of visualization
 2. Summary of tasks and how they accomplish the task
 3. Explain/justify viz choices
@@ -176,7 +176,7 @@ TODO: Judy
     6. Critique the view
 
 ### View 3
-TODO: Helena
+TODO: Judy
 1. Screenshot/gif of visualization
 2. Summary of tasks and how they accomplish the task
 3. Explain/justify viz choices
@@ -186,6 +186,167 @@ TODO: Helena
     4. Describe new interactions
     5. Characteristics of interactios and interactivity
     6. Critique the view
+
+### The relationship between the diversity of genres an individual listens to, their self-reported mental health conditions, and the different perceived music effets.
+
+#### **What is the relationship between the variety of genres an individual listens to and their self-reported mental health conditions?**
+
+<img src="../images/pm3/judy_viz1.gif" />
+
+#### *Summary and Explanations*:
+
+**Tasks**
+This visualization supports the following tasks:
+
+1. **Correlate** – Examines the relationship between an individual's genre diversity score and their self-reported mental health conditions (anxiety, depression, insomnia, OCD).
+2. **Determine Range** – Identifies how mental health scores vary across different levels of genre diversity.
+3. **Retrieve Value** - Shows the count of individuals within selected ranges for each condition.
+4. **Filter** - Allows the selection of a subset of the data points.
+
+The view helps to identify the relationship between genre diversity and self-reported mental health conditions. It consists of a scatterplot, a bar chart and a correlation heatmap. The scatterplot allows users to visually assess whether higher or lower genre diversity scores correspond to particular mental health conditions. It consists of mental health score on the x-axis and genre diversity score on the y-axis. It has an interactive brushing component that enables filtering subsets of data. Since there are multiple points on the scatterplot that are overlaid on top of each other, there is a bar chart that displays the count of the points for the selection for each mental health condition for more clarity. the bar chart has the number of individuals on the x-axis and the mental health condition on the y-axis. The correlation heatmap helps to view the correlation value between genre diversity score and self-reported mental health condition with one variable on each axis.
+
+**Visualization Choices**
+1. *Scatterplot*
+   
+- Mark: Point
+- Channels:
+    - Position on a common scale: The horizontal position encodes mental health score which is a quantitative value and the vertical position encodes the genre diversity score which is also quantitative and a magnitude channel is best at representing these quantitative values.
+    - Size: Encodes the count of mental health conditions in the scatterplot and it is effectively used since count is a quantitative value.
+    - Color hue: Encodes mental health condition which is categorical and thus color hue is an appropriate identity channel to distinguish between the various levels.
+- Justification: Scatterplots are ideal for showing the relationship between two quantitative variables. Using position along common scales effectively shows the distribution and potential correlations. Size is added to show the number of conditions overlapping, which addresses overplotting. The color hue helps differentiate the mental health conditions.
+
+2. *Bar chart*
+- Mark: Line 
+- Channels:
+    - Length: Encodes the count and is used to express that quantitative value
+    - Color hue: Encodes mental health condition and it is used to differentiate between the levels of the categorical attribute of mental health condition.
+    - Spatial regions: There is one per mark which is separated vertically, and aligned horizontally.
+- Justification: Bar charts are good for comparing counts of categorical data. Using length to represent count allows for easy comparison between different mental health conditions within the selected range of the scatterplot.
+
+3. *Correlation heatmap*
+- Mark: Point
+- Channels:
+    - Color saturation: Encodes the correlation value which is quantitative. Lower values of saturation means lowest correlation and higher saturation indicates higher correlation.
+    - 2D shared position: Encodes the two variables as a cell.
+- Justification: Heatmaps are effective in displaying correlation matrices and the color saturation used represents the correlation value where its intensity helps to quuickly identify strong or weak relationships, and the 2D shared position clearly shows which variables are being correlated.
+
+#### *Interactions and Interactivity*
+- The brushing on the scatterplot allows users to select a range of data points and filters the bar chart to show counts within that range. Double-clicking on the background of the scatterplot should undo the selection.
+- There is a tooltip on the individual data points of the scatterplot that shows the mental health condition, mental health score and genre diversity score for that point.
+- There is also a tooltip on the correlation heatmap that shows the variable 1, variable 2 and the correlation between the two variables.
+
+*Characteristics of the interactions and interactivity*: 
+- Linked Views: The scatterplot and bar chart are linked and provide dynamic filtering and exploration.
+- Selection: Brushing allows for interactive selection of data subsets.
+- Overview and Detail: The scatterplot provides an overview, while the bar chart offers detailed counts for selected subsets.
+
+#### *Critique of View*
+The view effectively shows the relationship between genre diversity and mental health conditions. The scatterplot provides an overview, while the bar chart and heatmap offer more detailed insights. The color coding, which differentiates mental health conditions, is consistent across both the scatterplot and bar chart, making it easier for users to track data across different views. The interactive brushing feature is also great since it allows users to filter the scatterplot and see the corresponding counts in the bar chart which enables users to explore in more detail. While the scatterplot tries to reduce overplotting by adjusting point sizes, this might not fully solve the issue in areas with dense data. However, the bar chart complements this by clearly showing counts within selected ranges. Additionally, the heatmap helps investigate the correlation by highlighting the relationships between variables using a correlation value. Overall, the view helps answer the question.
+
+#### What is the distribution of genre diversity scores among individuals who report different effects of music on their well-being?
+<img src="../images/pm3/judy_viz2.gif" />
+
+#### Summary and Explanations:
+
+**Tasks**
+
+This visualization supports the following tasks:
+
+1. **Characterize Distribution** – Examines the distribution of genre diversity scores across different perceived music effects.
+2. **Determine Range** - Displays the range of genre diversity scores across different perceived music effects.
+3. **Retrieve Value** – Shows the count of individuals within each genre diversity score range for each music effect.
+4. **Filter** - Filter by music effect to view the respective distribution.
+   
+The view helps identify how genre diversity scores are distributed among individuals who report different effects of music on their well-being. It consists of a violin plot, a histogram, and a rug plot. The violin plot allows users to visually assess the distribution shape and density of genre diversity scores for each music effect. The histogram displays the count of individuals within each genre diversity score range, segmented by music effect. The rug plot provides a detailed view of individual data points along the genre diversity score axis.
+
+**Visualization Choices**
+
+1. *Violin Plot*
+
+- Mark: Area (mark_area)
+- Channels:
+  - Position on a common scale: Encodes genre diversity score which is a quantitative value as vertical position.]
+  - Color hue: used to encode different categories of music effects which helps in differentiating between them.
+- Justification: Violin plots are effective for showing the distribution of quantitative data across categorical groups. They combine the features of box plots and kernel density plots and thus provide insights into the data's shape and density.
+  
+2. *Stacked Histogram*
+
+- Mark: Vertical stack of area marks (mark_bar)
+- Channels:
+  - Position on a common scale where the horizontal position encodes the genre diversity score and length (frequency attribute) encodes the vertical position.
+  - Color Hue: Encodes the categorical variable music effects which helps differentiate between each level of the attribute.
+- Justification: Histograms are used to show the distribution of a quantitative variable which is genre diversity score in this view. The segmented bars, colored by music effects, enables the comparison of the distribution of genre diversity scores among the different music effects.
+  
+3. *Rug Plot*
+
+- Mark: Line (mark_tick)
+- Channels:
+  - Position on a common scale: Encodes the genre diversity score as vertical position.
+  - Color hue: Used to encode the categorical levels of the music effects attribute.
+- Justification: Rug plots provide a detailed view of individual data points along a single axis, showing the distribution of genre diversity scores.
+
+#### Interactions and Interactivity
+
+- Interactive legend that enables filtering to view the distribution and range of each music effect.
+- Range slider that enables users to view the violin plot for a specific range on the y-axis. 
+
+*Characteristics of the interactions and interactivity*:
+
+- Linked Views: The violin plot, histogram, and rug plot are linked to provide a comprehensive view of the data.
+- Selection: The interactive legend of music effects allows selection of a music effect and filtering views across specific music effects.
+- Overview and Detail: The violin plot provides an overview of the distributions, while the histogram and rug plot offer more detailed insights.
+
+#### Critique of View
+The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. One limitation is that while the linked views and interactive legend are useful, the violin plots lack direct interactivity. Users cannot directly select or hover over specific data points or density areas within the violin plots to get precise values, counts, or ranges. This limits the ability to explore the nuanced distributions in the violin plots directly.
+
+### How does the frequency of listening to different music genres relate to self-reported mental health conditions and the perceived effects of music?
+<img src="../images/pm3/judy_viz3.gif" />
+
+### Summary and Explanations:
+
+**Tasks**
+
+This visualization supports the following tasks:
+
+- **Characterize distribution**: Examining the distribution of mental health scores based on the frequency of listening to a specific favorite genre.
+- **Filter** – Allows filtering by music effect and mental health condition to focus on specific subsets of data.
+- **Retrieve Value** – Shows the proportion of respondents within each mental health condition level for each genre listening frequency.
+- **Find Extremum** – Determining which favorite genre has the highest proportion of individuals reporting the effects of music on their well-being.
+  
+The view helps identify how the frequency of listening to different music genres relates to self-reported mental health conditions and the perceived effects of music. It consists of a normalized stacked bar chart and a radial chart. The normalized stacked bar chart displays the proportion of respondents with different mental health condition levels for each genre listening frequency. The radial chart shows the distribution of music effects across different favorite genres.
+
+**Visualization Choices**
+
+1. *Radial Chart*
+
+- Mark: 2D Area mark (mark_arc)
+- Channels:
+  - Polar position: Encodes the favorite music genre as angular position and the proportion of individuals as radial position.
+  - Color Hue: Encodes the favorite genres which is a categorical attribute and an identity channel like color hue is ideal for higher discriminability.
+- Justification: The radial chart is suitable for visualizing the distribution of music effects across different genres, as it effectively uses angular and radial encoding to display proportions. The angular position represents the different genres, while the radius shows the proportion of individuals reporting each effect. This enables an intuitive comparison between genres. The use of color enhances the ability to differentiate between the different categories of genres. Additionally, the radial layout provides a compact way to represent categorical data and makes it easy to determine which favorite genre has the highest proportion of individuals per music effect.
+  
+3. *Normalized Stacked Bar Chart*
+
+- Mark: Vertical stack of line marks (mark_bar)
+- Channels:
+  - Length: Encodes the proportion of respondents within each mental health condition level for each genre listening frequency which is a quantitative value so a magnitude channel like length is effective.
+  - Color Hue: Encodes the categorical variable mental health condition level and helps differentiate between the levels of low, medium and high.
+  - Spatial regions: Encoded as one per glyph 
+- Justification: Normalized stacked bar charts are effective for showing proportions of different categories within a whole and comparing them across different groups. Length is used to represent proportions, and color hue differentiates mental health condition levels. The normalized stacked bar structure ensures that each bar represents a complete whole which enables direct comparison of proportions.
+
+#### Interactions and Interactivity
+
+- Bidirectional linking between the radial plot and the normalized stacked bar chart. Selecting a genre on the radial plot shows the distribution of the genre on the normalized stacked bar chart and selecting a section of the stacked bar chart shows the respective genre on the radial plot.
+- Dropdown menus to select music effect and mental health condition which allows filtering across the entire view.
+- Tooltips on the radial plot (favorite genre, count of individuals that has this genre as favorite genre, and the proportion) and on the normalized stacked bar chart (favorite genre, frequency, mental health condition level and proportion)
+    
+*Characteristics of the interactions and interactivity*:
+
+- Filtering: Dropdown menus allow filtering data based on music effects and mental health conditions.
+- Linked Views: The normalized stacked bar chart and radial chart are linked through the filtering option.
+  
+#### Critique of View
+The view effectively shows the relationship between genre listening frequency, mental health conditions, and perceived music effects. The normalized stacked bar chart clearly displays the proportions of different mental health condition levels across various listening frequencies which helps easy comparison. The radial chart provides an overview of how different favorite genres are associated with perceived music effects. The filtering options allow users to focus on specific subsets of the data which encourages exploration. The consistent use of color coding across the view helps users track data across different representations. However, one possible limitation is that the radial chart might be challenging to interpret accurately, especially when comparing areas or angles across different genres and music effects. It relies heavily on angle and area encoding, which are known to be less precise for human perception compared to length or position. This can make it difficult to accurately compare proportions for different genre-effect combinations, which can ultimately limit the chart's effectiveness in communicating precise information.
 
 ### Response bias in self-reported mental health severity
 *Member: Jessica Luo*
