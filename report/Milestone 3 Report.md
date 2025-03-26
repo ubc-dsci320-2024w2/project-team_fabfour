@@ -172,22 +172,13 @@ TODO: Helena
     2. Channels
     3. Characteristics of channels exploited
     4. Describe new interactions
-    5. Characteristics of interactios and interactivity
+    5. Characteristics of interactions and interactivity
     6. Critique the view
 
-### View 3
-TODO: Judy
-1. Screenshot/gif of visualization
-2. Summary of tasks and how they accomplish the task
-3. Explain/justify viz choices
-    1. Marks
-    2. Channels
-    3. Characteristics of channels exploited
-    4. Describe new interactions
-    5. Characteristics of interactios and interactivity
-    6. Critique the view
 
-### The relationship between the diversity of genres an individual listens to, their self-reported mental health conditions, and the different perceived music effets.
+### The relationship between the diversity of genres an individual listens to, their self-reported mental health conditions, and the different perceived music effects.
+*Member: Judy Lee*
+
 
 #### **What is the relationship between the variety of genres an individual listens to and their self-reported mental health conditions?**
 
@@ -208,7 +199,7 @@ The view helps to identify the relationship between genre diversity and self-rep
 **Visualization Choices**
 1. *Scatterplot*
    
-- Mark: Point
+- Mark: Point (mark_circle)
 - Channels:
     - Position on a common scale: The horizontal position encodes mental health score which is a quantitative value and the vertical position encodes the genre diversity score which is also quantitative and a magnitude channel is best at representing these quantitative values.
     - Size: Encodes the count of mental health conditions in the scatterplot and it is effectively used since count is a quantitative value.
@@ -216,7 +207,7 @@ The view helps to identify the relationship between genre diversity and self-rep
 - Justification: Scatterplots are ideal for showing the relationship between two quantitative variables. Using position along common scales effectively shows the distribution and potential correlations. Size is added to show the number of conditions overlapping, which addresses overplotting. The color hue helps differentiate the mental health conditions.
 
 2. *Bar chart*
-- Mark: Line 
+- Mark: Line (mark_bar)
 - Channels:
     - Length: Encodes the count and is used to express that quantitative value
     - Color hue: Encodes mental health condition and it is used to differentiate between the levels of the categorical attribute of mental health condition.
@@ -224,7 +215,7 @@ The view helps to identify the relationship between genre diversity and self-rep
 - Justification: Bar charts are good for comparing counts of categorical data. Using length to represent count allows for easy comparison between different mental health conditions within the selected range of the scatterplot.
 
 3. *Correlation heatmap*
-- Mark: Point
+- Mark: Point (mark_point)
 - Channels:
     - Color saturation: Encodes the correlation value which is quantitative. Lower values of saturation means lowest correlation and higher saturation indicates higher correlation.
     - 2D shared position: Encodes the two variables as a cell.
