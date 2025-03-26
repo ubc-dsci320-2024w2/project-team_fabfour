@@ -39,7 +39,7 @@ TODO: Allison
 
 #### *Summary and Explanations*:
 **Tasks**
-This visualization supports the following analytical tasks:
+This visualization supports the following tasks:
 
 1. **Compute Derived Value** – It displays the average age of respondents for each favourite genre.
 2. **Determine Range** – It reveals the distribution and variation of ages within each genre.
@@ -48,7 +48,7 @@ The dot plot on the left shows the **average age** for each genre along the x-ax
 
 The linked histogram on the right shows the distribution of ages for the selected genre, binned into 5-year intervals. This enables viewers to identify skewness (e.g., Latin or Gospel), spot multiple peaks, and observe the distribution of ages within genres.
 
-**Viz Choices**
+**Visualization Choices**
 1) Dot plot
 - Mark: Point (mark_circle)
 - Channels:
@@ -58,7 +58,7 @@ The linked histogram on the right shows the distribution of ages for the selecte
      - _Color_: indicates selected genre during interaction
      - _Line_: indicates the overall average
      - _Text_: indicates genre label
-Justification: The point mark was chosen instead of bars since the average does not need to originate at zero. It also supports effective encoding of count using size. The size channel is able to highlight genre popularity. Color serves a supporting aesthetic role, helping users visually track the selected genre. The use of the line was also important to serve as an anchor for the points, and to show how the values did not vary too much from the overall mean. Due to the points being far from the axis, the labels were removed and placed near their corresponding point.
+Justification: The point mark was chosen instead of bars since the average does not need to originate at zero and it supports effective encoding of count using size. The size channel is able to highlight genre popularity. Color serves a supporting aesthetic role, helping users visually track the selected genre. The use of the line was also important to serve as an anchor for the points, and to show how the values did not vary too much from the overall mean. Due to the points being far from the axis, the labels were removed and placed near their corresponding point.
 
 2) Histogram
 - Mark: Bar (mark_bar)
@@ -79,23 +79,45 @@ This design avoids overwhelming the viewer with all 16 genres simultaneously and
 #### *Critique of View*
 This visualization is effective due to its strong use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although area can be less obvious than length when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, this is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express transition between categories and the connection between the dot plot and the histogram. Only seven colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
 
-#### ** How does the age distribution vary across different severity levels of mental health conditions?**
+#### **How does the age distribution vary across different severity levels of mental health conditions?**
 
 <img src="../images/pm3/allie_viz2.gif" />
 
+**Tasks**
+This visualization supports the following tasks:
 
-#### ** How do musical hobbies relate to mental health scores across age, and which are most represented within different age and score ranges? **
+1. **Determine Range** – Reveals the full distribution of age for each severity level (Low, Medium, High) across various mental health conditions.
+2. **Retrieve Value** – Allows inspection of how age is distributed for each selected condition and severity level.
+3. **Identify Trends** – Investigates whether younger individuals are more likely to report high severity scores (as observed by researchers).
+
+The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown.
+
+This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed. If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
+
+**Visualization Choices**
+- Mark: Area (mark_area with interpolate='monotone' and orient='horizontal')
+- Channels:
+    - _Horizontal_: Smoothed density of respondents (stacked center)
+    - _Vertical_: Age
+    - _Color_: Severity Level (Low, Medium, High); change in saturation
+    - _Column_: Faceting by Level
+Justification: The area mark was chosen for its ability to show density smoothly, and it was preferred over a boxplot due to its ability to represent bimodal data and display trends more clearly [Source](https://clauswilke.com/dataviz/boxplots-violins.html). Faceting by level allows for direct comparison of age distributions across severity categories without interference or crowding. Overlapping violins (one per level) would be visually messy and difficult to interpret. Colour saturation is used over hue to correctly encode the ordinal variable.
+
+**Interactions and Interactivity**
+The visualization introduces a dropdown selector for the mental health condition (e.g., Anxiety, Depression, etc.). Upon selection:
+- The violin plots dynamically update to show the age distributions for that condition across severity levels.
+- Tooltips allow for value lookup, offering precise information about the estimated age and density at any point along the violin.
+
+This interaction is simple but effective. It avoids overloading the user with too many violins at once and allows the user to explore one condition at a time.
+
+#### *Critique of View*
+This visualization effectively reveals distribution shapes, which is essential for addressing the core question of whether younger individuals report higher severity. The width of each violin at different age points represents the relative density of respondents, allowing users to assess whether high severity is concentrated among younger people. The violin plot was chosen to emphasize density, display multiple peaks, and reduce the impact of noisy outliers. By combining this mark with faceting, each severity level appears in its own column, enabling clear and uncluttered comparisons. The dropdown interaction also enhances usability by allowing side-by-side comparisons across mental health conditions without introducing visual clutter.
+
+However, a limitation of this approach is the presence of long tails at the top of the violins, which is misleading since it suggests the presence of data where none exists ([Source](https://clauswilke.com/dataviz/boxplots-violins.html)). Additionally, violin plots are generally less intuitive than histograms, which may pose a challenge for novice viewers. 
+
+#### **How do musical hobbies relate to mental health scores across age, and which are most represented within different age and score ranges?**
 
 <img src="../images/pm3/allie_viz3.gif" />
-
-2. Summary of tasks and how they accomplish the task
-3. Explain/justify viz choices
-    1. Marks
-    2. Channels
-    3. Characteristics of channels exploited
-    4. Describe new interactions
-    5. Characteristics of interactios and interactivity
-    6. Critique the view
 
 ### View 2
 TODO: Judy
