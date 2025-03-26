@@ -30,7 +30,64 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 
 ### View 1 
 TODO: Allison
-1. Screenshot/gif of visualization
+
+// research q overview
+
+#### **How does the average age of listeners vary across favorite music genres, and what does the age distribution look like for each genre?**
+
+<img src="../images/pm3/allie_viz1.gif" />
+
+#### *Summary and Explanations*:
+**Tasks**
+This visualization supports the following analytical tasks:
+
+1. **Compute Derived Value** – It displays the average age of respondents for each favourite genre.
+2. **Determine Range** – It reveals the distribution and variation of ages within each genre.
+
+The dot plot on the left shows the **average age** for each genre along the x-axis, allowing for quick comparisons across genres to identify those preferred by older vs. younger individuals. Hovering over a point provides a tooltip with exact values for both average age and count.
+
+The linked histogram on the right shows the distribution of ages for the selected genre, binned into 5-year intervals. This enables viewers to identify skewness (e.g., Latin or Gospel), spot multiple peaks, and observe the distribution of ages within genres.
+
+**Viz Choices**
+1) Dot plot
+- Mark: Point (mark_circle)
+- Channels:
+     - _Horizontal_: encodes average age
+     - _Vertical_: encodes genre category
+     - _Size_: encodes respondent count
+     - _Color_: indicates selected genre during interaction
+     - _Line_: indicates the overall average
+     - _Text_: indicates genre label
+Justification: The point mark was chosen instead of bars since the average does not need to originate at zero. It also supports effective encoding of count using size. The size channel is able to highlight genre popularity. Color serves a supporting aesthetic role, helping users visually track the selected genre. The use of the line was also important to serve as an anchor for the points, and to show how the values did not vary too much from the overall mean. Due to the points being far from the axis, the labels were removed and placed near their corresponding point.
+
+2) Histogram
+- Mark: Bar (mark_bar)
+- Channels:
+     - _Horizontal_: binned age (5-year intervals)
+     - _Vertical_: count per bin
+     - _Color_: matches dot plot to reflect selected genre
+Justification: A bar chart provides a clear, consistent representation of age distributions, and exploits the common scale to support comparison of bin heights. The consistent bin width enables easy identification of skew, peaks, and gaps.
+
+**Interactions and Interactivity**
+The visualization employs a mouseover interaction on the dot plot. When a genre is hovered over:
+- The histogram updates to reflect the age distribution for that genre.
+- The genre name updates dynamically in the histogram title.
+- The selected genre is highlighted using color, while others fade to gray.
+
+This design avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltis is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
+
+#### *Critique of View*
+This visualization is effective due to its strong use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although area can be less obvious than length when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, this is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express transition between categories and the connection between the dot plot and the histogram. Only seven colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
+
+#### ** How does the age distribution vary across different severity levels of mental health conditions?**
+
+<img src="../images/pm3/allie_viz2.gif" />
+
+
+#### ** How do musical hobbies relate to mental health scores across age, and which are most represented within different age and score ranges? **
+
+<img src="../images/pm3/allie_viz3.gif" />
+
 2. Summary of tasks and how they accomplish the task
 3. Explain/justify viz choices
     1. Marks
