@@ -298,7 +298,7 @@ The view effectively shows the distribution of genre diversity scores across dif
 
 <img src="../images/pm3/judy_chart3.gif"/>
 
-### *Summary and Explanations*:
+#### *Summary and Explanations*:
 
 **Tasks**
 
