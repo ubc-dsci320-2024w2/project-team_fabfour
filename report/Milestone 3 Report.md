@@ -226,7 +226,7 @@ The view helps to identify the relationship between genre diversity and self-rep
 #### *Interactions and Interactivity*
 - The brushing on the scatterplot allows users to select a range of data points and filters the bar chart to show counts within that range. Double-clicking on the background of the scatterplot should undo the selection.
 - There is a tooltip on the individual data points of the scatterplot that shows the mental health condition, mental health score and genre diversity score for that point.
-- There is also a tooltip on the correlation heatmap that shows the variable 1, variable 2 and the correlation between the two variables.
+- There is also a text label on the correlation heatmap that shows the correlation between the two variables.
 
 *Characteristics of the interactions and interactivity*: 
 - Linked Views: The scatterplot and bar chart are linked and provide dynamic filtering and exploration.
