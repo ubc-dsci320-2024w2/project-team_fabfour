@@ -308,7 +308,7 @@ This visualization supports the following tasks:
 - **Retrieve Value** – Shows the proportion of respondents within each mental health condition level for each genre listening frequency.
 - **Find Extremum** – Determining which favorite genre has the highest proportion of individuals reporting the effects of music on their well-being.
   
-The view helps identify how the frequency of listening to different music genres relates to self-reported mental health conditions and the perceived effects of music. It consists of a normalized stacked bar chart and a radial chart. The normalized stacked bar chart displays the proportion of respondents with different mental health condition levels for each genre listening frequency. The radial chart shows the distribution of music effects across different favorite genres.
+The view helps identify how the frequency of listening to different music genres relates to self-reported mental health conditions and the perceived effects of music. It consists of a normalized stacked bar chart and a radial chart. The normalized stacked bar chart displays the proportion of respondents with different mental health condition levels for each genre listening frequency and the radial chart shows the distribution of music effects across different favorite genres.
 
 **Visualization Choices**
 
