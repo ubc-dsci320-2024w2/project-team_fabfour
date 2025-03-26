@@ -1,0 +1,142 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    }
+  },
+  "vconcat": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadius": 7,
+        "size": 12
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "param": "param_12",
+            "field": "Mental Health Condition",
+            "type": "nominal"
+          },
+          "value": "grey"
+        },
+        "tooltip": [
+          {
+            "field": "Mental Health Condition",
+            "type": "nominal"
+          },
+          {
+            "aggregate": "count",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "field": "Self-report Score",
+          "type": "ordinal"
+        },
+        "xOffset": {
+          "field": "Mental Health Condition",
+          "type": "nominal"
+        },
+        "y": {
+          "aggregate": "count",
+          "type": "quantitative"
+        }
+      },
+      "height": 300,
+      "name": "view_7",
+      "width": 800
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "param": "param_12",
+            "field": "Mental Health Condition",
+            "type": "nominal"
+          },
+          "value": "grey"
+        },
+        "size": {
+          "aggregate": "count",
+          "legend": {
+            "labelFontSize": 12
+          },
+          "scale": {
+            "rangeMax": 2000,
+            "rangeMin": 30
+          },
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Self-report Score",
+            "type": "quantitative"
+          },
+          {
+            "aggregate": "count",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "field": "Self-report Score",
+          "scale": {
+            "domain": [
+              -0.75,
+              10.75
+            ]
+          },
+          "title": "Self-report Score",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Mental Health Condition",
+          "title": "Mental Health Condition",
+          "type": "nominal"
+        }
+      },
+      "height": 240,
+      "name": "view_8",
+      "title": "Response Patters of Self-Reported Mental Health Severities",
+      "width": 800
+    }
+  ],
+  "data": {
+    "url": "altairdata/altair-data-1ea860cd83498ee1aef79675b13027d9.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "params": [
+    {
+      "name": "param_12",
+      "select": {
+        "type": "point",
+        "fields": [
+          "Mental Health Condition"
+        ]
+      },
+      "bind": "legend",
+      "views": [
+        "view_7",
+        "view_8"
+      ]
+    },
+    {
+      "name": "param_13",
+      "select": {
+        "type": "point"
+      },
+      "bind": "legend",
+      "views": [
+        "view_8"
+      ]
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"
+}

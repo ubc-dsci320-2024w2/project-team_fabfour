@@ -1,0 +1,163 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    }
+  },
+  "data": {
+    "url": "altairdata/altair-data-a485232af25b1c0d4659fec54829a86b.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "circle"
+  },
+  "encoding": {
+    "color": {
+      "field": "color",
+      "title": "Legend",
+      "type": "nominal"
+    },
+    "size": {
+      "aggregate": "count",
+      "scale": {
+        "domain": [
+          1,
+          20
+        ],
+        "rangeMax": 1000,
+        "rangeMin": 50
+      },
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "aggregate": "count",
+        "type": "quantitative"
+      },
+      {
+        "aggregate": "median",
+        "field": "Anxiety",
+        "type": "quantitative"
+      },
+      {
+        "aggregate": "median",
+        "field": "Depression",
+        "type": "quantitative"
+      },
+      {
+        "aggregate": "median",
+        "field": "Insomnia",
+        "type": "quantitative"
+      },
+      {
+        "aggregate": "median",
+        "field": "OCD",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "x",
+      "scale": {
+        "domain": [
+          -0.5,
+          10.5
+        ]
+      },
+      "title": "Selected Mental Health Group",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "y",
+      "scale": {
+        "domain": [
+          -0.5,
+          10.5
+        ]
+      },
+      "title": "Selected Mental Health Group",
+      "type": "quantitative"
+    }
+  },
+  "height": 550,
+  "params": [
+    {
+      "name": "param_16",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Anxiety",
+          "Depression",
+          "Insomnia",
+          "OCD"
+        ],
+        "name": "Y-axis column "
+      },
+      "value": "Depression"
+    },
+    {
+      "name": "param_15",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Anxiety",
+          "Depression",
+          "Insomnia",
+          "OCD"
+        ],
+        "name": "X-axis column "
+      },
+      "value": "Anxiety"
+    },
+    {
+      "name": "param_17",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Primary streaming service",
+          "While working",
+          "Instrumentalist",
+          "Composer",
+          "Exploratory",
+          "Foreign languages",
+          "Music effects"
+        ],
+        "labels": [
+          "None",
+          "Primary streaming service",
+          "While working",
+          "Instrumentalist",
+          "Composer",
+          "Exploratory",
+          "Foreign languages",
+          "Music Effects on Mental Health"
+        ],
+        "name": "Legend: "
+      }
+    }
+  ],
+  "title": {
+    "text": "Comparing Mental Health Scores",
+    "fontSize": 20,
+    "subtitle": "by Category of Choice"
+  },
+  "transform": [
+    {
+      "calculate": "datum[param_16]",
+      "as": "y"
+    },
+    {
+      "calculate": "datum[param_15]",
+      "as": "x"
+    },
+    {
+      "calculate": "datum[param_17]",
+      "as": "color"
+    }
+  ],
+  "width": 550,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"
+}
