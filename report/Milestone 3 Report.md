@@ -263,7 +263,7 @@ The view helps identify how genre diversity scores are distributed among individ
   - Color hue: used to encode different categories of music effects which helps in differentiating between them.
 - Justification: Violin plots are effective for showing the distribution of quantitative data across categorical groups. They combine the features of box plots and kernel density plots and thus provide insights into the data's shape and density.
   
-2. Histogram*
+2. Histogram
 
 - Mark: Vertical stack of area marks (mark_bar)
 - Channels:
