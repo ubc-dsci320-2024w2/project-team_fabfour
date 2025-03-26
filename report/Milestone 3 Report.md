@@ -184,7 +184,7 @@ TODO: Helena
 
 #### **What is the relationship between the variety of genres an individual listens to and their self-reported mental health conditions?**
 
-<img src="../images/pm3/judy_viz1.gif" />
+<img src="../images/pm3/judy_chart1.gif"/>
 
 #### *Summary and Explanations*:
 
@@ -237,7 +237,8 @@ The view helps to identify the relationship between genre diversity and self-rep
 The view effectively shows the relationship between genre diversity and mental health conditions. The scatterplot provides an overview, while the bar chart and heatmap offer more detailed insights. The color coding, which differentiates mental health conditions, is consistent across both the scatterplot and bar chart, making it easier for users to track data across different views. The interactive brushing feature is also great since it allows users to filter the scatterplot and see the corresponding counts in the bar chart which enables users to explore in more detail. While the scatterplot tries to reduce overplotting by adjusting point sizes, this might not fully solve the issue in areas with dense data. However, the bar chart complements this by clearly showing counts within selected ranges. Additionally, the heatmap helps investigate the correlation by highlighting the relationships between variables using a correlation value. Overall, the view helps answer the question.
 
 #### What is the distribution of genre diversity scores among individuals who report different effects of music on their well-being?
-<img src="../images/pm3/judy_viz2.gif" />
+
+<img src="../images/pm3/judy_chart2.gif"/>
 
 #### Summary and Explanations:
 
@@ -278,7 +279,7 @@ The view helps identify how genre diversity scores are distributed among individ
   - Color hue: Used to encode the categorical levels of the music effects attribute.
 - Justification: Rug plots provide a detailed view of individual data points along a single axis, showing the distribution of genre diversity scores.
 
-#### Interactions and Interactivity
+#### *Interactions and Interactivity*
 
 - Interactive legend that enables filtering to view the distribution and range of each music effect.
 - Range slider that enables users to view the violin plot for a specific range on the y-axis. 
@@ -289,13 +290,14 @@ The view helps identify how genre diversity scores are distributed among individ
 - Selection: The interactive legend of music effects allows selection of a music effect and filtering views across specific music effects.
 - Overview and Detail: The violin plot provides an overview of the distributions, while the histogram and rug plot offer more detailed insights.
 
-#### Critique of View
+#### *Critique of View*
 The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. One limitation is that while the linked views and interactive legend are useful, the violin plots lack direct interactivity. Users cannot directly select or hover over specific data points or density areas within the violin plots to get precise values, counts, or ranges. This limits the ability to explore the nuanced distributions in the violin plots directly.
 
 #### How does the frequency of listening to different music genres relate to self-reported mental health conditions and the perceived effects of music?
-<img src="../images/pm3/judy_viz3.gif" />
 
-### Summary and Explanations:
+<img src="../images/pm3/judy_chart3.gif"/>
+
+### *Summary and Explanations*:
 
 **Tasks**
 
@@ -327,7 +329,7 @@ The view helps identify how the frequency of listening to different music genres
   - Spatial regions: Encoded as one per glyph 
 - Justification: Normalized stacked bar charts are effective for showing proportions of different categories within a whole and comparing them across different groups. Length is used to represent proportions, and color hue differentiates mental health condition levels. The normalized stacked bar structure ensures that each bar represents a complete whole which enables direct comparison of proportions.
 
-#### Interactions and Interactivity
+#### *Interactions and Interactivity*
 
 - Bidirectional linking between the radial plot and the normalized stacked bar chart. Selecting a genre on the radial plot shows the distribution of the genre on the normalized stacked bar chart and selecting a section of the stacked bar chart shows the respective genre on the radial plot.
 - Dropdown menus to select music effect and mental health condition which allows filtering across the entire view.
@@ -338,7 +340,7 @@ The view helps identify how the frequency of listening to different music genres
 - Filtering: Dropdown menus allow filtering data based on music effects and mental health conditions.
 - Linked Views: The normalized stacked bar chart and radial chart are linked through the filtering option.
   
-#### Critique of View
+#### *Critique of View*
 The view effectively shows the relationship between genre listening frequency, mental health conditions, and perceived music effects. The normalized stacked bar chart clearly displays the proportions of different mental health condition levels across various listening frequencies which helps easy comparison. The radial chart provides an overview of how different favorite genres are associated with perceived music effects. The filtering options allow users to focus on specific subsets of the data which encourages exploration. The consistent use of color coding across the view helps users track data across different representations. However, one possible limitation is that the radial chart might be challenging to interpret accurately, especially when comparing areas or angles across different genres and music effects. It relies heavily on angle and area encoding, which are known to be less precise for human perception compared to length or position. This can make it difficult to accurately compare proportions for different genre-effect combinations, which can ultimately limit the chart's effectiveness in communicating precise information.
 
 ### Response bias in self-reported mental health severity
