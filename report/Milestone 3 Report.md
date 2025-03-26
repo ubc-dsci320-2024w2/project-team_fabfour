@@ -28,10 +28,12 @@ The visualization may be a dashboard with interactions, or SPLOM with outlier po
 
 [ For each visualization/view ]...
 
-### View 1 
-TODO: Allison
+### The relationship between music preferences, musical engagement, and mental health across age groups.
+*Member: Allison Fellhauer*
 
-// research q overview
+This visual exploration aims to better understand how age and musical engagement—both passive (favourite genres) and active (playing or composing music)—relate to self-reported mental health. Each chart was designed to answer a specific question, motivated by an interest in how people experience and interact with music across different life stages and mental health conditions.
+
+One focus was on whether age shaped musical taste, and if certain genres were more common among younger or older groups. Another key question was whether different forms of musical engagement—such as playing an instrument, composing, or simply listening—had any connection to self-reported levels of anxiety, depression, insomnia, or OCD.
 
 #### **How does the average age of listeners vary across favorite music genres, and what does the age distribution look like for each genre?**
 
