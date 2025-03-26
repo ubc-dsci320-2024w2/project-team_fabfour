@@ -93,7 +93,7 @@ This visualization supports the following tasks:
 2. **Retrieve Value** – Allows inspection of how age is distributed for each selected condition and severity level.
 3. **Identify Trends** – Investigates whether younger individuals are more likely to report high severity scores (as observed by researchers).
 
-The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown menu. This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed ([Source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938292/#:~:text=In%20contrast%2C%20older%20respondents%20were,%25%20CI%200.26%E2%80%930.52)). If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
+The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown menu. This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed ([source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938292/#:~:text=In%20contrast%2C%20older%20respondents%20were,%25%20CI%200.26%E2%80%930.52)). If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
 
 **Visualization Choices**
 - Mark: Area (mark_area with interpolate='monotone' and orient='horizontal')
@@ -102,7 +102,7 @@ The violin plot presents the smoothed distribution of age for each mental health
     - _Vertical_: encodes age
     - _Colour (saturation)_: encodes severity Level (Low, Medium, High)
     - _Column_: facets by Level
-Justification: The area mark was chosen for its ability to show density smoothly, and it was preferred over a boxplot due to its ability to represent bimodal data and display trends more clearly [Source](https://clauswilke.com/dataviz/boxplots-violins.html). Faceting by level allows for direct comparison of age distributions across severity categories without interference or crowding. Overlapping violins (one per level) would be visually messy and difficult to interpret. Colour saturation is used over hue to correctly encode the ordinal variable.
+Justification: The area mark was chosen for its ability to show density smoothly, and it was preferred over a boxplot due to its ability to represent bimodal data and display trends more clearly [source](https://clauswilke.com/dataviz/boxplots-violins.html). Faceting by level allows for direct comparison of age distributions across severity categories without interference or crowding. Overlapping violins (one per level) would be visually messy and difficult to interpret. Colour saturation is used instead hue to efectively encode the ordinal variable, and the hues choses and fully distinguishable.
 
 **Interactions and Interactivity**
 The visualization introduces a dropdown menu for the mental health condition (e.g., Anxiety, Depression, etc.). Upon selection:
@@ -112,9 +112,9 @@ The visualization introduces a dropdown menu for the mental health condition (e.
 This interaction is simple but effective. It avoids overloading the user with too many violins at once and allows the user to explore one condition at a time.
 
 #### *Critique of View*
-This visualization effectively reveals distribution shapes, which is essential for addressing the core question of whether younger individuals report higher severity. The width of each violin at different age points represents the relative density of respondents, allowing users to assess whether high severity is concentrated among younger people. The violin plot was chosen to emphasize density, display multiple peaks, and reduce the impact of noisy outliers. By combining this mark with faceting, each severity level appears in its own column, enabling clear and uncluttered comparisons. The dropdown interaction also enhances usability by allowing side-by-side comparisons across mental health conditions without introducing visual clutter.
+This visualization effectively reveals distribution shapes, which is essential for addressing the question of whether younger individuals report higher severity. The width of each violin at different age points represents the relative density of respondents, allowing users to assess whether high severity is concentrated among younger people. The violin plot was chosen to emphasize density, display multiple peaks, and reduce the impact of noisy outliers. By combining this mark with faceting, each severity level appears in its own column, enabling clear and uncluttered comparisons. The dropdown interaction also enhances usability by allowing side-by-side comparisons across mental health conditions without introducing visual clutter.
 
-However, a limitation of this approach is the presence of long tails at the top of the violins, which is misleading since it suggests the presence of data where none exists ([Source](https://clauswilke.com/dataviz/boxplots-violins.html)). Additionally, violin plots are generally less intuitive than histograms, which may pose a challenge for novice viewers. However, the posi
+However, a limitation of this approach is the presence of long tails at the top of the violins, which is misleading since it suggests the presence of data where none exists ([source](https://clauswilke.com/dataviz/boxplots-violins.html)). Additionally, violin plots are generally less intuitive than histograms, which may pose a challenge for novice viewers.
 
 #### **How do musical hobbies relate to mental health scores across age, and which are most represented within different age and score ranges?**
 
@@ -143,8 +143,8 @@ Justification: A scatterplot was selected to reveal trends in mental health scor
 2. Bar Chart
 - Mark: Bar (mark_bar)
 - Channels:
-    - _Horizontal_: encode count
-    - _Vertical_: encode musical Hobby
+    - _Horizontal_: encodes count
+    - _Vertical_: encodes musical Hobby
     - _Colour (hue)_: encodes the same hobbies as scatterplot
 Justification: The bar chart provides a simple yet effective view of how many individuals fall into each musical category for a selected region of the scatterplot. This helps answer whether certain musical identities appear more frequently at high or low mental health scores. The use of length and aligned bars supports direct comparison.
 
@@ -158,7 +158,7 @@ The visualization allows for multiple interactions, including:
 These interactions support bidirectional exploration: users can begin by selecting a musical hobby or a region of interest (e.g., high anxiety and younger age) and observe how counts shift below. 
 
 **Crtitque of View**
-This visualization does a strong job of helping users explore how musical hobbies relates to age and mental health across different conditions. The scatterplot shows patterns in how scores change with age and lets viewers spot clusters and outliers. Color is used effectively to separate the four musical hobby groups, and the same color palette ties both charts together clearly. The interaction is both easy to use and useful. Brushing (clicking and dragging) on the scatterplot filters the bar chart below, giving instant feedback. Users can also click on a bar to filter the scatterplot, making it easy to focus on just one group. The problem with using a large dataset is that the raw data can be overwhelming and display overplotting. By adding a filter, the noise is reduced, and the user can performed focused exploration. 
+This visualization does a good job of helping users explore how musical hobbies relate to age and mental health across different conditions. The scatterplot shows patterns in how scores change with age and lets viewers spot clusters and outliers. Colour is used effectively to separate the four musical hobby groups, and the same color palette ties both charts together clearly. The interaction is both easy to use and useful. Brushing (clicking and dragging) on the scatterplot filters the bar chart below, giving instant feedback. Users can also click on a bar to filter the scatterplot, making it easy to focus on just one group. The problem with using a large dataset is that the raw data can be overwhelming and display overplotting. By adding a filter, the noise is reduced, and the user can performed focused exploration. 
 
 One small limitation is that only one mental health condition can be viewed at a time (because of the dropdown). However, this keeps the view clean and avoids overwhelming the viewer. The bar chart works well with only four categories, and it makes it easy to compare counts across groups.
 
