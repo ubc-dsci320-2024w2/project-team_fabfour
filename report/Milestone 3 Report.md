@@ -48,7 +48,7 @@ This visualization supports the following tasks:
 
 The dot plot on the left shows the **average age** for each genre along the x-axis, allowing for quick comparisons across genres to identify those preferred by older vs. younger individuals. Hovering over a point provides a tooltip with exact values for both average age and count.
 
-The linked histogram on the right shows the distribution of ages for the selected genre, binned into 5-year intervals. This enables viewers to identify skewness (e.g., Latin or Gospel), spot multiple peaks, and observe the distribution of ages within genres.
+The linked histogram on the right shows the distribution of ages for the selected genre, binned into 5-year intervals. This enables viewers to identify skewness (e.g., Latin, Gospel), spot multiple peaks, and observe the distribution of ages within genres.
 
 **Visualization Choices**
 1) Dot plot
@@ -65,8 +65,8 @@ Justification: The point mark was chosen instead of bars since the average does 
 2) Histogram
 - Mark: Bar (mark_bar)
 - Channels:
-     - _Horizontal_: binned age (5-year intervals)
-     - _Vertical_: count per bin
+     - _Horizontal_: encodes binned age (5-year intervals)
+     - _Vertical_: encocdes count per bin
      - _Colour_: matches dot plot to reflect selected genre
 Justification: A bar chart provides a clear, consistent representation of age distributions, and exploits the common scale to support comparison of bin heights. The consistent bin width enables easy identification of skew, peaks, and gaps.
 
@@ -76,12 +76,12 @@ The visualization employs a mouseover interaction on the dot plot. When a genre 
 - The genre name updates dynamically in the histogram title.
 - The selected genre is highlighted using colour, while others fade to gray.
 
-In addition, the visualization also uses a radio button for specific lookup.
+In addition, the visualization also uses a radio button for specific lookup. The mouseover limits comparison between adjacent points, so having the radio button allows for swtiching between any of the genres.
 
-This design avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltip is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
+This design choice avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltip is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
 
 #### *Critique of View*
-This visualization is effective due to its strong use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although area can be less obvious than length when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, this is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express transition between categories and the connection between the dot plot and the histogram. Only seven colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
+This visualization is effective due to its appropriate use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although the area channel is less obvious than the length channel when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, it is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express the transition between categories and visually links the dot plot and the histogram. Only seven, colour-blind safe colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
 
 #### **How does the age distribution vary across different severity levels of mental health conditions?**
 
@@ -94,9 +94,7 @@ This visualization supports the following tasks:
 2. **Retrieve Value** – Allows inspection of how age is distributed for each selected condition and severity level.
 3. **Identify Trends** – Investigates whether younger individuals are more likely to report high severity scores (as observed by researchers).
 
-The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown.
-
-This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed. If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
+The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown menu. This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed ([Source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938292/#:~:text=In%20contrast%2C%20older%20respondents%20were,%25%20CI%200.26%E2%80%930.52)). If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
 
 **Visualization Choices**
 - Mark: Area (mark_area with interpolate='monotone' and orient='horizontal')
