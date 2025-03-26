@@ -334,7 +334,7 @@ The view helps identify how the frequency of listening to different music genres
 
 - Bidirectional linking between the radial plot and the normalized stacked bar chart. Selecting a genre on the radial plot shows the distribution of the genre on the normalized stacked bar chart and selecting a section of the stacked bar chart shows the respective genre on the radial plot.
 - Dropdown menus to select music effect and mental health condition which allows filtering across the entire view.
-- Tooltips on the radial plot (favorite genre, count of individuals that has this genre as favorite genre, and the proportion) and on the normalized stacked bar chart (favorite genre, frequency, mental health condition level and proportion)
+- Tooltips on the radial plot (favorite genre, count of individuals that has this genre as favorite genre, and the proportion) and on the normalized stacked bar chart (favorite genre, frequency, mental health condition, mental health condition level and proportion)
     
 *Characteristics of the interactions and interactivity*:
 
