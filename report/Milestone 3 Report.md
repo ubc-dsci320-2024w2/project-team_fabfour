@@ -1,4 +1,5 @@
 ## Research Questions
+
 *Here will we will include our research questions again:*
 
 **Allison's** research question is: **What is the impact of the respondent's age on their survey responses?**
@@ -46,7 +47,7 @@ This visualization supports the following tasks:
 
 The dot plot on the left shows the **average age** for each genre along the x-axis, allowing for quick comparisons across genres to identify those preferred by older vs. younger individuals. Hovering over a point provides a tooltip with exact values for both average age and count.
 
-The linked histogram on the right shows the distribution of ages for the selected genre, binned into 5-year intervals. This enables viewers to identify skewness (e.g., Latin or Gospel), spot multiple peaks, and observe the distribution of ages within genres.
+The linked histogram on the right shows the distribution of ages for the selected genre, binned into 5-year intervals. This enables viewers to identify skewness (e.g., Latin, Gospel), spot multiple peaks, and observe the distribution of ages within genres.
 
 **Visualization Choices**
 1) Dot plot
@@ -55,7 +56,7 @@ The linked histogram on the right shows the distribution of ages for the selecte
      - _Horizontal_: encodes average age
      - _Vertical_: encodes genre category
      - _Size_: encodes respondent count
-     - _Colour_: indicates selected genre during interaction
+     - _Colour (hue)_: indicates selected genre during interaction
      - _Line_: indicates the overall average
      - _Text_: indicates genre label
 Justification: The point mark was chosen instead of bars since the average does not need to originate at zero and it supports effective encoding of count using size. The size channel is able to highlight genre popularity. Colour serves a supporting aesthetic role, helping users visually track the selected genre. The use of the line was also important to serve as an anchor for the points, and to show how the values did not vary too much from the overall mean. Due to the points being far from the axis, the labels were removed and placed near their corresponding point.
@@ -63,9 +64,9 @@ Justification: The point mark was chosen instead of bars since the average does 
 2) Histogram
 - Mark: Bar (mark_bar)
 - Channels:
-     - _Horizontal_: binned age (5-year intervals)
-     - _Vertical_: count per bin
-     - _Colour_: matches dot plot to reflect selected genre
+     - _Horizontal_: encodes binned age (5-year intervals)
+     - _Vertical_: encocdes count per bin
+     - _Colour (hue)_: matches dot plot to reflect selected genre
 Justification: A bar chart provides a clear, consistent representation of age distributions, and exploits the common scale to support comparison of bin heights. The consistent bin width enables easy identification of skew, peaks, and gaps.
 
 **Interactions and Interactivity**
@@ -74,12 +75,12 @@ The visualization employs a mouseover interaction on the dot plot. When a genre 
 - The genre name updates dynamically in the histogram title.
 - The selected genre is highlighted using colour, while others fade to gray.
 
-In addition, the visualization also uses a radio button for specific lookup.
+In addition, the visualization also uses a radio button for specific lookup. The mouseover limits comparison between adjacent points, so having the radio button allows for swtiching between any of the genres.
 
-This design avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltip is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
+This design choice avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltip is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
 
 #### *Critique of View*
-This visualization is effective due to its strong use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although area can be less obvious than length when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, this is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express transition between categories and the connection between the dot plot and the histogram. Only seven colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
+This visualization is effective due to its appropriate use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although the area channel is less obvious than the length channel when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, it is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express the transition between categories and visually links the dot plot and the histogram. Only seven, colour-blind safe colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
 
 #### **How does the age distribution vary across different severity levels of mental health conditions?**
 
@@ -92,18 +93,16 @@ This visualization supports the following tasks:
 2. **Retrieve Value** – Allows inspection of how age is distributed for each selected condition and severity level.
 3. **Identify Trends** – Investigates whether younger individuals are more likely to report high severity scores (as observed by researchers).
 
-The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown.
-
-This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed. If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
+The violin plot presents the smoothed distribution of age for each mental health severity level (Low, Medium, High), for a selected condition (e.g., Anxiety, Depression, etc.). Users can switch between conditions via a dropdown menu. This visualization is specifically designed to support exploration of a potential reporting bias among older individuals, who may be less likely to rate themselves as highly anxious or depressed ([source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938292/#:~:text=In%20contrast%2C%20older%20respondents%20were,%25%20CI%200.26%E2%80%930.52)). If this bias exists, it should be reflected in narrower violins for older ages in the “High” category, or in a general shift of the “High” distribution toward younger age groups.
 
 **Visualization Choices**
 - Mark: Area (mark_area with interpolate='monotone' and orient='horizontal')
 - Channels:
-    - _Horizontal_: Smoothed density of respondents (stacked center)
-    - _Vertical_: Age
-    - _Colour_: Severity Level (Low, Medium, High); change in saturation
-    - _Column_: Faceting by Level
-Justification: The area mark was chosen for its ability to show density smoothly, and it was preferred over a boxplot due to its ability to represent bimodal data and display trends more clearly [Source](https://clauswilke.com/dataviz/boxplots-violins.html). Faceting by level allows for direct comparison of age distributions across severity categories without interference or crowding. Overlapping violins (one per level) would be visually messy and difficult to interpret. Colour saturation is used over hue to correctly encode the ordinal variable.
+    - _Horizontal_: encodes smoothed density of respondents (stacked center)
+    - _Vertical_: encodes age
+    - _Colour (saturation)_: encodes severity Level (Low, Medium, High)
+    - _Column_: facets by Level
+Justification: The area mark was chosen for its ability to show density smoothly, and it was preferred over a boxplot due to its ability to represent bimodal data and display trends more clearly [source](https://clauswilke.com/dataviz/boxplots-violins.html). Faceting by level allows for direct comparison of age distributions across severity categories without interference or crowding. Overlapping violins (one per level) would be visually messy and difficult to interpret. Colour saturation is used instead hue to efectively encode the ordinal variable, and the hues choses and fully distinguishable.
 
 **Interactions and Interactivity**
 The visualization introduces a dropdown menu for the mental health condition (e.g., Anxiety, Depression, etc.). Upon selection:
@@ -113,9 +112,9 @@ The visualization introduces a dropdown menu for the mental health condition (e.
 This interaction is simple but effective. It avoids overloading the user with too many violins at once and allows the user to explore one condition at a time.
 
 #### *Critique of View*
-This visualization effectively reveals distribution shapes, which is essential for addressing the core question of whether younger individuals report higher severity. The width of each violin at different age points represents the relative density of respondents, allowing users to assess whether high severity is concentrated among younger people. The violin plot was chosen to emphasize density, display multiple peaks, and reduce the impact of noisy outliers. By combining this mark with faceting, each severity level appears in its own column, enabling clear and uncluttered comparisons. The dropdown interaction also enhances usability by allowing side-by-side comparisons across mental health conditions without introducing visual clutter.
+This visualization effectively reveals distribution shapes, which is essential for addressing the question of whether younger individuals report higher severity. The width of each violin at different age points represents the relative density of respondents, allowing users to assess whether high severity is concentrated among younger people. The violin plot was chosen to emphasize density, display multiple peaks, and reduce the impact of noisy outliers. By combining this mark with faceting, each severity level appears in its own column, enabling clear and uncluttered comparisons. The dropdown interaction also enhances usability by allowing side-by-side comparisons across mental health conditions without introducing visual clutter.
 
-However, a limitation of this approach is the presence of long tails at the top of the violins, which is misleading since it suggests the presence of data where none exists ([Source](https://clauswilke.com/dataviz/boxplots-violins.html)). Additionally, violin plots are generally less intuitive than histograms, which may pose a challenge for novice viewers. However, the posi
+However, a limitation of this approach is the presence of long tails at the top of the violins, which is misleading since it suggests the presence of data where none exists ([source](https://clauswilke.com/dataviz/boxplots-violins.html)). Additionally, violin plots are generally less intuitive than histograms, which may pose a challenge for novice viewers.
 
 #### **How do musical hobbies relate to mental health scores across age, and which are most represented within different age and score ranges?**
 
@@ -136,17 +135,17 @@ The bar chart below shows the count of respondents per musical hobby for the bru
 1. Scatter Plot
 - Mark: Point (mark_circle)
 - Channels:
-    - _Horizontal_: Age
-    - _Vertical_: Mental health score
-    - _Colour_: Musical hobbies (Both, Instrumentalist, Composer, Neither)
+    - _Horizontal_: encode age
+    - _Vertical_: encode mental health score
+    - _Colour (hue)_: encodes musical hobbies (Both, Instrumentalist, Composer, Neither)
 Justification: A scatterplot was selected to reveal trends in mental health scores across age for different musical identities. Colour helps differentiate groups while preserving clarity. The dropdown enables users to compare how different mental health conditions. A brush interaction was added to for linked filtering and to help with overplotting.
 
 2. Bar Chart
 - Mark: Bar (mark_bar)
 - Channels:
-    - _Horizontal_: Count
-    - _Vertical_: Musical Hobby
-    - _Colour_: Same hobbies as scatterplot
+    - _Horizontal_: encodes count
+    - _Vertical_: encodes musical Hobby
+    - _Colour (hue)_: encodes the same hobbies as scatterplot
 Justification: The bar chart provides a simple yet effective view of how many individuals fall into each musical category for a selected region of the scatterplot. This helps answer whether certain musical identities appear more frequently at high or low mental health scores. The use of length and aligned bars supports direct comparison.
 
 **Interactions and Interactivity**
@@ -159,7 +158,7 @@ The visualization allows for multiple interactions, including:
 These interactions support bidirectional exploration: users can begin by selecting a musical hobby or a region of interest (e.g., high anxiety and younger age) and observe how counts shift below. 
 
 **Crtitque of View**
-This visualization does a strong job of helping users explore how musical hobbies relates to age and mental health across different conditions. The scatterplot shows patterns in how scores change with age and lets viewers spot clusters and outliers. Color is used effectively to separate the four musical hobby groups, and the same color palette ties both charts together clearly. The interaction is both easy to use and useful. Brushing (clicking and dragging) on the scatterplot filters the bar chart below, giving instant feedback. Users can also click on a bar to filter the scatterplot, making it easy to focus on just one group. The problem with using a large dataset is that the raw data can be overwhelming and display overplotting. By adding a filter, the noise is reduced, and the user can performed focused exploration. 
+This visualization does a good job of helping users explore how musical hobbies relate to age and mental health across different conditions. The scatterplot shows patterns in how scores change with age and lets viewers spot clusters and outliers. Colour is used effectively to separate the four musical hobby groups, and the same color palette ties both charts together clearly. The interaction is both easy to use and useful. Brushing (clicking and dragging) on the scatterplot filters the bar chart below, giving instant feedback. Users can also click on a bar to filter the scatterplot, making it easy to focus on just one group. The problem with using a large dataset is that the raw data can be overwhelming and display overplotting. By adding a filter, the noise is reduced, and the user can performed focused exploration. 
 
 One small limitation is that only one mental health condition can be viewed at a time (because of the dropdown). However, this keeps the view clean and avoids overwhelming the viewer. The bar chart works well with only four categories, and it makes it easy to compare counts across groups.
 
@@ -187,6 +186,7 @@ TODO: Helena
 #### *Summary and Explanations*:
 
 **Tasks**
+
 This visualization supports the following tasks:
 
 1. **Correlate** – Examines the relationship between an individual's genre diversity score and their self-reported mental health conditions (anxiety, depression, insomnia, OCD).
@@ -224,7 +224,7 @@ The view helps to identify the relationship between genre diversity and self-rep
 #### *Interactions and Interactivity*
 - The brushing on the scatterplot allows users to select a range of data points and filters the bar chart to show counts within that range. Double-clicking on the background of the scatterplot should undo the selection.
 - There is a tooltip on the individual data points of the scatterplot that shows the mental health condition, mental health score and genre diversity score for that point.
-- There is also a tooltip on the correlation heatmap that shows the variable 1, variable 2 and the correlation between the two variables.
+- There is also a text label on the correlation heatmap that shows the correlation between the two variables.
 
 *Characteristics of the interactions and interactivity*: 
 - Linked Views: The scatterplot and bar chart are linked and provide dynamic filtering and exploration.
@@ -232,13 +232,13 @@ The view helps to identify the relationship between genre diversity and self-rep
 - Overview and Detail: The scatterplot provides an overview, while the bar chart offers detailed counts for selected subsets.
 
 #### *Critique of View*
-The view effectively shows the relationship between genre diversity and mental health conditions. The scatterplot provides an overview, while the bar chart and heatmap offer more detailed insights. The color coding, which differentiates mental health conditions, is consistent across both the scatterplot and bar chart, making it easier for users to track data across different views. The interactive brushing feature is also great since it allows users to filter the scatterplot and see the corresponding counts in the bar chart which enables users to explore in more detail. While the scatterplot tries to reduce overplotting by adjusting point sizes, this might not fully solve the issue in areas with dense data. However, the bar chart complements this by clearly showing counts within selected ranges. Additionally, the heatmap helps investigate the correlation by highlighting the relationships between variables using a correlation value. Overall, the view helps answer the question.
+The view effectively shows the relationship between genre diversity and mental health conditions. The scatterplot provides an overview, while the bar chart and heatmap offer more detailed insights. The color coding, which differentiates mental health conditions, is consistent across both the scatterplot and bar chart, making it easier for users to track data across different views. The interactive brushing feature is also great since it allows users to filter the scatterplot and see the corresponding counts in the bar chart which enables users to explore in more detail. While the scatterplot tries to reduce overplotting by adjusting point sizes, this might not fully solve the issue in areas with dense data. However, the bar chart complements this by clearly showing counts within selected ranges. Additionally, the heatmap helps investigate the correlation by highlighting the relationships between variables using a correlation value. Unfortunately, we can see from the view that there is no clear correlation between genre diversity and mental health conditions.
 
 #### What is the distribution of genre diversity scores among individuals who report different effects of music on their well-being?
 
 <img src="../images/pm3/judy_chart2.gif"/>
 
-#### Summary and Explanations:
+#### *Summary and Explanations*:
 
 **Tasks**
 
@@ -257,11 +257,11 @@ The view helps identify how genre diversity scores are distributed among individ
 
 - Mark: Area (mark_area)
 - Channels:
-  - Position on a common scale: Encodes genre diversity score which is a quantitative value as vertical position.]
+  - Position on a common scale: Encodes genre diversity score which is a quantitative value as vertical position.
   - Color hue: used to encode different categories of music effects which helps in differentiating between them.
 - Justification: Violin plots are effective for showing the distribution of quantitative data across categorical groups. They combine the features of box plots and kernel density plots and thus provide insights into the data's shape and density.
   
-2. *Stacked Histogram*
+2. *Histogram*
 
 - Mark: Vertical stack of area marks (mark_bar)
 - Channels:
@@ -280,7 +280,8 @@ The view helps identify how genre diversity scores are distributed among individ
 #### *Interactions and Interactivity*
 
 - Interactive legend that enables filtering to view the distribution and range of each music effect.
-- Range slider that enables users to view the violin plot for a specific range on the y-axis. 
+- Range slider that enables users to view the violin plot for a specific range on the y-axis.
+- Tooltip that shows the genre diversity score on each violin plot.
 
 *Characteristics of the interactions and interactivity*:
 
@@ -289,13 +290,13 @@ The view helps identify how genre diversity scores are distributed among individ
 - Overview and Detail: The violin plot provides an overview of the distributions, while the histogram and rug plot offer more detailed insights.
 
 #### *Critique of View*
-The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. One limitation is that while the linked views and interactive legend are useful, the violin plots lack direct interactivity. Users cannot directly select or hover over specific data points or density areas within the violin plots to get precise values, counts, or ranges. This limits the ability to explore the nuanced distributions in the violin plots directly.
+The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. However, one limitation is that violin plots may lead to a higher learning curve for new users who might have trouble interpreting the visualization.
 
 #### How does the frequency of listening to different music genres relate to self-reported mental health conditions and the perceived effects of music?
 
 <img src="../images/pm3/judy_chart3.gif"/>
 
-### *Summary and Explanations*:
+#### *Summary and Explanations*:
 
 **Tasks**
 
@@ -331,7 +332,7 @@ The view helps identify how the frequency of listening to different music genres
 
 - Bidirectional linking between the radial plot and the normalized stacked bar chart. Selecting a genre on the radial plot shows the distribution of the genre on the normalized stacked bar chart and selecting a section of the stacked bar chart shows the respective genre on the radial plot.
 - Dropdown menus to select music effect and mental health condition which allows filtering across the entire view.
-- Tooltips on the radial plot (favorite genre, count of individuals that has this genre as favorite genre, and the proportion) and on the normalized stacked bar chart (favorite genre, frequency, mental health condition level and proportion)
+- Tooltips on the radial plot (favorite genre, count of individuals that has this genre as favorite genre, and the proportion) and on the normalized stacked bar chart (favorite genre, frequency, mental health condition, mental health condition level and proportion)
     
 *Characteristics of the interactions and interactivity*:
 
@@ -493,7 +494,7 @@ Most points are dark green, suggesting that music tends to improve mental health
 Few purple points (`Music effects=Worsen`) suggest that negative effects of music are rare.
 The lack of clear clusters, when highlighting or not, shows that no obvious clusters can be found.
   
-1. Faceted Scatter Plot
+1. _Faceted Scatter Plots_
 - Mark: circle (`mark_circle`)
     - Each dot represents an individual data point, corresponding to a survey respondent.
 
@@ -534,7 +535,7 @@ This visualization supports the following tasks:
 
 This visualization allows users to compare different **mental health scores** across different categories.
 
-1. Dot-plot
+1. _Dot-plot_
 - Mark: `mark_circle`
 
 - Channels:
