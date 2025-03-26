@@ -33,9 +33,10 @@ she heard from many help-seekers that music was something people turned to when 
 - Person 4: Jessica is a 5th-year student majoring in Behavioural Neuroscience + minoring in Data Science and always enjoys a late night sweet treat 🍫🌙
 
 ## Images
-<img src="../images/pm3/allie_viz1.gif" />
-<img src="../images/pm3/judy_chart1.gif"/>
-<img src="../images/pm3/jess_vis1.gif" />
+<img src="images/pm3/allie_viz1.gif" />
+<img src="images/pm3/judy_chart1.gif"/>
+<img src="images/pm3/jess_vis1.gif" />
+
 ## Package requirements
 
 - `altair`
