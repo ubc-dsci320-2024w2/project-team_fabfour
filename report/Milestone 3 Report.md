@@ -186,6 +186,7 @@ TODO: Helena
 #### *Summary and Explanations*:
 
 **Tasks**
+
 This visualization supports the following tasks:
 
 1. **Correlate** – Examines the relationship between an individual's genre diversity score and their self-reported mental health conditions (anxiety, depression, insomnia, OCD).
@@ -256,7 +257,7 @@ The view helps identify how genre diversity scores are distributed among individ
 
 - Mark: Area (mark_area)
 - Channels:
-  - Position on a common scale: Encodes genre diversity score which is a quantitative value as vertical position.]
+  - Position on a common scale: Encodes genre diversity score which is a quantitative value as vertical position.
   - Color hue: used to encode different categories of music effects which helps in differentiating between them.
 - Justification: Violin plots are effective for showing the distribution of quantitative data across categorical groups. They combine the features of box plots and kernel density plots and thus provide insights into the data's shape and density.
   
