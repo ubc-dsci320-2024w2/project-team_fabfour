@@ -76,7 +76,9 @@ The visualization employs a mouseover interaction on the dot plot. When a genre 
 - The genre name updates dynamically in the histogram title.
 - The selected genre is highlighted using colour, while others fade to gray.
 
-This design avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltis is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
+In addition, the visualization also uses a radio button for specific lookup.
+
+This design avoids overwhelming the viewer with all 16 genres simultaneously and removes the need for a legend. Since there are the presence of genres with smaller counts (e.g. Latin), including tolerance in the interaction allows for easier selection. A tooltip is used for value lookup, providing exact average age and respondent count, supporting retrieval tasks.
 
 #### *Critique of View*
 This visualization is effective due to its strong use of marks, position channels, and interaction design. The use of a common scale in both the dot plot and the histogram enables comparison, which is one of the primary tasks of this visualization. Although area can be less obvious than length when making comparison, its use here helps highlight the popularity of different genres, especially the extremes. This allows the viewer to immediately see that even though gospel has the greatest average age, this is as a result of few individuals choosing this genre (count = 3). In addition, colour is used in this visualization to express transition between categories and the connection between the dot plot and the histogram. Only seven colours were used overall, which reduced stimulation while still providings distinction between neighbouring categories. By faceting and filtering, only a single category is shown at once time, bypassing the need to distinguish colours. Finally, the interaction used is sophisticated (many moving parts including the genre labels, colour, histogram filtering, and title filter), yet very simple and intuitive. It allows for easy parusal and removes all clutter caused by displaying all charts simultenously.
@@ -144,9 +146,9 @@ Justification: A scatterplot was selected to reveal trends in mental health scor
 2. Bar Chart
 - Mark: Bar (mark_bar)
 - Channels:
-    - Horizontal: Count
-    - Vertical: Musical Hobby
-    - Colour: Same hobbies as scatterplot
+    - _Horizontal_: Count
+    - _Vertical_: Musical Hobby
+    - _Colour_: Same hobbies as scatterplot
 Justification: The bar chart provides a simple yet effective view of how many individuals fall into each musical category for a selected region of the scatterplot. This helps answer whether certain musical identities appear more frequently at high or low mental health scores. The use of length and aligned bars supports direct comparison.
 
 **Interactions and Interactivity**
