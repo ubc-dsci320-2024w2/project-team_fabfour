@@ -282,7 +282,8 @@ The view helps identify how genre diversity scores are distributed among individ
 #### *Interactions and Interactivity*
 
 - Interactive legend that enables filtering to view the distribution and range of each music effect.
-- Range slider that enables users to view the violin plot for a specific range on the y-axis. 
+- Range slider that enables users to view the violin plot for a specific range on the y-axis.
+- Tooltip that shows the genre diversity score on each violin plot.
 
 *Characteristics of the interactions and interactivity*:
 
@@ -291,7 +292,7 @@ The view helps identify how genre diversity scores are distributed among individ
 - Overview and Detail: The violin plot provides an overview of the distributions, while the histogram and rug plot offer more detailed insights.
 
 #### *Critique of View*
-The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. One limitation is that while the linked views and interactive legend are useful, the violin plots lack direct interactivity. Users cannot directly select or hover over specific data points or density areas within the violin plots to get precise values, counts, or ranges. This limits the ability to explore the nuanced distributions in the violin plots directly.
+The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. 
 
 #### How does the frequency of listening to different music genres relate to self-reported mental health conditions and the perceived effects of music?
 
