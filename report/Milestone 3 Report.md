@@ -57,7 +57,7 @@ The linked histogram on the right shows the distribution of ages for the selecte
      - _Horizontal_: encodes average age
      - _Vertical_: encodes genre category
      - _Size_: encodes respondent count
-     - _Colour_: indicates selected genre during interaction
+     - _Colour (hue)_: indicates selected genre during interaction
      - _Line_: indicates the overall average
      - _Text_: indicates genre label
 Justification: The point mark was chosen instead of bars since the average does not need to originate at zero and it supports effective encoding of count using size. The size channel is able to highlight genre popularity. Colour serves a supporting aesthetic role, helping users visually track the selected genre. The use of the line was also important to serve as an anchor for the points, and to show how the values did not vary too much from the overall mean. Due to the points being far from the axis, the labels were removed and placed near their corresponding point.
@@ -67,7 +67,7 @@ Justification: The point mark was chosen instead of bars since the average does 
 - Channels:
      - _Horizontal_: encodes binned age (5-year intervals)
      - _Vertical_: encocdes count per bin
-     - _Colour_: matches dot plot to reflect selected genre
+     - _Colour (hue)_: matches dot plot to reflect selected genre
 Justification: A bar chart provides a clear, consistent representation of age distributions, and exploits the common scale to support comparison of bin heights. The consistent bin width enables easy identification of skew, peaks, and gaps.
 
 **Interactions and Interactivity**
@@ -99,10 +99,10 @@ The violin plot presents the smoothed distribution of age for each mental health
 **Visualization Choices**
 - Mark: Area (mark_area with interpolate='monotone' and orient='horizontal')
 - Channels:
-    - _Horizontal_: Smoothed density of respondents (stacked center)
-    - _Vertical_: Age
-    - _Colour_: Severity Level (Low, Medium, High); change in saturation
-    - _Column_: Faceting by Level
+    - _Horizontal_: encodes smoothed density of respondents (stacked center)
+    - _Vertical_: encodes age
+    - _Colour (saturation)_: encodes severity Level (Low, Medium, High)
+    - _Column_: facets by Level
 Justification: The area mark was chosen for its ability to show density smoothly, and it was preferred over a boxplot due to its ability to represent bimodal data and display trends more clearly [Source](https://clauswilke.com/dataviz/boxplots-violins.html). Faceting by level allows for direct comparison of age distributions across severity categories without interference or crowding. Overlapping violins (one per level) would be visually messy and difficult to interpret. Colour saturation is used over hue to correctly encode the ordinal variable.
 
 **Interactions and Interactivity**
@@ -136,17 +136,17 @@ The bar chart below shows the count of respondents per musical hobby for the bru
 1. Scatter Plot
 - Mark: Point (mark_circle)
 - Channels:
-    - _Horizontal_: Age
-    - _Vertical_: Mental health score
-    - _Colour_: Musical hobbies (Both, Instrumentalist, Composer, Neither)
+    - _Horizontal_: encode age
+    - _Vertical_: encode mental health score
+    - _Colour (hue)_: encodes musical hobbies (Both, Instrumentalist, Composer, Neither)
 Justification: A scatterplot was selected to reveal trends in mental health scores across age for different musical identities. Colour helps differentiate groups while preserving clarity. The dropdown enables users to compare how different mental health conditions. A brush interaction was added to for linked filtering and to help with overplotting.
 
 2. Bar Chart
 - Mark: Bar (mark_bar)
 - Channels:
-    - _Horizontal_: Count
-    - _Vertical_: Musical Hobby
-    - _Colour_: Same hobbies as scatterplot
+    - _Horizontal_: encode count
+    - _Vertical_: encode musical Hobby
+    - _Colour (hue)_: encodes the same hobbies as scatterplot
 Justification: The bar chart provides a simple yet effective view of how many individuals fall into each musical category for a selected region of the scatterplot. This helps answer whether certain musical identities appear more frequently at high or low mental health scores. The use of length and aligned bars supports direct comparison.
 
 **Interactions and Interactivity**
