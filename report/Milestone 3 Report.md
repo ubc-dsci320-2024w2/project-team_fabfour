@@ -1,5 +1,4 @@
 ## Research Questions
-[ Here will we will include our research questions again ]
 
 **Allison's** research question is: **What is the impact of the respondent's age on their survey responses?**
 - Does Age Influence the Relationship Between Music Genre Preferences and Mental Health Scores? How do music preferences correlate with mental health scores for different age groups? 
