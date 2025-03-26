@@ -290,7 +290,7 @@ The view helps identify how genre diversity scores are distributed among individ
 - Overview and Detail: The violin plot provides an overview of the distributions, while the histogram and rug plot offer more detailed insights.
 
 #### *Critique of View*
-The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. 
+The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. However, one limitation is that violin plots may lead to a higher learning curve for new users who might have trouble interpreting the visualization.
 
 #### How does the frequency of listening to different music genres relate to self-reported mental health conditions and the perceived effects of music?
 
