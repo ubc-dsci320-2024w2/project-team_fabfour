@@ -1,5 +1,7 @@
 # Group Fab Four - Music and Mental Health
 
+- Your title can change over time.
+
 ## Describe your dataset in about 150-200 words
 
 The [Music & Mental Health Survey Dataset](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results) comes from Kaggle.
@@ -33,19 +35,19 @@ she heard from many help-seekers that music was something people turned to when 
 - Person 4: Jessica is a 5th-year student majoring in Behavioural Neuroscience + minoring in Data Science and always enjoys a late night sweet treat 🍫🌙
 
 ## Images
-<img src="images/pm3/allie_viz1.gif" />
-<img src="images/pm3/judy_chart1.gif"/>
-<img src="images/pm3/jess_vis1.gif" />
+
+{You should use this area to add a screenshot of an interesting view, and eventually, of your dashboard}
+
+<img src ="images/test.jpg" width="300px">
 
 ## Package requirements
 
 - `altair`
 - `pre-commit`
-- pandas
 
 ## References
 
-Gerlach, L. B., Maust, D. T., Solway, E., Kirch, M., Kullgren, J. T., Singer, D. C., & Malani, P. N. (2022). Perceptions of overall mental health and barriers to mental health treatment among us older adults. The American Journal of Geriatric Psychiatry, 30(4), 521–526. https://doi.org/10.1016/j.jagp.2021.09.006 
+{Add your stuff here}
 
-Wilke, C (2019). Fundamentals of Data Visualization: A Primer on making informative and compelling figures. O'Reilly. https://clauswilke.com/dataviz/
+
 

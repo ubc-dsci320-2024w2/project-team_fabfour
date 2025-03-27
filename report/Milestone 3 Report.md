@@ -376,7 +376,7 @@ and in turn, our results and perceptions of the visualizations above.
 This visualization supports the following tasks:
 - **characterize distribution**: The width of the violin plot represent the distribution of responses,
 showing where responses are more or less frequent.
-- **determine range**: 
+- **determine range**: the interquartile ranges can be seen by the box-plot.
 
 Here, we have four violin plots overlaid by boxplots,
 with one violin and boxplot for each mental health condition, .
@@ -393,33 +393,29 @@ The violin plot/boxplot has scores encoded left to right, instead of down to up,
 - Mark: `.mark_boxplot()`
 
 - Channels:
-    - Horizontal: The X-axis encodes the self-reported mental health severity on a 0-10 scale.
+    - *Horizontal*: The X-axis encodes the self-reported mental health severity on a 0-10 scale.
+    - *Opacity*: the boxplot is translucent so that the colors of the violin plots can be seen underneath.
 
-- Interactions:  
+- Interactions:
+    - *hovering* over the main box shows a tooltip with summary statistics.
+    - *hovering* over the whiskers shows the upper and lower whisker scores.
   
 2. _Violin plot_
 
 - Mark: `.mark_area()` & `.transform_density()`
 
 - Channels:
-    - Horizontal: The X-axis is the same as above, since these plots are overlaid. 
-    - Vertical: 
+    - *Horizontal*: The X-axis is the same as above, since these plots are overlaid. 
+    - Vertical: densities of each violin plot represent the number of responses for that category.
     - Colour: Different colors represent the perceived effects of music on well-being (Improve, No effect, No response, Worsen).
 
 - Interactions:
+    - Tooltip for density can help distinguish exact densities at certain places in the plot.
     - Using the legend, we can interactively view the violin plot, splitting by music effects. 
 
 #### *Critique of view*
-The combination of violin plots/density ridges and boxplots effectively balances distribution and summary statistics.
-The use of color for mental health scores are expressive and meaningful;
-in my vis, dark green relates to "Improves", light green relates to "No effect", and dark purple relates to "Worsen".
-For these choices, I assume the viewer also lives in my society where green means "good" 
-and dark green means "very good" while light green means "ok".
-The vis also uses a colourblind friendly palette, obtained from
-[ColorBrewer2.org](https://colorbrewer2.org/#type=diverging&scheme=PRGn&n=4).
-Boxplots may be difficult to interpret due to their small size within the larger ridges,
-but larger box plots may make the violin plot splits more difficult to see.
-Showing only one mental health condition at a time can be very effective, allowing for better focus.
+The combination of violin plots/density ridges and boxplots effectively balances distribution and summary statistics. The use of color for mental health scores are expressive and meaningful; in my vis, dark green relates to "Improves", light green relates to "No effect", and dark purple relates to "Worsen". For these choices, I assume the viewer also lives in my society where green means "good"  and dark green means "very good" while light green means "ok". The vis also uses a colourblind friendly palette, obtained from [ColorBrewer2.org](https://colorbrewer2.org/#type=diverging&scheme=PRGn&n=4).
+Boxplots may be difficult to interpret due to their small size within the larger ridges, but larger box plots may make the violin plot splits more difficult to see. Showing only one mental health condition at a time can be very effective, allowing for better focus. Another improvement may be the option to show/remove the boxplot from the vis.
 
 
 #### **What are the response patterns (and anomalies) for self-reported mental health scores?**
@@ -431,9 +427,9 @@ Showing only one mental health condition at a time can be very effective, allowi
 **Tasks**
 
 This visualization supports the following tasks:
-- **characterize distribution**: 
-- **find extremums**: 
-- **filter**: 
+- **characterize distribution**
+- **find extremums**
+- **filter**
 
 Here, we can see a multi-bar plot and a dotplot. By default, the plots display mental health self-report scores by color.
 
@@ -442,37 +438,35 @@ Here, we can see a multi-bar plot and a dotplot. By default, the plots display m
 - Mark: `.mark_bar()`
 
 - Channels:
-    - Horizontal: The X-axis encodes the self-reported mental health severity on a 0-10 scale.
-    - Vertical: The Y position/height of each bar and size of dots represent the counts
-      for self-reported responses, showing where responses are more or less frequent.
-      Bar height can easily show any noticeable response patterns for each mental health condition.
-    - Colour: The colors represent different mental illnesses for more clarity and differentiation.
+    - *Horizontal*: The X-axis encodes the self-reported mental health severity on a 0-10 scale.
+    - *Vertical*: The Y position for height of each bar represent the counts for self-reported responses, showing where responses are more or less frequent. Bar height can easily show any noticeable response patterns for each mental health condition.
+    - *Colour*: The colors represent different mental illnesses for more clarity and differentiation.
 
-- Interactions:  
+- Interactions:
+    - *Bidirectional linking*: A brush can be used in both the multi-bar and dot-plot; the multi-bar plot is linked with a *brush* that corresponds to the dotplot below.
+    - Using the *brush*, we can interactively view the plots by splitting based on self-report score. Showing only range may help focus the viewer on patterns within a smaller frame, allowing for better effectiveness.
   
 2. _Dot-plot_
 
 - Mark: `.mark_circle()`
 
 - Channels:
-    - Horizontal:  The X-axis encodes the self-reported mental health severity on a 0-10 scale (same as above).
-    - Vertical: 
-    - Colour: The colors are the same as above, following the Gestalt Principle of similarity.
+    - *Horizontal*:  The X-axis encodes the self-reported mental health severity on a 0-10 scale (same as above).
+    - Vertical: each row of dots corresponds to one type of mental health category. Splitting into rows of dots can help us quickly identify patterns without filtering by mental health.
+    - Colour: The colors for mental health conditions help separate groups, and this follows the Gestalt Principle of similarity.
 
 - Interactions:
-    - A brush can be used in both the multi-bar and dot-plot; the multi-bar plot is linked with a *brush* that corresponds to the dotplot below.
-    - Using the brush, we can interactively view the plots by splitting based on self-report score.
-    - Showing only range may help focus the viewer on patterns within a smaller frame, allowing for better effectiveness.
-
-Using the dot-plot, we can easily see the **anomolies** of self-reported mental health: we can see that `3.5` was a self-reported score for some people with anxiety and insomnia.
+    - Same as above: a brush can be used to highlight certain groups or ranges within the plot.
+    
+Using the dot-plot, we can easily see the *anomalies* of self-reported mental health: we can see that `3.5` was a self-reported score for some people with anxiety and insomnia.
 
 #### *Critique of view*:
 The combination of a bar chart (top) and a bubble chart (bottom) provides two perspectives on the same data, which can be helpful for interpretation.
-Use of the different colors shows effective distinction across visualizations,.
+Use of the different colors shows effective distinction across visualizations.
 Bar height to show count of records, on a common axis, is regarded as the most effective and expressive; 
 use of circle area to show Count of Records is regarded as less effective,
 but when placed in a line and separated by color, can be useful for filtering and comparing with the barplot above.
-When using only the multibar plot, is difficult to see the Counts of infrequent responses,
+When using only the multi-bar plot, is difficult to see the Counts of infrequent responses,
 but the dotplot makes it easier to see these anomalies.
 
 #### **Can we group individuals into clusters based on their age and mental health scores?** BPM and mental health scores?
@@ -503,10 +497,10 @@ The lack of clear clusters, when highlighting or not, shows that no obvious clus
     - Each dot represents an individual data point, corresponding to a survey respondent.
 
 - Channels:
-    - Horizontal: The x-axis for each plot corresponds to self-reported severity scores (ranging from 0 to 10).
-    - Vertical: The y-axis represents an unspecified variable labeled "y", and can be interacted with.
-    - Colour: The scatter plots use color encoding to show different music effects on individuals' mental health responses. The same colours are used as the first visualization for consistency.
-    - Opacity: Points are slightly transparent/have different opacities to avoid excessive overplotting. The density of points in certain areas indicates where responses are more common.
+    - *Horizontal*: The x-axis for each plot corresponds to self-reported severity scores (ranging from 0 to 10).
+    - *Vertical*: The y-axis represents an unspecified variable labeled "y", and can be interacted with.
+    - *Colour*: The scatter plots use color encoding to show different music effects on individuals' mental health responses. The same colours are used as the first visualization for consistency.
+    - *Opacity*: Points are slightly transparent/have different opacities to avoid excessive overplotting. The density of points in certain areas indicates where responses are more common.
 
 - Interactions:
     - The *dropdown* allows for interactivity, such that users may to switch the y-axis to other possible variables. This allows the viewer to visually separate trends in how music affects different conditions.
@@ -543,16 +537,15 @@ This visualization allows users to compare different **mental health scores** ac
 - Mark: `mark_circle`
 
 - Channels:
-    - Horizontal: represents the selected mental health score variable for the x-axis
+    - *Horizontal*: represents the selected mental health score variable for the x-axis.
     - Vertical: represents the selected mental health score variable for the y-axis
     - Colour: Nominal color categories are used to differentiate between participant groups based on the selected legend variable (e.g., "Yes," "No," "Unknown").
     - Size: represents the number of records for the selected X & Y category. Larger circles indicate higher frequencies, making it easy to spot trends.
 
 
 - Interactions:
-    - the horizontal position, vertical position, and legend can all be changed using a drop-down.
-    - Dropdown menus allow users to change the X-axis, Y-axis, and color grouping dynamically.
-    - You can also **hover over points** to display detailed information about data points.
+    - the horizontal position, vertical position, and legend can all be changed using a *drop-down*. These dropdown menus allow users to change the X-axis, Y-axis, and color grouping dynamically.
+    - You can also *hover* over points to display detailed information about data points.
 
 #### *Critique of view*:
 This visualization is an effective use of bubble chart for frequency comparison. 
