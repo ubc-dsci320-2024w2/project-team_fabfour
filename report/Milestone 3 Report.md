@@ -389,8 +389,11 @@ The violin plot/boxplot has scores encoded left to right, instead of down to up,
 
 - Channels:
     - Horizontal: The X-axis encodes the self-reported mental health severity on a 0-10 scale.
+    - Opacity: the boxplot is translucent so that the colors of the violin plots can be seen underneath.
 
-- Interactions:  
+- Interactions:
+    - hovering over the main box shows a tooltip with summary statistics.
+    - hovering over the whiskers shows the upper and lower whisker scores.
   
 2. _Violin plot_
 
@@ -405,16 +408,8 @@ The violin plot/boxplot has scores encoded left to right, instead of down to up,
     - Using the legend, we can interactively view the violin plot, splitting by music effects. 
 
 #### *Critique of view*
-The combination of violin plots/density ridges and boxplots effectively balances distribution and summary statistics.
-The use of color for mental health scores are expressive and meaningful;
-in my vis, dark green relates to "Improves", light green relates to "No effect", and dark purple relates to "Worsen".
-For these choices, I assume the viewer also lives in my society where green means "good" 
-and dark green means "very good" while light green means "ok".
-The vis also uses a colourblind friendly palette, obtained from
-[ColorBrewer2.org](https://colorbrewer2.org/#type=diverging&scheme=PRGn&n=4).
-Boxplots may be difficult to interpret due to their small size within the larger ridges,
-but larger box plots may make the violin plot splits more difficult to see.
-Showing only one mental health condition at a time can be very effective, allowing for better focus.
+The combination of violin plots/density ridges and boxplots effectively balances distribution and summary statistics. The use of color for mental health scores are expressive and meaningful; in my vis, dark green relates to "Improves", light green relates to "No effect", and dark purple relates to "Worsen". For these choices, I assume the viewer also lives in my society where green means "good"  and dark green means "very good" while light green means "ok". The vis also uses a colourblind friendly palette, obtained from [ColorBrewer2.org](https://colorbrewer2.org/#type=diverging&scheme=PRGn&n=4).
+Boxplots may be difficult to interpret due to their small size within the larger ridges, but larger box plots may make the violin plot splits more difficult to see. Showing only one mental health condition at a time can be very effective, allowing for better focus. Another improvement may be the option to show/remove the boxplot from the vis.
 
 
 #### **What are the response patterns (and anomalies) for self-reported mental health scores?**
@@ -426,9 +421,9 @@ Showing only one mental health condition at a time can be very effective, allowi
 **Tasks**
 
 This visualization supports the following tasks:
-- **characterize distribution**: 
-- **find extremums**: 
-- **filter**: 
+- **characterize distribution**
+- **find extremums**
+- **filter**
 
 Here, we can see a multi-bar plot and a dotplot. By default, the plots display mental health self-report scores by color.
 
@@ -443,7 +438,10 @@ Here, we can see a multi-bar plot and a dotplot. By default, the plots display m
       Bar height can easily show any noticeable response patterns for each mental health condition.
     - Colour: The colors represent different mental illnesses for more clarity and differentiation.
 
-- Interactions:  
+- Interactions:
+    - *Bidirectional linking*: A brush can be used in both the multi-bar and dot-plot; the multi-bar plot is linked with a *brush* that corresponds to the dotplot below.
+    - Using the brush, we can interactively view the plots by splitting based on self-report score.
+    - Showing only range may help focus the viewer on patterns within a smaller frame, allowing for better effectiveness.
   
 2. _Dot-plot_
 
@@ -455,19 +453,18 @@ Here, we can see a multi-bar plot and a dotplot. By default, the plots display m
     - Colour: The colors are the same as above, following the Gestalt Principle of similarity.
 
 - Interactions:
-    - A brush can be used in both the multi-bar and dot-plot; the multi-bar plot is linked with a *brush* that corresponds to the dotplot below.
-    - Using the brush, we can interactively view the plots by splitting based on self-report score.
-    - Showing only range may help focus the viewer on patterns within a smaller frame, allowing for better effectiveness.
+    - Same as above: a brush can be used to highlight certain groups or ranges within the plot.
+    
 
-Using the dot-plot, we can easily see the **anomolies** of self-reported mental health: we can see that `3.5` was a self-reported score for some people with anxiety and insomnia.
+Using the dot-plot, we can easily see the *anomalies* of self-reported mental health: we can see that `3.5` was a self-reported score for some people with anxiety and insomnia.
 
 #### *Critique of view*:
 The combination of a bar chart (top) and a bubble chart (bottom) provides two perspectives on the same data, which can be helpful for interpretation.
-Use of the different colors shows effective distinction across visualizations,.
+Use of the different colors shows effective distinction across visualizations.
 Bar height to show count of records, on a common axis, is regarded as the most effective and expressive; 
 use of circle area to show Count of Records is regarded as less effective,
 but when placed in a line and separated by color, can be useful for filtering and comparing with the barplot above.
-When using only the multibar plot, is difficult to see the Counts of infrequent responses,
+When using only the multi-bar plot, is difficult to see the Counts of infrequent responses,
 but the dotplot makes it easier to see these anomalies.
 
 #### **Can we group individuals into clusters based on their age and mental health scores?** BPM and mental health scores?
