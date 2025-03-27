@@ -36,18 +36,21 @@ she heard from many help-seekers that music was something people turned to when 
 
 ## Images
 
-{You should use this area to add a screenshot of an interesting view, and eventually, of your dashboard}
-
-<img src ="images/test.jpg" width="300px">
+<img src="images/pm3/allie_viz1.gif" />
+<img src="images/pm3/judy_chart1.gif"/>
+<img src="images/pm3/jess_vis1.gif" />
 
 ## Package requirements
 
 - `altair`
 - `pre-commit`
+- pandas
 
 ## References
 
-{Add your stuff here}
+Gerlach, L. B., Maust, D. T., Solway, E., Kirch, M., Kullgren, J. T., Singer, D. C., & Malani, P. N. (2022). Perceptions of overall mental health and barriers to mental health treatment among us older adults. The American Journal of Geriatric Psychiatry, 30(4), 521–526. https://doi.org/10.1016/j.jagp.2021.09.006 
+
+Wilke, C (2019). Fundamentals of Data Visualization: A Primer on making informative and compelling figures. O'Reilly. https://clauswilke.com/dataviz/
 
 
 
