@@ -178,6 +178,10 @@ TODO: Helena
 ### The relationship between the diversity of genres an individual listens to, their self-reported mental health conditions, and the different perceived music effects.
 *Member: Judy Lee*
 
+The visualizations aim to explore the connection between music genres, the diversity of genres an individual listens to, and how these factors influence perceived music effects on well-being and mental health. The central research question guiding this exploration is: "How do an individual's favorite genre and the diversity of music genres they listen to impact the perceived effects of music on their well-being and self-reported mental health conditions?".
+
+Additionally, the visualizations help address key questions such as whether certain genres are associated with positive or negative effects on well-being, whether individuals who listen to a wider variety of genres report greater improvements in well-being, and whether those with different mental health conditions have distinct musical preferences.
+
 
 #### **What is the relationship between the variety of genres an individual listens to and their self-reported mental health conditions?**
 
@@ -212,27 +216,27 @@ The view helps to identify the relationship between genre diversity and self-rep
     - Length: Encodes the count and is used to express that quantitative value
     - Color hue: Encodes mental health condition and it is used to differentiate between the levels of the categorical attribute of mental health condition.
     - Spatial regions: There is one per mark which is separated vertically, and aligned horizontally.
-- Justification: Bar charts are good for comparing counts of categorical data. Using length to represent count allows for easy comparison between different mental health conditions within the selected range of the scatterplot.
+- Justification: Bar charts are good for comparing counts of categorical data. Using length to represent count allows for easy comparison between different mental health conditions within the selected range of the scatterplot. Using color hues to distinguish the categories is also very effective and expressive as it is an identity channel that offers good discriminability.
 
 3. *Correlation heatmap*
-- Mark: Point (mark_point)
+- Mark: Point (mark_point) and text label
 - Channels:
-    - Color saturation: Encodes the correlation value which is quantitative. Lower values of saturation means lowest correlation and higher saturation indicates higher correlation.
+    - Color saturation: Encodes the correlation value which is quantitative. Lower values of saturation mean lower correlation and higher saturation indicates higher correlation.
     - 2D shared position: Encodes the two variables as a cell.
-- Justification: Heatmaps are effective in displaying correlation matrices and the color saturation used represents the correlation value where its intensity helps to quuickly identify strong or weak relationships, and the 2D shared position clearly shows which variables are being correlated.
+- Justification: Heatmaps are effective in displaying correlation matrices and the color saturation used represents the correlation value where its intensity helps to quickly identify strong or weak relationships, and the 2D shared position clearly shows which variables are being correlated. 
 
 #### *Interactions and Interactivity*
-- The brushing on the scatterplot allows users to select a range of data points and filters the bar chart to show counts within that range. Double-clicking on the background of the scatterplot should undo the selection.
-- There is a tooltip on the individual data points of the scatterplot that shows the mental health condition, mental health score and genre diversity score for that point.
-- There is also a text label on the correlation heatmap that shows the correlation between the two variables.
+- Brushing: The brushing on the scatterplot allows users to select a range of data points and filters the bar chart to show counts within that range. Double-clicking on the background of the scatterplot should undo the selection.
+- Tooltip: There is a tooltip on the individual data points of the scatterplot that shows the mental health condition, mental health score and genre diversity score for that point.
+- Text label: There is also a text label on the correlation heatmap that shows the correlation between the two variables.
 
 *Characteristics of the interactions and interactivity*: 
-- Linked Views: The scatterplot and bar chart are linked and provide dynamic filtering and exploration.
+- Linked Views: The scatterplot and bar chart are linked and allow insights from one to influence the other dynamically.
 - Selection: Brushing allows for interactive selection of data subsets.
 - Overview and Detail: The scatterplot provides an overview, while the bar chart offers detailed counts for selected subsets.
 
 #### *Critique of View*
-The view effectively shows the relationship between genre diversity and mental health conditions. The scatterplot provides an overview, while the bar chart and heatmap offer more detailed insights. The color coding, which differentiates mental health conditions, is consistent across both the scatterplot and bar chart, making it easier for users to track data across different views. The interactive brushing feature is also great since it allows users to filter the scatterplot and see the corresponding counts in the bar chart which enables users to explore in more detail. While the scatterplot tries to reduce overplotting by adjusting point sizes, this might not fully solve the issue in areas with dense data. However, the bar chart complements this by clearly showing counts within selected ranges. Additionally, the heatmap helps investigate the correlation by highlighting the relationships between variables using a correlation value. Unfortunately, we can see from the view that there is no clear correlation between genre diversity and mental health conditions.
+The view effectively shows the relationship between genre diversity and mental health conditions. The scatterplot provides an overview, while the bar chart and heatmap offer more detailed insights. The color coding, which differentiates mental health conditions, is consistent across both the scatterplot and bar chart, making it easier for users to track data across different views. The interactive brushing feature is also great since it allows users to filter the scatterplot and see the corresponding counts in the bar chart which enables users to explore in more detail. While the scatterplot tries to reduce overplotting by adjusting point sizes, this might not fully solve the issue in areas with dense data. However, the bar chart complements this by clearly showing counts within selected ranges. Additionally, the heatmap helps investigate the correlation by highlighting the relationships between variables using a correlation value. Unfortunately, we can see from the view that there is no clear correlation between genre diversity and mental health conditions. 
 
 #### What is the distribution of genre diversity scores among individuals who report different effects of music on their well-being?
 
@@ -286,11 +290,11 @@ The view helps identify how genre diversity scores are distributed among individ
 *Characteristics of the interactions and interactivity*:
 
 - Linked Views: The violin plot, histogram, and rug plot are linked to provide a comprehensive view of the data.
-- Selection: The interactive legend of music effects allows selection of a music effect and filtering views across specific music effects.
+- Selection: The interactive legend of music effects allows the selection of a music effect and filtering views across specific music effects.
 - Overview and Detail: The violin plot provides an overview of the distributions, while the histogram and rug plot offer more detailed insights.
 
 #### *Critique of View*
-The view effectively shows the distribution of genre diversity scores across different perceived music effects. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. However, one limitation is that violin plots may lead to a higher learning curve for new users who might have trouble interpreting the visualization.
+The visualization effectively shows the distribution of genre diversity scores across different perceived music effects using linked views. The violin plot illustrates the distribution shapes and densities for each music effect and enables easy comparison across music effects. The histogram provides a detailed view of the counts within each genre diversity score range, filtered by music effect. The rug plot offers a granular view of individual data points which helps to understand the distribution of the genre diversity score. The consistent color coding across the violin plot and histogram helps users track data across views. However, one limitation is that violin plots may lead to a higher learning curve for new users who might have trouble interpreting the visualization or for other people who are not familiar with density-based visualizations.
 
 #### How does the frequency of listening to different music genres relate to self-reported mental health conditions and the perceived effects of music?
 
