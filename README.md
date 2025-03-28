@@ -1,6 +1,5 @@
 # Group Fab Four - Music and Mental Health
 
-- Your title can change over time.
 
 ## Describe your dataset in about 150-200 words
 
@@ -39,6 +38,7 @@ she heard from many help-seekers that music was something people turned to when 
 <img src="images/pm3/allie_viz1.gif" />
 <img src="images/pm3/judy_chart1.gif"/>
 <img src="images/pm3/jess_vis1.gif" />
+<img src="images/pm3/helena_viz1.gif" />
 
 ## Package requirements
 
