@@ -162,19 +162,6 @@ This visualization does a good job of helping users explore how musical hobbies 
 
 One small limitation is that only one mental health condition can be viewed at a time (because of the dropdown). However, this keeps the view clean and avoids overwhelming the viewer. The bar chart works well with only four categories, and it makes it easy to compare counts across groups.
 
-### View 2
-TODO: Helena
-1. Screenshot/gif of visualization
-2. Summary of tasks and how they accomplish the task
-3. Explain/justify viz choices
-    1. Marks
-    2. Channels
-    3. Characteristics of channels exploited
-    4. Describe new interactions
-    5. Characteristics of interactions and interactivity
-    6. Critique the view
-
-
 ### The relationship between the diversity of genres an individual listens to, their self-reported mental health conditions, and the different perceived music effects.
 *Member: Judy Lee*
 
