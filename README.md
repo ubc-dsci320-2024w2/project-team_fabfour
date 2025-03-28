@@ -38,7 +38,8 @@ she heard from many help-seekers that music was something people turned to when 
 <img src="images/pm3/allie_viz1.gif" />
 <img src="images/pm3/judy_chart1.gif"/>
 <img src="images/pm3/jess_vis1.gif" />
-<img src="images/pm3/helena_viz1.gif" />
+<img src="images/pm3/helena_viz4.gif" />
+<img src="images/pm3/helena_viz5.gif" />
 
 ## Package requirements
 
