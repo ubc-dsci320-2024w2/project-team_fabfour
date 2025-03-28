@@ -554,3 +554,183 @@ There is good use of color to differentiate categories and the interactivity enh
 This dataset was not a validated or standardized questionnaire.
 Although our findings may be interesting, the validity of the data should be kept in mind.
 Future work may include re-creating these visualizations using data from validated questionnaires and responses from a larger sample.
+
+---
+
+### What is the relationship between specific mental illnesses and listening habits?
+*Member: Helena Sokolovska*
+
+Are any mental illnesses associated with specific listening habits (specific platforms, favourite genre, listening while working, frequency of specific genres, exploratory tastes, foreign languages, etc.)?
+
+---
+
+#### **How is the (self-reported) severity of each mental illness associated with listening frequency to each genre?**
+
+<img src="../images/pm3/helena_viz1.gif" />
+
+#### *Summary and Explanations*:
+**Tasks**
+
+This visualization supports the following tasks:
+
+1. **Filter** - It filters the data by selected genre in the dropdown.
+2. **Correlate** – It displays how the self-reported severity of each condition correlates with the listening frequency to each genre.
+
+**Visualization Choices**
+1) Area plot
+- Mark: Area (mark_area)
+- Channels:
+     - _Horizontal_: encodes listening frequency (O)
+     - _Vertical_: encodes difference from average severity in the overall sample (Q)
+     - _Facet_: facets rows by mental health condition (N)
+     - _Tooltip_: mouseover displays selected genre, listening frequency, and difference from average severity
+     - _Dropdown_: allows selection by specific music genre (N)
+
+**Interactions and Interactivity**
+
+A tooltip allows value lookup by displaying selected genre, listening frequency, and difference from average severity. A dropdown allows selection by specific music genre, instead of displaying all 16 genres. This reduces overwhelming the audience by reducing the amount of encodings.
+
+#### *Critique of View + Justification*
+I normalized the severity score to the difference from average severity in the overall sample: I noticed in EDA that most of the effect was attributed to the average condition severity in the sample, and severity vastly differed across conditions. I feel the use of marks and channels are particularly effective for the task of correlation: the area mark was chosen because it emphasizing both the trend and how the condition severity differs from the mean. Thus, 0 difference from average severity is a natural midpoint in the visualization. Mental health condition could have been faceted into columns to save space, however I faceted conditions into rows as lining the plots up in 1 row would risk the audience interpreting the ordinal x-axis as continuous. Perhaps mental health condition could have been double-encoded in colour as well to emphasize the different conditions, assuming the palette is colour-blind safe. The y-axis used a scale range of -2 to 2: I felt this was the appropriate y-axis resolution to see details in the data. However, the y-axis could have used a larger scale (maybe -10 to 10) to better represent the small magnitude of the changes, at the cost of obscuring some details.  
+
+---
+
+#### **Are there any disparities in the (self-reported) mental health of participants with a specific favourite genre?**
+
+<img src="../images/pm3/helena_viz2.gif" />
+
+#### *Summary and Explanations*:
+**Tasks**
+
+This visualization supports the following task:
+
+1. **Find Anomalies** – It highlights the disparities in self-reported severity of each mental health condition based on favourite genre.
+
+**Visualization Choices**
+1) Heat map
+- Mark: Rectangle (mark_rect)
+- Channels:
+     - _Horizontal_: encodes favourite genre (N)
+     - _Vertical_: encodes mental health condition (N)
+     - _Color_: encodes difference from average severity in the overall sample (Q)
+     - _Tooltip_: mouseover displays favourite genre, mental health condition, and difference from average severity
+
+**Interactions and Interactivity**
+
+A tooltip allows value lookup by displaying favourite genre, mental health condition, and difference from average severity.
+
+#### *Critique of View + Justification*
+I normalized the condition severity score to the difference from average severity in the overall sample: I noticed in EDA that most of the effect was attributed to the average condition severity in the sample, and severity vastly differed across conditions. The heatmap was chosen because it is particularly suited to identifying anomalies via the colour channel, although obtaining the exact quantitative value of colour is difficult. Thus, I implemented a tooltip for value lookup. I used a colour-blind safe, sequential, and diverging colour scheme, since 0 difference from the average is a natural midpoint. I used a colour scale range of -4 to 4: this felt like the appropriate resolution to emphasize differences. However, I could have used a larger colour scale (maybe -10 to 10) to better represent the small magnitude of the changes, at the cost of obscuring some differences.
+
+---
+
+#### **What are the values of non-genre listening habits (Primary streaming service, Hours per day, While working, Instrumentalist, Composer, Exploratory, Foreign languages) when you filter by low, medium, and high (self-reported) mental health severity?**
+
+<img src="../images/pm3/helena_viz3.gif" />
+
+#### *Summary and Explanations*:
+**Tasks**
+
+This visualization supports the following tasks:
+
+1. **Filter** - It filters the data by selected mental health condition and selected listening habit in the dropdowns, and optionally by selected condition severity in the left plot.
+2. **Retrieve Value** – It displays the participant counts by condition severity and the participant counts associated with each category of non-genre listening habits.
+
+**Visualization Choices**
+1) Left bar plot
+- Mark: bar (mark_bar)
+- Channels:
+     - _Horizontal_: encodes participant count (Q)
+     - _Vertical_: encodes mental health condition severity level (O)
+     - _Color_: encodes mental health condition severity (O)
+     - _Tooltip_: mouseover displays participant count (Q)
+     - _Dropdown_: allows selection by specific mental health condition (N)
+
+2) Right bar plot
+- Mark: bar (mark_bar)
+- Channels:
+     - _Horizontal_: encodes participants (Q)
+     - _Vertical_: encodes categories of selected listening habit (N)
+     - _Tooltip_: mouseover displays participant count (Q)
+     - _Dropdown_: allows selection by specific listening habit (N)
+
+**Interactions and Interactivity**
+
+A tooltip allows value lookup by displaying participant count. Two dropdowns allow selection by specific mental health condition and listening habit, which prevents overwhelming the audience by reducing the amount of encodings. Additionally, users can select a specific bar on the left plot to filter the right chart by low, medium, or high condition severity.
+
+#### *Critique of View + Justification*
+The bar plot was chosen because the length encoding is the most efficient channel for retrieving quantitative value. I stratified condition severity score into low, medium, and high severity categories so I could filter by each category. The sequential colouring of severity bars in the left plot emphasizes that y-axis encodes an ordinal variable. I did not colour listening habit bars as there are sometimes as many as 6 categories, and it is difficult to find 6 colour-blind friendly bins. However, I could have found a discrete, colour-blind friendly palette to better distinguish each listening habit category.
+
+---
+
+#### **1. What is the distribution of hours participants listen to music per day, and how does it correlate with mental health?**
+#### **2. How do the distributions of (self-reported) mental health severity, music hours per day, and preferred music BPM appear when filtering by mental health condition?**
+
+<img src="../images/pm3/helena_viz4.gif" />
+
+<img src="../images/pm3/helena_viz5.gif" />
+
+#### *Summary and Explanations*:
+**Tasks**
+
+This visualization supports the following tasks:
+
+1. **Filter** - It filters the data by the selected range of listening hours per day (top-left) or favourite genre BPM (bottom-left).
+2. **Characterize Distribution** – It displays the distributions of listening hours per day (top-left) or favourite genre BPM (bottom-left).
+3. **Retrieve Value** - It displays the difference in self-reported severity of each condition (right) when filtering a histogram range (left).
+
+**Visualization Choices**
+1) Left histograms
+- Mark: bar (mark_bar)
+- Channels:
+     - _Horizontal_: encodes binned listening hours per day (top-left) or favourite genre BPM (bottom-left) (O)
+     - _Vertical_: encodes participant count (Q)
+     - _Color_: encodes mental health condition severity (O)
+     - _Tooltip_: mouseover displays participant count (Q)
+     - _Interval brush_: encodes the selected range on the x-axis (Q)
+     - _Label/text_: encodes median line and value
+
+2) Right bar plots
+- Mark: bar (mark_bar)
+- Channels:
+     - _Horizontal_: encodes mental health condition (N)
+     - _Vertical_: encodes difference from average severity in the overall sample (Q)
+     - _Color_: encodes mental health condition (N)
+     - _Tooltip_: mouseover displays difference from average severity in the overall sample (Q)
+     
+**Interactions and Interactivity**
+
+Tooltips allows value lookup by displaying participant count or difference from average severity in the overall sample. An interval brush on the left plots allows users to filter the right plots by the selected range of listening hours per day (top-left) or favourite genre BPM (bottom-left).
+
+#### *Critique of View + Justification*
+I normalized the severity score to the difference from average severity in the overall sample: I noticed in EDA that most of the effect was attributed to the average condition severity in the sample, and severity vastly differed across conditions. Bar plots were chosen for the left and right because the length encoding is the most efficient channel for retrieving quantitative value. I drew the median line and value on the histograms to further characterize the distribution. I could have used a density plot to display the distribution, however I did not find this necessary unless overlaying multiple histograms. I could have overlaid the 2 histograms on the left for better comparison, however that would prevent users from filtering based on either listening hours or BPM intervals. I used a colour-blind friendly discrete colour palette to distinguish mental health condition given it is a nominal variable. The y-axis scale is a range of -5 to 5: I felt this was the appropriate scale to resolve details in the data.
+
+---
+
+#### **How do the distributions of mental health severity, music hours per day, and preferred music BPM appear when filtering by mental health condition?**
+
+<img src="../images/pm3/helena_viz6.gif" />
+
+#### *Summary and Explanations*:
+**Tasks**
+
+This visualization supports the following tasks:
+
+1. **Filter** - It filters the data by the selected range of condition severity (left) and/or favourite genre BPM (right). You also filter the distributions by the selected condition in the dropdown.
+2. **Characterize Distribution** – It displays the distributions of condition severity (left), listening hours per day (middle) or favourite genre BPM (right).
+
+**Visualization Choices**
+1) Histograms
+- Mark: bar (mark_bar)
+- Channels:
+     - _Horizontal_: encodes binned condition severity (left), binned listening hours per day (middle), or binned favourite genre BPM (right) (Q)
+     - _Vertical_: encodes participant count (Q)
+     - _Interval brush_: encodes the selected range on the x-axis (Q)
+     - _Dropdown_: encodes selected mental health condition (N)
+     
+**Interactions and Interactivity**
+
+A dropdown allows selection by specific mental health condition, which prevents overwhelming the audience by reducing the amount of encodings. An interval brush on the plots (bi-directionally linked) allows users to filter the distributions by the interval selected for condition severity (left), binned listening hours per day (middle), and/or binned favourite genre BPM (right).
+
+#### *Critique of View + Justification*
+Bar plots were chosen because the length encoding is the most efficient channel for retrieving quantitative value. I could have drawn the median lines and values on the histograms to further characterize the distribution. I could have used a density plot to display the distribution, however I did not find this necessary unless overlaying multiple histograms. I could have overlaid the histograms for better comparison, however that would prevent users from filtering based on either condition severity, listening hours, and/or BPM intervals. I could have used a shared y-axis scale to better compare distributions, at the cost of losing resolution for some of the histograms. Additionally, a tooltip would have been useful to retrieve specific participant counts, though this is not essential to the goal of characterizing distributions.
