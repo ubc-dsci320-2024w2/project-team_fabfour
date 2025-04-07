@@ -2,8 +2,10 @@
 <html>
 <head>
   <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+    }
     #vis1.vega-embed {
-      width: 100%;
       display: flex;
     }
 
@@ -12,8 +14,15 @@
       position: relative;
     }
 
+    #vis1 {
+      width: 80%; 
+      height: auto;
+      margin: 50 auto;
+      padding: 1 px;
+        
+    }
+
     #vis2.vega-embed {
-      width: 50%;
       display: flex;
     }
 
@@ -21,17 +30,16 @@
     #vis2.vega-embed details summary {
       position: relative;
     }
+
     #vis2 {
-        width: auto; 
-        height: auto;
-        margin: 50 auto;
-        padding: 1 px;
-        
+      width: 50%; 
+      height: auto;
+      margin: 50 auto;
+      padding: 1 px;
     }
     
 
     #vis3.vega-embed {
-      width: 50%;
       display: flex;
     }
 
@@ -41,21 +49,19 @@
     }
 
     #vis3 {
-        width: 10%; /* Can be in percentage also. */
-        height: auto;
-        margin: 0 auto;
-        padding: 10px;
-        position: relative;
+      width: 40%;
+      height: auto;
+      margin: 0 auto;
+      padding: 10px;
     }
 
     #center {
-        margin: auto;
-        width: 75%;
-        border: 3px solid black;
-        padding: 5px;
+      margin: auto;
+      width: auto;
+      padding: 5px;
     }
     h1 {
-        text-align: center;
+      text-align: center;
     }
   </style>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -122,6 +128,6 @@
       vegaEmbed("#vis3", spec, embedOpt)
         .catch(error => showError(el, error));
     })(vegaEmbed);
-</script>
+  </script>
 </body>
 </html>
