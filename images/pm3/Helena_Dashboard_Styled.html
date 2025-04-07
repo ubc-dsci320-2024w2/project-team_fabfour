@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music & Mental Health Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin: 0;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .dashboard {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;              
+        padding: 20px;
+    }
+
+    .main-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 26px;
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #444;
+    }
+
+    h3.centered-text {
+      text-align: center;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    p {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1 class="main-title">Mental Health x Music</h1>
+
+    <p>
+      The Music & Mental Health Survey Dataset comes from Kaggle and was compiled by Catherine Rasgaitis.
+      These data were collected via a survey about music listening habits and their connection to mental health,
+      that respondents filled out via Google Forms. The form was posted on different social media platforms such
+      as Reddit and Discord. Posters and cards were distributed to advertise the survey in libraries, parks, and
+      other public locations. Overall, the dataset contains 737 participants and 33 variables. This dataset consists
+      of self-reported data, thus the reliability of the data cannot be confirmed.
+    </p>
+
+    <h2>Data Attributes</h2>
+    <table>
+        <tr>
+            <th>Attribute Name</th>
+            <th>Attribute Type</th>
+            <th>Data Semantics</th>
+            <th>Cardinality</th>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td>Temporal</td>
+            <td>The date and time when the survey form was submitted.</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>Quantitative</td>
+            <td>The age of the respondent.</td>
+            <td>10-89</td>
+        </tr>
+        <tr>
+            <td>Primary streaming service</td>
+            <td>Categorical</td>
+            <td>The primary streaming service used by the respondent.</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Hours per day</td>
+            <td>Quantitative</td>
+            <td>The number of hours the individual listens to music per day.</td>
+            <td>0-24</td>
+        </tr>
+        <tr>
+            <td>While working</td>
+            <td>Categorical</td>
+            <td>Whether the individual listens to music while working.</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Instrumentalist</td>
+            <td>Categorical</td>
+            <td>Whether the individual plays an instrument.</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Composer</td>
+            <td>Categorical</td>
+            <td>Whether the individual is a composer.</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Fav genre</td>
+            <td>Categorical</td>
+            <td>The favorite genre of music of the respondent.</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Exploratory</td>
+            <td>Categorical</td>
+            <td>Whether the individual is exploratory in terms of music genres.</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Foreign Languages</td>
+            <td>Categorical</td>
+            <td>Whether the individual listens to music in foreign languages.</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>BPM</td>
+            <td>Quantitative</td>
+            <td>Beats per minute of favorite genre.</td>
+            <td>0-999999999</td>
+        </tr>
+        <tr>
+            <td>Frequency</td>
+            <td>Ordinal</td>
+            <td>How frequently the respondent listens to various genres of music.</td>
+            <td>4 each</td>
+        </tr>
+        <tr>
+            <td>Anxiety</td>
+            <td>Ordinal</td>
+            <td>Self-reported anxiety on a scale of 0-10.</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Depression</td>
+            <td>Ordinal</td>
+            <td>Self-reported depression on a scale of 0-10.</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Insomnia</td>
+            <td>Ordinal</td>
+            <td>Self-reported insomnia on a scale of 0-10.</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>OCD</td>
+            <td>Ordinal</td>
+            <td>Self-reported OCD on a scale of 0-10.</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Music effects</td>
+            <td>Ordinal</td>
+            <td>The effect that music has on the respondent's mental health conditions.</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Permissions</td>
+            <td>Categorical</td>
+            <td>Permission to publicize data.</td>
+            <td>1</td>
+        </tr>
+    </table>
+  
+    <h2 class="main-title">Research Areas</h2>
+    <h3 class="centered-text">Allison: What is the impact of the respondent's age on their survey responses?</h3>
+    <h3 class="centered-text">Judy: How does the favorite genre and the diversity of music genres an individual listens to influence the perceived music effects on their well-being and their self-reported mental health conditions?</h3>
+    <h3 class="centered-text">Helena: What is the relationship between specific mental illnesses and listening habits?</h3>
+    <h3 class="centered-text">Jessica: How does response bias play a role in self-reporting mental health severity?</h3>
+
+    <h2 class="main-title">Correlate: How is the severity of each mental illness associated with listening frequency to each genre?</h2>
+    <iframe src="helena_viz1_2.0.html" style="width: 350px; height: 1100px; border: none;" class="chart"></iframe>
+  
+    <h2 class="main-title">Find Anomalies: Are there any disparities in the mental health of participants with a specific favourite genre?</h2>
+    <iframe src="helena_viz2_2.0.html" style="width: 1000px; height: 600px; border: none;" class="chart"></iframe>
+  
+    <h2 class="main-title">Filter/Retrieve Value: What are the values of non-genre listening habits when you filter by low/medium/high mental health severity?</h2>
+    <iframe src="helena_viz3_2.0.html" style="width: 1100px; height: 500px; border: none;" class="chart"></iframe>
+  
+    <h2 class="main-title">Characterize Distribution: What are the distributions of music hours per day and favourite genre BPM, and how do they correlate with mental health?</h2>
+    <iframe src="helena_viz4-5_2.0.html" style="width: 1000px; height: 900px; border: none;" class="chart"></iframe>
+  
+    <h2 class="main-title">Filter/Characterize Distribution: What are the distributions of mental health severity, music hours per day, and favourite genre BPM when filtering by mental health condition?</h2>
+    <iframe src="helena_viz6_2.0.html" style="width: 1150px; height: 400px; border: none;" class="chart"></iframe>
+    </div>
+</body>
+</html>
