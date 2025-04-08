@@ -47,7 +47,7 @@ she heard from many help-seekers that music was something people turned to when 
 
 - `altair`
 - `pre-commit`
-- pandas
+- `pandas`
 
 ## References
 
