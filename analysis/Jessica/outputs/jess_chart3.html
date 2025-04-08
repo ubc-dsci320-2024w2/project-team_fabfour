@@ -6,6 +6,10 @@
     #vis.vega-embed {
       width: 100%;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 70px;
+      text-align: center;
     }
 
     #vis.vega-embed details,
@@ -36,7 +40,7 @@
       vegaEmbed("#vis", spec, embedOpt)
         .catch(error => showError(el, error));
     })(vegaEmbed);
-
+  
   </script>
 </body>
 </html>
